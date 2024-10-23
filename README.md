@@ -4,7 +4,9 @@
 
 Resolution of Partial Differential Equations by Physically Informed Neural Networks Applied to the Radiation Module of a Numerical Weather Forecast Model.
 
-This repository contains my personal notes on research, and experiments related to radiation scheme for use in weather and climate models. The work is based on Ukkonen & Hogan (2023) [[4]](#ref04) and several other authors. Simply put, the idea is to replace the [RRTMGP](https://github.com/earth-system-radiation/rte-rrtmgp) lookup table with a model using PIML.
+This repository contains my personal notes on research, and experiments related to radiation scheme for use in weather and climate models. The work is based on Ukkonen & Hogan (2023) [[4]](#ref04) and several other authors. One of the researches is to understand the replacement of the [RRTMGP](https://github.com/earth-system-radiation/rte-rrtmgp) lookup table by a model using PIML.
+
+This repository is a work in progress and is subject to constant change.
 
 ## Notebooks
 
