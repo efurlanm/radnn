@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: qqaas-cqo2q
+created: 2024-11-13T22:04:17-03:00
