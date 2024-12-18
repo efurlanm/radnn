@@ -1,0 +1,108 @@
+# Last edited: 2024-12-16
+# This is a work in progress and, so, subject to constant change.
+site_name: RADNN
+site_author: Eduardo Furlan
+site_url: "" #https://efurlanm.github.io/
+site_description: Eduardo Furlan's Page
+copyright: CC BY 4.0 License
+
+# Repository
+repo_name: radnn
+repo_url: https://github.com/efurlanm/radnn
+
+# Configuration
+docs_dir: src
+site_dir: docs
+use_directory_urls: false
+theme:
+    name: material
+    # squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+    palette:
+        primary: grey
+        accent: grey
+    font: false
+    features:
+       - header.autohide
+       - navigation.expand
+plugins:
+    #- search:
+        #enabled: false
+    - autorefs
+    - offline
+    #- privacy
+    #- mkdocs-jupyter:
+        #ignore_h1_titles: true
+extra_javascript:
+    - javascripts/katex.js
+    - javascripts/katex/katex.min.js
+    - javascripts/katex/contrib/auto-render.min.js
+extra_css:
+    - javascripts/katex/katex.min.css
+    - css/extra.css
+markdown_extensions:
+    - def_list
+    - md_in_html
+    - tables
+    - attr_list    # autoref
+    - pymdownx.arithmatex:
+        generic: true    # katex
+exclude_docs: |
+    .*
+    *§*
+    *.F90*
+    *.f90*
+    *.mod
+    *.h
+    *.o
+    *.nc
+    *.py
+    *.pyc
+    *.npy
+    *.sh
+    rrtmgp_*
+    *.a
+    Make*
+    *.yml
+    *LICENSE*
+    *.m
+    *.nam
+    *.mat
+    CONVENTIONS
+    *data*
+    *.out
+    clean
+    MODIFICATIONS
+    *.cfg
+    NOTICE
+    TODO
+    CHANGELOG
+    *variables*
+    COPYING
+    *.pl
+    *.ipynb
+
+
+
+
+#not_in_nav: |
+#nav:
+
+
+  #*
+  #!*.md
+  #!*.js
+  #!*.css
+  #!*.png
+  #!*.jpg
+  #.*
+
+
+
+# ## NOTES ##
+#
+# MKDOCS INSTALL
+# pip install --user mkdocs mkdocs-material mkdocs-jupyter mkdocs-autorefs
+
+#
+# MKDOCS.YML EXAMPLE
+# https://github.com/squidfunk/mkdocs-material/blob/master/mkdocs.yml
