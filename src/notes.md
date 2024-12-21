@@ -1,4 +1,4 @@
-# My personal random notes 
+Various notes on different subjects.
 
 * The Table of Contents, for Markdown and Notebook files, can be viewed in JupyterLab using the "View > Table of Contents" menu item or by pressing Ctrl+Shift+K.
 
@@ -12,7 +12,7 @@
    
       * The ML datasets were generated using the input profiles datasets and running the Fortran programs `rrtmgp_sw_gendata_rfmipstyle.F90` and `rrtmgp_lw_gendata_rfmipstyle.F90` in `rte-rrtmgp-nn/examples/rrtmgp-nn-training`, which call the RRTMGP gas optics scheme.
 
-* From [[Ukk20][Ukk20]] :
+* From [[Ukk20](references.md#Ukk20)] :
    
       * The GPTL profiler was used to profile the code. <https://jmrosinski.github.io/GPTL/>
    
@@ -27,6 +27,6 @@
    
       * Scripts and data used in this paper are available online: <https://doi.org/10.5281/zenodo.3909653>
 
-* The NN inference and I/O code in RRTGMP-NN is based on Neural-Fortran  [[Cur19][Cur19]].
+* The NN inference and I/O code in RRTGMP-NN is based on Neural-Fortran  [[Cur19](references.md#Cur19)].
 
-* **RTE+RRTMGP** [[Pin19][Pin19]] is a recently developed **radiation transfer scheme** for dynamical models combining two codes: Radiative Transfer for Energetics (RTE), which computes fluxes given a description of boundary conditions, source functions and optical properties of the atmosphere, and RRTM for General circulation model applications — Parallel (RRTMGP), which computes optical properties and source functions of the gaseous atmosphere. The **gas optics scheme RRTMGP** uses a k-distribution based on state-of-the-art spectroscopy, and has 256 g-points in the longwave and 224 g-points in the shortwave, which is high compared to many other schemes. [[Ukk20][Ukk20]]
+* **RTE+RRTMGP** [[Pin19](references.md#Pin19)] is a recently developed **radiation transfer scheme** for dynamical models combining two codes: Radiative Transfer for Energetics (RTE), which computes fluxes given a description of boundary conditions, source functions and optical properties of the atmosphere, and RRTM for General circulation model applications — Parallel (RRTMGP), which computes optical properties and source functions of the gaseous atmosphere. The **gas optics scheme RRTMGP** uses a k-distribution based on state-of-the-art spectroscopy, and has 256 g-points in the longwave and 224 g-points in the shortwave, which is high compared to many other schemes. [[Ukk20](references.md#Ukk20)]

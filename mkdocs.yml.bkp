@@ -1,0 +1,105 @@
+# Last edited: 2024-12-18
+# This is a work in progress and, so, subject to constant change.
+site_name: RADNN
+site_author: Eduardo Furlan
+site_url: https://efurlanm.github.io
+site_description: Eduardo Furlan's Page
+copyright: CC BY 4.0 License
+
+# Repository
+repo_name: radnn
+repo_url: https://github.com/efurlanm/radnn
+
+# Configuration
+docs_dir: src
+site_dir: docs
+use_directory_urls: false
+theme:
+  name: material
+  # squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+  palette:
+    primary: grey
+    accent: grey
+  features:
+    - header.autohide
+    - navigation.expand
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+plugins:
+  - search
+  #- mkdocs-jupyter:
+      #ignore_h1_titles: true
+extra_javascript:
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - docs-assets/katex.js
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+  - docs-assets/extra.css
+markdown_extensions:
+  - tables
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true    # katex
+not_in_nav: |
+  docs-assets/
+  library-zotero/
+exclude_docs: |
+  .*
+  *§*
+  *.F90*
+  *.f90*
+  *.mod
+  *.h
+  *.o
+  *.nc
+  *.py
+  *.pyc
+  *.npy
+  *.sh
+  rrtmgp_*
+  *.a
+  Make*
+  *.yml
+  *LICENSE*
+  *.m
+  *.nam
+  *.mat
+  CONVENTIONS
+  *data*
+  *.out
+  clean
+  MODIFICATIONS
+  *.cfg
+  NOTICE
+  TODO
+  CHANGELOG
+  *variables*
+  COPYING
+  *.pl
+  *.ipynb
+  library-zotero/*
+
+
+
+# ### NOTES ###
+# MKDOCS INSTALL
+# pip install --user mkdocs-material mkdocs-jupyter
+# MKDOCS.YML EXAMPLE
+# https://github.com/squidfunk/mkdocs-material/blob/master/mkdocs.yml

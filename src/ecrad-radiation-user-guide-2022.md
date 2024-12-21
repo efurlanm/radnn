@@ -5,6 +5,8 @@ European Centre for Medium Range Weather Forecasts, Reading, UK
 
 Document version 1.5 (June 2022) applicable to *ecRad* version 1.5.x
 
+> Converted from the original document: https://confluence.ecmwf.int/download/attachments/70945505/ecrad_documentation.pdf . Accessed on 2024-12-21.
+
 <sub>This document is copyright (c) European Centre for Medium Range Weather Forecasts 2018–. If you have any queries about *ecRad* that are not answered by this document or by the information on the *ecRad* web site (<https://confluence.ecmwf.int/display/ECRAD>) then please email me at <r.j.hogan@ecmwf.int>.</sub>
 
 <br>
