@@ -2,40 +2,30 @@
 # This is a work in progress and, so, subject to constant change.
 site_name: RADNN
 site_author: Eduardo Furlan
-#site_url: ""  # offline
-site_url:  https://efurlanm.github.io
-#site_description: Eduardo Furlan's Page
-site_description: RADNN Page
-copyright: CC BY 4.0 License
-
-# Repository
+site_description: radnn repository documentation
+site_url: https://efurlanm.github.io/radnn/
 repo_name: radnn
-repo_url: https://github.com/efurlanm/radnn
-
-# Configuration
-docs_dir: src
+repo_url: https://github.com/efurlanm/radnn/
+copyright: CC BY 4.0 License
 site_dir: docs
-#use_directory_urls: false  # offline
+docs_dir: src
 theme:
   name: readthedocs
-#plugins: []  # offline
 extra_css:
   - docs-assets/extra.css
-  # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
-  - https://unpkg.com/katex@0/dist/katex.min.css
+  - docs-assets/katex/katex.min.css
 extra_javascript:
   - docs-assets/katex.js
-  - https://unpkg.com/katex@0/dist/katex.min.js
-  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - docs-assets/katex/katex.min.js
+  - docs-assets/katex/contrib/auto-render.min.js  
 markdown_extensions:
-  - def_list
   - tables
+  - def_list
   - md_in_html
   - pymdownx.arithmatex:
-      generic: true    # katex
+      generic: true     # katex
 not_in_nav: |
   docs-assets/
-  library-zotero/
 exclude_docs: |
   .*
   *§*
@@ -71,11 +61,6 @@ exclude_docs: |
   *.pl
   *.ipynb
   library-zotero/*
-
-
-
-# ### NOTES ###
-# MKDOCS INSTALL
-# pip install --user mkdocs-material mkdocs-jupyter
-# MKDOCS.YML EXAMPLE
-# https://github.com/squidfunk/mkdocs-material/blob/master/mkdocs.yml
+validation:
+    links:
+        not_found: ignore

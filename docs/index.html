@@ -1,1336 +1,197 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="radnn repository documentation" /><meta name="author" content="Eduardo Furlan" /><link rel="canonical" href="https://efurlanm.github.io/radnn/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>RADNN</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="docs-assets/extra.css" rel="stylesheet" />
+        <link href="docs-assets/katex/katex.min.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Introduction";
+        var mkdocs_page_input_path = "README.md";
+        var mkdocs_page_url = "/radnn/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-        <meta name="description" content="Eduardo Furlan's Page">
-      
-      
-        <meta name="author" content="Eduardo Furlan">
-      
-      
-      
-      
-        <link rel="next" href="ecrad-radiation-user-guide-2022.html">
-      
-      
-      <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
-    
-    
-      
-        <title>RADNN</title>
-      
-    
-    
-      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
-      
-        
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
-      
-      
+<body class="wy-body-for-nav" role="document">
 
-
-    
-    
-      
-        <script src="https://unpkg.com/iframe-worker/shim"></script>
-      
-    
-    
-      
-    
-    
-      <link rel="stylesheet" href="javascripts/katex/katex.min.css">
-    
-      <link rel="stylesheet" href="css/extra.css">
-    
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="grey">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#radnn" class="md-skip">
-          Skip to content
-        </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="RADNN" class="md-header__button md-logo" aria-label="RADNN" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            RADNN
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              RADNN
-            
-          </span>
-        </div>
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> RADNN
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
       </div>
-    </div>
-    
-      
-    
-    
-    
-    
-    
-      <div class="md-header__source">
-        <a href="https://github.com/efurlanm/radnn" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
-  </div>
-  <div class="md-source__repository">
-    radnn
-  </div>
-</a>
-      </div>
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
 
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="RADNN" class="md-nav__button md-logo" aria-label="RADNN" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
-    RADNN
-  </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/efurlanm/radnn" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
-  </div>
-  <div class="md-source__repository">
-    radnn
-  </div>
-</a>
-    </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    RADNN
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    RADNN
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#directories" class="md-nav__link">
-    <span class="md-ellipsis">
-      Directories
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notebooks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notebooks
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Other files
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-and-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code and data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#my-personal-random-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      My personal random notes
-    </span>
-  </a>
-  
-</li>
-      
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Introduction</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#directories">Directories</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#notebooks">Notebooks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#other-files">Other files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#code-and-data">Code and data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#my-personal-notes">My personal notes</a>
+    </li>
     </ul>
-  
-</nav>
-      
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="ecrad-radiation-user-guide-2022/">ecRad radiation scheme: User Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="env/">Conda environment</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="notes/">Notes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="references/">References</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ecrad</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="ecrad/">ECRAD - ECMWF atmospheric radiation scheme</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk22test02</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="ukk22test02/">RTE+RRTMGP-NN nn_dev</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="ukk22test02/Contributing/">Contributing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Examples</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >All sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="ukk22test02/examples/all-sky/">All-sky example</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emulator training</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="ukk22test02/examples/emulator-training/Readme/">Readme</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rfmip clear sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="ukk22test02/examples/rfmip-clear-sky/Readme/">Readme</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk23eo01</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="ukk23eo01/">ECRAD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Rrtmgp nn</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="ukk23eo01/rrtmgp-nn/">RTE+RRTMGP-NN</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk23test01</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="ukk23test01/">RTE+RRTMGP-NN</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="ukk23test01/Contributing/">Contributing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Examples</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >All sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="ukk23test01/examples/all-sky/">All-sky example</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rfmip clear sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="ukk23test01/examples/rfmip-clear-sky/Readme/">Readme</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rrtmgp nn training</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="ukk23test01/examples/rrtmgp-nn-training/Readme/">Readme</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">RADNN</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Introduction</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/efurlanm/radnn/edit/master/docs/README.md">Edit on radnn</a>
     </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ecrad-radiation-user-guide-2022.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ecRad radiation scheme: User Guide
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="env.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Conda environment
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="notes.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    My personal random notes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="references.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    References
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Ecrad
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Ecrad
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ecrad/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ECRAD - ECMWF atmospheric radiation scheme
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Ukk22test02
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Ukk22test02
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ukk22test02/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ukk22
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ukk22test02/Contributing.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Contributing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Examples
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3">
-            <span class="md-nav__icon md-icon"></span>
-            Examples
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_3_1" id="__nav_7_3_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    All sky
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3_1">
-            <span class="md-nav__icon md-icon"></span>
-            All sky
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ukk22test02/examples/all-sky/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    All-sky example
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_3_2" id="__nav_7_3_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Emulator training
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            Emulator training
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ukk22test02/examples/emulator-training/Readme.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Readme
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_3_3" id="__nav_7_3_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Rfmip clear sky
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            Rfmip clear sky
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ukk22test02/examples/rfmip-clear-sky/Readme.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Readme
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Ukk23eo01
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Ukk23eo01
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ukk23eo01/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ECRAD
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Rrtmgp nn
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_2">
-            <span class="md-nav__icon md-icon"></span>
-            Rrtmgp nn
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ukk23eo01/rrtmgp-nn/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    RTE+RRTMGP-NN
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Ukk23test01
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            Ukk23test01
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ukk23test01/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    RTE+RRTMGP-NN
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ukk23test01/Contributing.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Contributing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Examples
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_3">
-            <span class="md-nav__icon md-icon"></span>
-            Examples
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_3_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_9_3_1" id="__nav_9_3_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    All sky
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_3_1">
-            <span class="md-nav__icon md-icon"></span>
-            All sky
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ukk23test01/examples/all-sky/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    All-sky example
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_3_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_9_3_2" id="__nav_9_3_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Rfmip clear sky
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            Rfmip clear sky
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ukk23test01/examples/rfmip-clear-sky/Readme.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Readme
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_3_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_9_3_3" id="__nav_9_3_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Rrtmgp nn training
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            Rrtmgp nn training
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ukk23test01/examples/rrtmgp-nn-training/Readme.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Readme
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#directories" class="md-nav__link">
-    <span class="md-ellipsis">
-      Directories
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notebooks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notebooks
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Other files
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-and-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code and data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#my-personal-random-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      My personal random notes
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-  
-  
-
-
-<h1 id="radnn">RADNN</h1>
+                <h1 id="introduction">Introduction</h1>
 <p><em>Last edited: 2024-12-16<br />
 Repository: <a href="https://github.com/efurlanm/radnn">https://github.com/efurlanm/radnn</a><br />
 Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.io/radnn</a></em></p>
-<p>This repository contains my research related to the use of physics-based machine learning (PIML) to solve scientific problems, including its use in climate and weather modeling schemes. For example, one piece of research currently underway is trying to understand the use of PIML to emulate the gas optics scheme lookup table <a href="https://github.com/earth-system-radiation/rte-rrtmgp">RRTMGP</a>. The <a href="https://efurlanm.github.io/radnn">documentation page</a> tries to provide an overview of the repository structure, shows the READMEs of the directories, and also some personal notes I made over time.</p>
-<p>This repository is a work in progress, and is subject to constant change.</p>
+<p>This repository curates my research on applying physics-based machine learning (PIML) to scientific problems, including its potential in climate and weather modeling. One ongoing research explores the feasibility of using PIML to emulate the gas optics scheme lookup table of the <a href="https://github.com/earth-system-radiation/rte-rrtmgp">RRTMGP</a> model, used in atmospheric models. This document attempts to provide an overview of the repository structure, including the READMEs of individual directories and some of my personal research notes. As research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.</p>
 <h2 id="directories">Directories</h2>
 <ul>
 <li>
-<p><a href="ukk22test02/index.html">ukk22test02</a> : git branch <code>nn_dev</code>, described in [<a class="autorefs autorefs-internal" href="references.html#Ukk22c">Ukk22c</a>]. [<a href="https://zenodo.org/records/5833494">Data sources</a>]</p>
+<p><a href="ukk22test02/">ukk22test02</a> : git branch <code>nn_dev</code>, described in [<a href="references/#Ukk22c">Ukk22c</a>].</p>
 </li>
 <li>
-<p><a href="ukk23test01/index.html">ukk23test01</a> : git branch <code>main</code>, described in [<a class="autorefs autorefs-internal" href="references.html#Ukk22">Ukk22</a>]. Contains the sub-dir <code>examples/rrtmgp-nn-training</code> with the implementation for training gas optics NN.</p>
+<p><a href="ukk23test01/">ukk23test01</a> : git branch <code>main</code>, described in [<a href="references/#Ukk22">Ukk22</a>]. Contains the sub-dir <code>examples/rrtmgp-nn-training</code> with the implementation for training gas optics NN.</p>
 </li>
 <li>
-<p><a href="ukk23eo01/index.html">ukk23eo01</a> : "ecRad-NN". Contains the optimized version of the ecRad radiation scheme, with the new RRTMGP-NN gas optics (see ukk23test01). Does not contain the implementation that does the NN training. The implementation, development and testing of RRTMGP-NN is described in [<a class="autorefs autorefs-internal" href="references.html#Ukk23">Ukk23</a>]. Sources:</p>
+<p><a href="ukk23eo01/">ukk23eo01</a> : "ecRad-NN". Contains the optimized version of the ecRad radiation scheme, with the new RRTMGP-NN gas optics (see ukk23test01). Does not contain the implementation that does the NN training. The implementation, development and testing of RRTMGP-NN is described in [<a href="references/#Ukk23">Ukk23</a>]. Sources:</p>
 <ul>
 <li><a href="https://github.com/peterukk/ecrad-opt">https://github.com/peterukk/ecrad-opt</a> : "(...) the most up-to-date optimized ecRad code, see branch <code>clean_no_opt_testing</code> in this github repo (...)"</li>
 </ul>
 </li>
 <li>
-<p><a href="ecrad/index.html">ecrad</a> : original ecRad repo, without NN</p>
+<p><a href="ecrad/">ecrad</a> : original ecRad repo, without NN</p>
 <ul>
 <li><a href="https://github.com/ecmwf-ifs/ecrad">https://github.com/ecmwf-ifs/ecrad</a></li>
 </ul>
@@ -1361,7 +222,7 @@ Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.
 <p><a href="ukk23test01-train-v1.ipynb">ukk23test01-train-v1.ipynb</a> : generates files containing the NN model that is later used in the RRTMGP-NN model. The implementation uses TensorFlow/Python for training the NN, and Fortran routines are used to generate the training dataset. Based on Ukk22 git main branch.</p>
 </li>
 <li>
-<p><a href="rfmip01-clear-sky.ipynb">rfmip01-clear-sky.ipynb</a> : runs the RFMIP-CLEAR-SKY example, from ukk23test01 dir, described in [<a class="autorefs autorefs-internal" href="references.html#Ukk22">Ukk22</a>]. Was "ukk23test01-rfmip-clear-sky.ipynb".</p>
+<p><a href="rfmip01-clear-sky.ipynb">rfmip01-clear-sky.ipynb</a> : runs the RFMIP-CLEAR-SKY example, from ukk23test01 dir, described in [<a href="references/#Ukk22">Ukk22</a>]. Was "ukk23test01-rfmip-clear-sky.ipynb".</p>
 </li>
 <li>
 <p><a href="ecrad01-NN-gprof.ipynb">ecrad01-NN-gprof.ipynb</a> : "ecRad-NN". Gprof of ecRad from <code>ukk23eo01</code> dir (uses RRTMGP-NN). Was "ukk23eo01-NN-gprof.ipynb".</p>
@@ -1379,7 +240,7 @@ Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.
 <h2 id="other-files">Other files</h2>
 <ul>
 <li>
-<p><a href="ecrad-radiation-user-guide-2022.html">ecrad-radiation-user-guide-2022</a> : ecRad Radiation Scheme User Guide original document converted from PDF:</p>
+<p><a href="ecrad-radiation-user-guide-2022/">ecrad-radiation-user-guide-2022</a> : ecRad Radiation Scheme User Guide original document converted from PDF:</p>
 <ul>
 <li>Hogan, R. J. <a href="https://confluence.ecmwf.int/download/attachments/70945505/ecrad_documentation.pdf?version=5&amp;modificationDate=1655480733414&amp;api=v2">ecRad radiation scheme: User Guide</a>. Version 1.5 (June 2022) applicable to ecRad version 1.5.x .</li>
 </ul>
@@ -1391,12 +252,13 @@ Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.
 <p><code>*.nc</code> files are of type NetCDF4 and can be browsed and their structure visualized using the Java tool <a href="https://docs.unidata.ucar.edu/netcdf-java/current/userguide/reading_cdm.html">ToolsUI</a> or using the Python library <a href="https://github.com/Unidata/netcdf4-python">netcdf4-python</a>.</p>
 </li>
 <li>
-<p><a href="env.html">env.md</a> :  briefly describes the installation of the Conda environment used in Notebooks.</p>
+<p><a href="env/">env.md</a> :  briefly describes the installation of the Conda environment used in Notebooks.</p>
 </li>
 </ul>
 <h2 id="code-and-data">Code and data</h2>
 <p>Due to size restrictions, the data is not present in this repository and must be obtained and installed from several sources:</p>
 <ul>
+<li><a href="https://zenodo.org/records/5564314">https://zenodo.org/records/5564314</a> [<a href="references/#Ukk22c">Ukk22c</a>]</li>
 <li><a href="https://zenodo.org/records/7413935">https://zenodo.org/records/7413935</a></li>
 <li><a href="https://zenodo.org/records/7413952">https://zenodo.org/records/7413952</a></li>
 <li><a href="https://zenodo.org/records/7852526">https://zenodo.org/records/7852526</a></li>
@@ -1410,7 +272,7 @@ Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.
 <p><a href="https://github.com/peterukk/rte-rrtmgp-nn">https://github.com/peterukk/rte-rrtmgp-nn</a> (there are multiple branches in the repository containing different data files).</p>
 </li>
 <li>
-<p><a href="https://doi.org/10.5281/zenodo.7413935">https://doi.org/10.5281/zenodo.7413935</a> [<a class="autorefs autorefs-internal" href="references.html#Ukk22">Ukk22</a>]</p>
+<p><a href="https://doi.org/10.5281/zenodo.7413935">https://doi.org/10.5281/zenodo.7413935</a> [<a href="references/#Ukk22">Ukk22</a>]</p>
 <ul>
 <li>The link redirects to: <a href="https://zenodo.org/records/7413935">https://zenodo.org/records/7413935</a> . "peterukk/rte-rrtmgp-nn: 2.0".</li>
 </ul>
@@ -1422,7 +284,7 @@ Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.
 <p>The training data and archived version of RTE+RRTMGP-NN 2.0 with its training scripts can be accessed at:</p>
 <ul>
 <li>
-<p><a href="https://doi.org/10.5281/zenodo.6576680">https://doi.org/10.5281/zenodo.6576680</a> (see [<a class="autorefs autorefs-internal" href="references.html#Ukk22d">Ukk22d</a>])</p>
+<p><a href="https://doi.org/10.5281/zenodo.6576680">https://doi.org/10.5281/zenodo.6576680</a> (see [<a href="references/#Ukk22d">Ukk22d</a>])</p>
 <ul>
 <li>The link redirects to: <a href="https://zenodo.org/records/7413952">https://zenodo.org/records/7413952</a> .  "Code and extensive data for training neural networks for radiation, used in "Implementation of a machine-learned gas optics parameterization in the ECMWF Integrated Forecasting System: RRTMGP-NN 2.0" ".</li>
 </ul>
@@ -1431,13 +293,19 @@ Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.
 <p>The optimized version of the ecRad radiation scheme integrated with RRTMGP-NN 2.0 can be accessed at:</p>
 <ul>
 <li>
-<p><a href="https://doi.org/10.5281/zenodo.7148329">https://doi.org/10.5281/zenodo.7148329</a> (see [<a class="autorefs autorefs-internal" href="references.html#Ukk22a">Ukk22a</a>])</p>
+<p><a href="https://doi.org/10.5281/zenodo.7148329">https://doi.org/10.5281/zenodo.7148329</a> (see [<a href="references/#Ukk22a">Ukk22a</a>])</p>
 <ul>
 <li>The link redirects to: <a href="https://zenodo.org/records/7852526">https://zenodo.org/records/7852526</a> . "Optimized version of the ecRad radiation scheme with new RRTMGP-NN gas optics".</li>
 </ul>
 </li>
 </ul>
-<p>[<a class="autorefs autorefs-internal" href="references.html#Ukk21">Ukk21</a>] training and evaluation data for machine learning models emulating the RTE+RRTMGP radiation scheme or its components.</p>
+<p>There is a data repository hosted on Zenodo titled "Training and evaluation data for machine learning models emulating the RTE+RRTMGP radiation scheme or its components". In this repository there are 3 versions of the data, each version with a DOI and address:</p>
+<ul>
+<li>Version 3: <a href="https://doi.org/10.5281/zenodo.5833494">https://doi.org/10.5281/zenodo.5833494</a></li>
+<li>Version 2: <a href="https://doi.org/10.5281/zenodo.5564314">https://doi.org/10.5281/zenodo.5564314</a></li>
+<li>Version 1: <a href="https://doi.org/10.5281/zenodo.5513435">https://doi.org/10.5281/zenodo.5513435</a></li>
+</ul>
+<p>[<a href="references/#Ukk21">Ukk21</a>]</p>
 <ul>
 <li>
 <p><a href="https://doi.org/10.5281/zenodo.5833494">https://doi.org/10.5281/zenodo.5833494</a></p>
@@ -1446,69 +314,63 @@ Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.
 </ul>
 </li>
 </ul>
-<h2 id="my-personal-random-notes">My personal random notes</h2>
-<p>My random personal notes are on a separate <a href="notes.html">notes page</a>.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
+<h2 id="my-personal-notes">My personal notes</h2>
+<p>I keep a separate page with some <a href="notes/">personal notes</a>.</p>
+              
             </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-    <div class="md-copyright__highlight">
-      CC BY 4.0 License
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="ecrad-radiation-user-guide-2022/" class="btn btn-neutral float-right" title="ecRad radiation scheme: User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
-</div>
-      
-    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC BY 4.0 License</p>
   </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/efurlanm/radnn/" class="fa fa-code-fork" style="color: #fcfcfc"> radnn</a>
+        </span>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.expand"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
+      <span><a href="ecrad-radiation-user-guide-2022/" style="color: #fcfcfc">Next &raquo;</a></span>
     
-      <script src="assets/javascripts/bundle.88dd0f4e.min.js"></script>
-      
-        <script src="javascripts/katex.js"></script>
-      
-        <script src="javascripts/katex/katex.min.js"></script>
-      
-        <script src="javascripts/katex/contrib/auto-render.min.js"></script>
-      
-    
-  </body>
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="docs-assets/katex.js"></script>
+      <script src="docs-assets/katex/katex.min.js"></script>
+      <script src="docs-assets/katex/contrib/auto-render.min.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
 </html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2024-12-23 02:03:13.819336+00:00
+-->

@@ -88,6 +88,8 @@ $ jupyter-lab --notebook-dir=/home/x/jlab
 
 ## Machine specs
 
+Specification of the local machine used for experimentation.
+
 - [Intel Xeon Processor E52680 v4](https://ark.intel.com/content/www/br/pt/ark/products/91754/intel-xeon-processor-e5-2680-v4-35m-cache-2-40-ghz.html) 14 cores 35 MB cache 2.40 GHz AVX2 Broadwell
 - 128GB RAM 2x Samsung DDR4 2400 MT/s M386A8K40BM1-CRC
 - MSI Geforce RTX 3050 VENTUS 2X 6GB OC

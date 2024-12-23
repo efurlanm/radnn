@@ -4,12 +4,11 @@
 Repository: <https://github.com/efurlanm/radnn>  
 Documentation: <http://efurlanm.github.io/radnn>*
 
-This repository curates my research on applying physics-based machine learning (PIML) to scientific problems, including its potential in climate and weather modeling. One ongoing research explores the feasibility of using PIML to emulate the gas optics scheme lookup table of the [RRTMGP](https://github.com/earth-system-radiation/rte-rrtmgp) model, used in atmospheric models. The accompanying [documentation page](https://efurlanm.github.io/radnn) offers an overview of the repository structure, including individual directory READMEs and some of my personal research notes. As the research actively progresses, this repository remains a work in progress (WIP) and is subject to change.
-
+This repository curates my research on applying physics-based machine learning (PIML) to scientific problems, including its potential in climate and weather modeling. One ongoing research explores the feasibility of using PIML to emulate the gas optics scheme lookup table of the [RRTMGP](https://github.com/earth-system-radiation/rte-rrtmgp) model, used in atmospheric models. This document attempts to provide an overview of the repository structure, including the READMEs of individual directories and some of my personal research notes. As research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.
 
 ## Directories
 
-- [ukk22test02](ukk22test02/README.md) : git branch `nn_dev`, described in [[Ukk22c](references.md#Ukk22c)]. [[Data](https://zenodo.org/records/5833494)].
+- [ukk22test02](ukk22test02/README.md) : git branch `nn_dev`, described in [[Ukk22c](references.md#Ukk22c)].
 
 - [ukk23test01](ukk23test01/README.md) : git branch `main`, described in [[Ukk22](references.md#Ukk22)]. Contains the sub-dir `examples/rrtmgp-nn-training` with the implementation for training gas optics NN.
 

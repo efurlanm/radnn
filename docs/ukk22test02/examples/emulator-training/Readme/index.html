@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Eduardo Furlan" /><link rel="canonical" href="https://efurlanm.github.io/radnn/ukk22test02/examples/emulator-training/Readme/" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>Readme - RADNN</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../../docs-assets/extra.css" rel="stylesheet" />
+        <link href="../../../../docs-assets/katex/katex.min.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Readme";
+        var mkdocs_page_input_path = "ukk22test02/examples/emulator-training/Readme.md";
+        var mkdocs_page_url = "/radnn/ukk22test02/examples/emulator-training/Readme/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../.." class="icon icon-home"> RADNN
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../..">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../ecrad-radiation-user-guide-2022/">ecRad radiation scheme: User Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../env/">Conda environment</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../notes/">Notes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../references/">References</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ecrad</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../ecrad/">ECRAD - ECMWF atmospheric radiation scheme</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk22test02</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../../">RTE+RRTMGP-NN nn_dev</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Contributing/">Contributing</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Examples</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" >All sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../all-sky/">All-sky example</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" >Emulator training</a>
+    <ul class="current">
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">Readme</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rfmip clear sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../rfmip-clear-sky/Readme/">Readme</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk23eo01</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../ukk23eo01/">ECRAD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Rrtmgp nn</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../ukk23eo01/rrtmgp-nn/">RTE+RRTMGP-NN</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk23test01</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../ukk23test01/">RTE+RRTMGP-NN</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../ukk23test01/Contributing/">Contributing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Examples</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >All sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../../ukk23test01/examples/all-sky/">All-sky example</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rfmip clear sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../../ukk23test01/examples/rfmip-clear-sky/Readme/">Readme</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rrtmgp nn training</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../../ukk23test01/examples/rrtmgp-nn-training/Readme/">Readme</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">RADNN</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Ukk22test02</li>
+          <li class="breadcrumb-item">Examples</li>
+          <li class="breadcrumb-item">Emulator training</li>
+      <li class="breadcrumb-item active">Readme</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/efurlanm/radnn/edit/master/docs/ukk22test02/examples/emulator-training/Readme.md">Edit on radnn</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><strong>Generate training data for ML emulators</strong> </p>
+<p>Code for generating training data to replace RRTMGP and/or RTE, train emulators, and evaluating these emulators</p>
+<p>These example Fortran programs load atmospheric profiles from a netCDF file, compute gas optical properties with RRTMGP, optionally compute cloud optical properties, and then compute shortwave fluxes with RTE. They can also be used to generate training data (allsky_sw_gendata.F90), or test an emulator by replacing a physical component with it (allsky_sw_testmodels.F90) - see below for examples. In the <code>scripts/</code> subdirectory, Python code for training neural network-based emulators can be found, as well as code for retrieving and pre-processing CAMS reanalysis data.</p>
+<p>This code is associated with a paper submitted to Journal of Advances in Modeling Earth Systems (JAMES) and all data has been uploaded to <a href="https://doi.org/10.5281/zenodo.5513434">Zenodo</a></p>
+<hr />
+<p>The use and compilation of RTE+RRTMGP-NN is similar to the original code, but a BLAS library is required. If you're not using ifort+MKL then <a href="https://github.com/flame/blis">BLIS</a> is recommended</p>
+<ol>
+<li>Build the RTE+RRTMGP libraries in <code>../../build/</code>. This will require setting
+   environment variables <code>FC</code> for the Fortran compiler and <code>FCFLAGS</code>, or creating
+   <code>../../build/Makefile.conf</code> with that information (see Makefile.conf.X for examples). Other optional variables include:</li>
+<li>(Optional) Set <code>GPTL=1</code> to use the GPTL timing library, or <code>GPTL=2</code> to use GPTL with PAPI performance counters in order to measure computational intensity. You also need to provide location <code>TIME_DIR</code>. If GPTL was built with OpenMP then you will need to add -fopenmp to compilation flags which can be done with <code>USE_OPENMP=1</code></li>
+<li>(Optional) Set <code>USE_OPENACC=1</code> if you want to use OpenACC+CUDA for GPU acceleration (see Makefile.conf.nvfortran for example compilation flags)</li>
+<li>(Optional) Single precision is enabled by default, to use double prec. set <code>DOUBLE_PRECISION=1</code></li>
+<li>Build the executables in this directory, which will first require setting the folowing variables in the environment or via file Makefile.libs:</li>
+<li>(Required) The locations of the netCDF C and Fortran libraries and module files <code>NCHOME</code> and <code>NFHOME</code></li>
+<li>(Required) Specify the BLAS Library (e.g. BLIS) e.g.<code>BLASLIB=blis</code> and its location <code>BLAS_DIR</code>. If you are using Intel MKL then set <code>BLASLIB=mkl</code> and ensure <code>MKLROOT</code> is specified instead. </li>
+<li>After compiling the allsky_sw_gendata and allsky_sw_testmodels, they are used in the following way.</li>
+</ol>
+<p>Compute shortwave fluxes using refererence code and save them to fluxes subdirectory:</p>
+<p><code>./allsky_sw_testmodels 4 data_input/CAMS_2015_RFMIPstyle.nc ../../rrtmgp/data/rrtmgp-data-sw-g224-2018-12-04.nc ../../extensions/cloud_optics/rrtmgp-cloud-optics-coeffs-sw.nc fluxes/CAMS_2015_rsud_REFERENCE.nc</code></p>
+<p>Save input output data for training machine learning emulators (modify Fortran program to specify the outputs and other options):</p>
+<p><code>./allsky_sw_gendata 8 data_input/CAMS_2015_RFMIPstyle.nc ../../rrtmgp/data/rrtmgp-data-sw-g224-2018-12-04.nc ../../extensions/cloud_optics/rrtmgp-cloud-optics-coeffs-sw.nc  /media/peter/samsung/data/CAMS/ml_training/RADSCHEME_data_g224_CAMS_2014.nc</code></p>
+<p>Test an existing ML emulator, e.g. neural network to accelerate RRTMGP kernel (saving fluxes):</p>
+<p><code>/allsky_sw_testmodels 4 data_input/CAMS_2015_RFMIPstyle.nc ../../rrtmgp/data/rrtmgp-data-sw-g224-2018-12-04.nc ../../extensions/cloud_optics/rrtmgp-cloud-optics-coeffs-sw.nc fluxes/tmp.nc rrtmgp ../../neural/data/tau-sw-abs-7-16-16-CAMS-NEW.txt ../../neural/data/tau-sw-ray-7-16-16-CAMS-NEW-mae.txt</code> </p>
+<p>Or emulate the entire scheme using the final RADSCHEME model:</p>
+<p><code>./allsky_sw_testmodels 5120 data_input/CAMS_2015_RFMIPstyle.nc ../../rrtmgp/data/rrtmgp-data-sw-g224-2018-12-04.nc ../../extensions/cloud_optics/rrtmgp-cloud-optics-coeffs-sw.nc fluxes/tmp.nc both ../../neural/data/radscheme-128-128-128-hybridloss_new.txt</code> </p>
+<p>Or emulate reflectance-transmittance computations using the final REFTRANS model:</p>
+<p><code>./allsky_sw_testmodels 4 data_input/CAMS_2015_RFMIPstyle.nc ../../rrtmgp/data/rrtmgp-data-sw-g224-2018-12-04.nc ../../extensions/cloud_optics/rrtmgp-cloud-optics-coeffs-sw.nc fluxes/tmp.nc rte-reftrans ../../neural/data/reftrans-12-12-sinemse2-mae-NEW.txt</code> </p>
+<p>To not include clouds, provide "none" in place of the cloud coefficient file. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../all-sky/" class="btn btn-neutral float-left" title="All-sky example"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../rfmip-clear-sky/Readme/" class="btn btn-neutral float-right" title="Readme">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC BY 4.0 License</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/efurlanm/radnn/" class="fa fa-code-fork" style="color: #fcfcfc"> radnn</a>
+        </span>
+    
+    
+      <span><a href="../../all-sky/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../rfmip-clear-sky/Readme/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../docs-assets/katex.js"></script>
+      <script src="../../../../docs-assets/katex/katex.min.js"></script>
+      <script src="../../../../docs-assets/katex/contrib/auto-render.min.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
