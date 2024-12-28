@@ -1,3 +1,7 @@
+.rst-content .section dl dt {
+    margin-bottom: 0.25rem;
+}
+
 /* Styles for the navigation search bar */
 .wy-side-nav-search {
     /* Sets the background color of the side navigation search bar to dark gray (#696969) */
@@ -61,7 +65,7 @@
     margin-bottom: 0.5rem;
 }
 
-/* Remove vertical spacing for li's WITHOUT paragraphs in NESTED lists */
+/* Remove vertical spacing for li WITHOUT paragraphs in NESTED lists */
 .rst-content .section ul ul li:not(:has(p)),
 .rst-content .section ol ol li:not(:has(p)),
 .rst-content .section ul ol li:not(:has(p)),
@@ -91,7 +95,6 @@ a[href*="//"]:hover:after
     opacity: 1;
 }
 
-/*--- Local links -----------------------*/
 
 /*--- Local links -----------------------*/
 
@@ -135,7 +138,4 @@ a[href$=".webp"]:after, a[href$=".jpeg"]:after, a[href$=".jpg"]:after, a[href$="
     content: "🔗IMG";
 }
 
-
-
-<a name="Ukk22a"></a>
 

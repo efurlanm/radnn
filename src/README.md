@@ -4,7 +4,7 @@
 Repository: <https://github.com/efurlanm/radnn>  
 Documentation: <http://efurlanm.github.io/radnn>*
 
-This repository curates my research on applying physics-based machine learning (PIML) to scientific problems, including its potential in climate and weather modeling. One ongoing research explores the feasibility of using PIML to emulate the gas optics scheme lookup table of the [RRTMGP](https://github.com/earth-system-radiation/rte-rrtmgp) model, used in atmospheric models. This document attempts to provide an overview of the repository structure, including the READMEs of individual directories and some of my personal research notes. As research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.
+This repository curates my research on applying physics-based machine learning (PIML) to scientific problems, including its potential in climate and weather modeling. One ongoing research explores the feasibility of using PIML to emulate the gas optics scheme lookup table of the [RRTMGP](https://github.com/earth-system-radiation/rte-rrtmgp) model, used in atmospheric models. This document attempts to provide an overview of the repository structure, including the READMEs of individual directories, and some of my personal research notes. As research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.
 
 ## Directories
 
