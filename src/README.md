@@ -6,11 +6,12 @@ Documentation: <http://efurlanm.github.io/radnn>*
 
 This repository curates my research on applying physics-based machine learning (PIML) to scientific problems, including its potential in climate and weather modeling. One ongoing research explores the feasibility of using PIML to emulate the gas optics scheme lookup table of the [RRTMGP](https://github.com/earth-system-radiation/rte-rrtmgp) model, used in atmospheric models. This document attempts to provide an overview of the repository structure, including the READMEs of individual directories, and some of my personal research notes. As research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.
 
+
 ## Directories
 
-- [ukk22test02](ukk22test02/README.md) : git branch `nn_dev`, described in [[Ukk22c](references.md#Ukk22c)].
+- [ukk22test02](ukk22test02/README.md) : tests performed on a clone of the git branch **nn_dev**, described in [[Ukk22c](references.md#Ukk22c)].
 
-- [ukk23test01](ukk23test01/README.md) : git branch `main`, described in [[Ukk22](references.md#Ukk22)]. Contains the sub-dir `examples/rrtmgp-nn-training` with the implementation for training gas optics NN.
+- [ukk23test01](ukk23test01/README.md) : tests performed on a clone of the git branch **main**, described in [[Ukk22](references.md#Ukk22)]. Contains the sub-dir `examples/rrtmgp-nn-training` with the implementation for training gas optics NN.
 
 - [ukk23eo01](ukk23eo01/README.md) : "ecRad-NN". Contains the optimized version of the ecRad radiation scheme, with the new RRTMGP-NN gas optics (see ukk23test01). Does not contain the implementation that does the NN training. The implementation, development and testing of RRTMGP-NN is described in [[Ukk23](references.md#Ukk23)]. Sources:
   
@@ -33,7 +34,7 @@ This repository curates my research on applying physics-based machine learning (
 
 - [rfmip02-clear-sky.ipynb](rfmip02-clear-sky.ipynb) : "RRTMG". Runs the RFMIP-CLEAR-SKY example without NN, from ukk22test02 dir. Was "ukk22test02-rfmip-clear-sky.ipynb".
 
-- [rrtmgp_rfmip_lw-test01.ipynb](rrtmgp_rfmip_lw-test01.ipynb) : example program to demonstrate the calculation of longwave radiative fluxes in clear, aerosol-free skies. Based on `rfmip-clear-sky/rrtmgp_rfmip_lw.F90` from git branch `main`.
+- [rrtmgp_rfmip_lw-test01.ipynb](rrtmgp_rfmip_lw-test01.ipynb) : example program to demonstrate the calculation of longwave radiative fluxes in clear, aerosol-free skies. Based on `rfmip-clear-sky/rrtmgp_rfmip_lw.F90` from git branch **main**.
 
 - [ukk23test01-train-v2.ipynb](ukk23test01-train-v2.ipynb) : continuation of `ukk23test01-train-v1.ipynb`, adding more documentation, better organization, complete training, etc.
 
@@ -60,7 +61,7 @@ This repository curates my research on applying physics-based machine learning (
 
 - `*.nc` files are of type NetCDF4 and can be browsed and their structure visualized using the Java tool [ToolsUI](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/reading_cdm.html) or using the Python library [netcdf4-python](https://github.com/Unidata/netcdf4-python).
 
-- [env.md](env.md) :  briefly describes the installation of the Conda environment used in Notebooks.
+- [env](env.md) :  briefly describes the installation of the Conda environment used in Notebooks.
 
 
 ## Code and data

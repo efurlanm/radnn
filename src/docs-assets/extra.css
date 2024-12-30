@@ -7,6 +7,9 @@
     /* Sets the background color of the side navigation search bar to dark gray (#696969) */
     background-color: #696969;
 }
+.wy-side-nav-search input[type="text"] {
+    border-color: #868686;
+}
 
 /* Media query for responsive design on smaller screens (max-width: 768px) */
 @media screen and (max-width: 768px) {
@@ -14,6 +17,7 @@
     .wy-nav-top {
         /* Sets the background color of the top navigation bar to dark gray (#696969) when the screen width is 768px or less */
         background-color: #696969;
+        border-color: #868686;
     }
 }
 

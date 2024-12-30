@@ -175,14 +175,14 @@
 <p><em>Last edited: 2024-12-16<br />
 Repository: <a href="https://github.com/efurlanm/radnn">https://github.com/efurlanm/radnn</a><br />
 Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.io/radnn</a></em></p>
-<p>This repository curates my research on applying physics-based machine learning (PIML) to scientific problems, including its potential in climate and weather modeling. One ongoing research explores the feasibility of using PIML to emulate the gas optics scheme lookup table of the <a href="https://github.com/earth-system-radiation/rte-rrtmgp">RRTMGP</a> model, used in atmospheric models. This document attempts to provide an overview of the repository structure, including the READMEs of individual directories and some of my personal research notes. As research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.</p>
+<p>This repository curates my research on applying physics-based machine learning (PIML) to scientific problems, including its potential in climate and weather modeling. One ongoing research explores the feasibility of using PIML to emulate the gas optics scheme lookup table of the <a href="https://github.com/earth-system-radiation/rte-rrtmgp">RRTMGP</a> model, used in atmospheric models. This document attempts to provide an overview of the repository structure, including the READMEs of individual directories, and some of my personal research notes. As research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.</p>
 <h2 id="directories">Directories</h2>
 <ul>
 <li>
-<p><a href="ukk22test02/">ukk22test02</a> : git branch <code>nn_dev</code>, described in [<a href="references/#Ukk22c">Ukk22c</a>].</p>
+<p><a href="ukk22test02/">ukk22test02</a> : tests performed on a clone of the git branch <strong>nn_dev</strong>, described in [<a href="references/#Ukk22c">Ukk22c</a>].</p>
 </li>
 <li>
-<p><a href="ukk23test01/">ukk23test01</a> : git branch <code>main</code>, described in [<a href="references/#Ukk22">Ukk22</a>]. Contains the sub-dir <code>examples/rrtmgp-nn-training</code> with the implementation for training gas optics NN.</p>
+<p><a href="ukk23test01/">ukk23test01</a> : tests performed on a clone of the git branch <strong>main</strong>, described in [<a href="references/#Ukk22">Ukk22</a>]. Contains the sub-dir <code>examples/rrtmgp-nn-training</code> with the implementation for training gas optics NN.</p>
 </li>
 <li>
 <p><a href="ukk23eo01/">ukk23eo01</a> : "ecRad-NN". Contains the optimized version of the ecRad radiation scheme, with the new RRTMGP-NN gas optics (see ukk23test01). Does not contain the implementation that does the NN training. The implementation, development and testing of RRTMGP-NN is described in [<a href="references/#Ukk23">Ukk23</a>]. Sources:</p>
@@ -213,7 +213,7 @@ Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.
 <p><a href="rfmip02-clear-sky.ipynb">rfmip02-clear-sky.ipynb</a> : "RRTMG". Runs the RFMIP-CLEAR-SKY example without NN, from ukk22test02 dir. Was "ukk22test02-rfmip-clear-sky.ipynb".</p>
 </li>
 <li>
-<p><a href="rrtmgp_rfmip_lw-test01.ipynb">rrtmgp_rfmip_lw-test01.ipynb</a> : example program to demonstrate the calculation of longwave radiative fluxes in clear, aerosol-free skies. Based on <code>rfmip-clear-sky/rrtmgp_rfmip_lw.F90</code> from git branch <code>main</code>.</p>
+<p><a href="rrtmgp_rfmip_lw-test01.ipynb">rrtmgp_rfmip_lw-test01.ipynb</a> : example program to demonstrate the calculation of longwave radiative fluxes in clear, aerosol-free skies. Based on <code>rfmip-clear-sky/rrtmgp_rfmip_lw.F90</code> from git branch <strong>main</strong>.</p>
 </li>
 <li>
 <p><a href="ukk23test01-train-v2.ipynb">ukk23test01-train-v2.ipynb</a> : continuation of <code>ukk23test01-train-v1.ipynb</code>, adding more documentation, better organization, complete training, etc.</p>
@@ -252,7 +252,7 @@ Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.
 <p><code>*.nc</code> files are of type NetCDF4 and can be browsed and their structure visualized using the Java tool <a href="https://docs.unidata.ucar.edu/netcdf-java/current/userguide/reading_cdm.html">ToolsUI</a> or using the Python library <a href="https://github.com/Unidata/netcdf4-python">netcdf4-python</a>.</p>
 </li>
 <li>
-<p><a href="env/">env.md</a> :  briefly describes the installation of the Conda environment used in Notebooks.</p>
+<p><a href="env/">env</a> :  briefly describes the installation of the Conda environment used in Notebooks.</p>
 </li>
 </ul>
 <h2 id="code-and-data">Code and data</h2>
@@ -372,5 +372,5 @@ Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2024-12-23 15:12:04.313286+00:00
+Build Date UTC : 2024-12-30 03:17:39.911459+00:00
 -->
