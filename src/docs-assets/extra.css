@@ -18,6 +18,11 @@
         /* Sets the background color of the top navigation bar to dark gray (#696969) when the screen width is 768px or less */
         background-color: #696969;
         border-color: #868686;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .wy-nav-top i {
+         padding-top: 0.5rem; 
     }
 }
 

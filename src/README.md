@@ -1,25 +1,22 @@
 # Introduction
 
-*Last edited: 2024-12-30  
+*Last edited: 2025-01-01  
 Repository: <https://github.com/efurlanm/radnn>  
 Documentation: <http://efurlanm.github.io/radnn>*
 
-This repository curates my research on applying physics-based machine learning (PIML) to scientific problems, including its potential in climate and weather modeling. One ongoing research explores the feasibility of using PIML to emulate the gas optics scheme lookup table of the [RRTMGP](https://github.com/earth-system-radiation/rte-rrtmgp) model, used in atmospheric models. This document attempts to provide an overview of the repository structure, including the READMEs of individual directories, and some of my personal research notes. There is also automatically generated HTML documentation from the Markdown files available in the directories, which can be useful in some cases: <http://efurlanm.github.io/radnn> . As research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.
+This repository contains some of my research on the application of physics-based machine learning (PIML) to scientific problems, and also includes some experiments done in climate and weather modeling, as well as some of my personal notes. The documentation (<http://efurlanm.github.io/radnn>) tries to provide an overview of the structure of the repository, and is automatically generated from the Markdown (.md) files available in the directories. Please note that most of the documentation was not created by me. As the research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.
 
 
-## Directories
+## Some directories
 
 - [ukk22test02](ukk22test02/README.md) : tests performed on a clone of the git branch **nn_dev**, described in [[Ukk22c](references.md#Ukk22c)] : <https://github.com/peterukk/rte-rrtmgp-nn/tree/nn_dev/> . Contains the sub-dir `examples/rrtmgp-nn-training` with the implementation for training gas optics NN.
 
 - [ukk23test01](ukk23test01/README.md) : tests performed on a clone of the git branch **main**, described in [[Ukk22](references.md#Ukk22)] : Ⓓ<https://github.com/peterukk/rte-rrtmgp-nn/tree/2.0> . Contains the sub-dir `examples/rrtmgp-nn-training` with the implementation for training gas optics NN.
 
-- [ukk23eo01](ukk23eo01/README.md) : "ecRad-NN". Contains the optimized version of the ecRad radiation scheme, with the new RRTMGP-NN gas optics (see ukk23test01). Does not contain the implementation that does the NN training. The implementation, development and testing of RRTMGP-NN is described in [[Ukk23](references.md#Ukk23)]. Sources:
-  
-    - <https://github.com/peterukk/ecrad-opt> : "(...) the most up-to-date optimized ecRad code, see branch `clean_no_opt_testing` in this github repo (...)".
+- [ukk23eo01](ukk23eo01/README.md) : "ecRad-NN". Contains the optimized version of the ecRad radiation scheme, with the new RRTMGP-NN gas optics, from <https://github.com/peterukk/ecrad-opt> branch `clean_no_opt_testing` [[Ukk22a](references.md#Ukk22a)]. Does not contain the implementation that does the NN training. (the implementation, development and testing of RRTMGP-NN is described in [[Ukk23](references.md#Ukk23)]).
 
-- [ecrad](ecrad/README.md) : original ecRad repo, without NN.
-  
-     - <https://github.com/ecmwf-ifs/ecrad> .
+- [ecrad](ecrad/README.md) : original ecRad repo, without NN. <https://github.com/ecmwf-ifs/ecrad> .
+
 
 
 ## Notebooks
@@ -51,17 +48,17 @@ This repository curates my research on applying physics-based machine learning (
 - [ukk23test01-train-sd-v240823.ipynb](ukk23test01-train-sd-v240823.ipynb) : NN network training for the optical gas radiation problem, running on SDumont.
 
 
+
 ## Other files
 
-- [ecrad-radiation-user-guide-2022](ecrad-radiation-user-guide-2022.md) : ecRad Radiation Scheme User Guide original document converted from PDF:
-  
-- Hogan, R. J. [ecRad radiation scheme: User Guide](https://confluence.ecmwf.int/download/attachments/70945505/ecrad_documentation.pdf?version=5&modificationDate=1655480733414&api=v2). Version 1.5 (June 2022) applicable to ecRad version 1.5.x .
+- [ecrad-radiation-user-guide-2022](ecrad-radiation-user-guide-2022.md) : ecRad Radiation Scheme User Guide document converted from PDF to HTML. Source: [Hogan, R. J. [ecRad radiation scheme: User Guide](https://confluence.ecmwf.int/download/attachments/70945505/ecrad_documentation.pdf?version=5&modificationDate=1655480733414&api=v2). Version 1.5 (June 2022) applicable to ecRad version 1.5.x].
 
 - `*.txt` and `*.yml` are auxiliary files.
 
 - `*.nc` files are of type NetCDF4 and can be browsed and their structure visualized using the Java tool [ToolsUI](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/reading_cdm.html) or using the Python library [netcdf4-python](https://github.com/Unidata/netcdf4-python).
 
-- [env](env.md) :  briefly describes the installation of the Conda environment used in Notebooks.
+- [env](env.md) :  briefly describes the environment used in the Notebooks.
+
 
 
 ## Code and data
@@ -109,6 +106,7 @@ There is a data repository hosted on Zenodo titled "Training and evaluation data
 - <https://doi.org/10.5281/zenodo.5833494>
   
      - The link redirects to: <https://zenodo.org/records/5833494> . "Training and evaluation data for machine learning models emulating the RTE+RRTMGP radiation scheme or its components".
+
 
 
 ## My personal notes 

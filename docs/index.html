@@ -44,7 +44,7 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Introduction</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#directories">Directories</a>
+    <li class="toctree-l2"><a class="reference internal" href="#some-directories">Some directories</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#notebooks">Notebooks</a>
     </li>
@@ -70,7 +70,7 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="references/">References</a>
+                <li class="toctree-l1"><a class="reference internal" href="references/">Some references and comments</a>
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Ecrad</span></p>
@@ -172,11 +172,11 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="introduction">Introduction</h1>
-<p><em>Last edited: 2024-12-30<br />
+<p><em>Last edited: 2025-01-01<br />
 Repository: <a href="https://github.com/efurlanm/radnn">https://github.com/efurlanm/radnn</a><br />
 Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.io/radnn</a></em></p>
-<p>This repository curates my research on applying physics-based machine learning (PIML) to scientific problems, including its potential in climate and weather modeling. One ongoing research explores the feasibility of using PIML to emulate the gas optics scheme lookup table of the <a href="https://github.com/earth-system-radiation/rte-rrtmgp">RRTMGP</a> model, used in atmospheric models. This document attempts to provide an overview of the repository structure, including the READMEs of individual directories, and some of my personal research notes. There is also automatically generated HTML documentation from the Markdown files available in the directories, which can be useful in some cases: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.io/radnn</a> . As research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.</p>
-<h2 id="directories">Directories</h2>
+<p>This repository contains some of my research on the application of physics-based machine learning (PIML) to scientific problems, and also includes some experiments done in climate and weather modeling, as well as some of my personal notes. The documentation (<a href="http://efurlanm.github.io/radnn">http://efurlanm.github.io/radnn</a>) tries to provide an overview of the structure of the repository, and is automatically generated from the Markdown (.md) files available in the directories. Please note that most of the documentation was not created by me. As the research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.</p>
+<h2 id="some-directories">Some directories</h2>
 <ul>
 <li>
 <p><a href="ukk22test02/">ukk22test02</a> : tests performed on a clone of the git branch <strong>nn_dev</strong>, described in [<a href="references/#Ukk22c">Ukk22c</a>] : <a href="https://github.com/peterukk/rte-rrtmgp-nn/tree/nn_dev/">https://github.com/peterukk/rte-rrtmgp-nn/tree/nn_dev/</a> . Contains the sub-dir <code>examples/rrtmgp-nn-training</code> with the implementation for training gas optics NN.</p>
@@ -185,16 +185,10 @@ Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.
 <p><a href="ukk23test01/">ukk23test01</a> : tests performed on a clone of the git branch <strong>main</strong>, described in [<a href="references/#Ukk22">Ukk22</a>] : Ⓓ<a href="https://github.com/peterukk/rte-rrtmgp-nn/tree/2.0">https://github.com/peterukk/rte-rrtmgp-nn/tree/2.0</a> . Contains the sub-dir <code>examples/rrtmgp-nn-training</code> with the implementation for training gas optics NN.</p>
 </li>
 <li>
-<p><a href="ukk23eo01/">ukk23eo01</a> : "ecRad-NN". Contains the optimized version of the ecRad radiation scheme, with the new RRTMGP-NN gas optics (see ukk23test01). Does not contain the implementation that does the NN training. The implementation, development and testing of RRTMGP-NN is described in [<a href="references/#Ukk23">Ukk23</a>]. Sources:</p>
-<ul>
-<li><a href="https://github.com/peterukk/ecrad-opt">https://github.com/peterukk/ecrad-opt</a> : "(...) the most up-to-date optimized ecRad code, see branch <code>clean_no_opt_testing</code> in this github repo (...)".</li>
-</ul>
+<p><a href="ukk23eo01/">ukk23eo01</a> : "ecRad-NN". Contains the optimized version of the ecRad radiation scheme, with the new RRTMGP-NN gas optics, from <a href="https://github.com/peterukk/ecrad-opt">https://github.com/peterukk/ecrad-opt</a> branch <code>clean_no_opt_testing</code> [<a href="references/#Ukk22a">Ukk22a</a>]. Does not contain the implementation that does the NN training. (the implementation, development and testing of RRTMGP-NN is described in [<a href="references/#Ukk23">Ukk23</a>]).</p>
 </li>
 <li>
-<p><a href="ecrad/">ecrad</a> : original ecRad repo, without NN.</p>
-<ul>
-<li><a href="https://github.com/ecmwf-ifs/ecrad">https://github.com/ecmwf-ifs/ecrad</a> .</li>
-</ul>
+<p><a href="ecrad/">ecrad</a> : original ecRad repo, without NN. <a href="https://github.com/ecmwf-ifs/ecrad">https://github.com/ecmwf-ifs/ecrad</a> .</p>
 </li>
 </ul>
 <h2 id="notebooks">Notebooks</h2>
@@ -240,10 +234,7 @@ Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.
 <h2 id="other-files">Other files</h2>
 <ul>
 <li>
-<p><a href="ecrad-radiation-user-guide-2022/">ecrad-radiation-user-guide-2022</a> : ecRad Radiation Scheme User Guide original document converted from PDF:</p>
-</li>
-<li>
-<p>Hogan, R. J. <a href="https://confluence.ecmwf.int/download/attachments/70945505/ecrad_documentation.pdf?version=5&amp;modificationDate=1655480733414&amp;api=v2">ecRad radiation scheme: User Guide</a>. Version 1.5 (June 2022) applicable to ecRad version 1.5.x .</p>
+<p><a href="ecrad-radiation-user-guide-2022/">ecrad-radiation-user-guide-2022</a> : ecRad Radiation Scheme User Guide document converted from PDF to HTML. Source: [Hogan, R. J. <a href="https://confluence.ecmwf.int/download/attachments/70945505/ecrad_documentation.pdf?version=5&amp;modificationDate=1655480733414&amp;api=v2">ecRad radiation scheme: User Guide</a>. Version 1.5 (June 2022) applicable to ecRad version 1.5.x].</p>
 </li>
 <li>
 <p><code>*.txt</code> and <code>*.yml</code> are auxiliary files.</p>
@@ -252,7 +243,7 @@ Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.
 <p><code>*.nc</code> files are of type NetCDF4 and can be browsed and their structure visualized using the Java tool <a href="https://docs.unidata.ucar.edu/netcdf-java/current/userguide/reading_cdm.html">ToolsUI</a> or using the Python library <a href="https://github.com/Unidata/netcdf4-python">netcdf4-python</a>.</p>
 </li>
 <li>
-<p><a href="env/">env</a> :  briefly describes the installation of the Conda environment used in Notebooks.</p>
+<p><a href="env/">env</a> :  briefly describes the environment used in the Notebooks.</p>
 </li>
 </ul>
 <h2 id="code-and-data">Code and data</h2>
@@ -372,5 +363,5 @@ Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2024-12-30 15:53:13.722819+00:00
+Build Date UTC : 2025-01-03 22:35:49.724620+00:00
 -->
