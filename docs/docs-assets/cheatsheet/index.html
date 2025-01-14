@@ -42,7 +42,7 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                <li class="toctree-l1"><a class="reference internal" href="../..">RADNN</a>
                 </li>
               </ul>
               <ul>
@@ -782,12 +782,10 @@ Content Cell  | Content Cell
 Orange
 :   The fruit of an evergreen tree of the genus Citrus.
 </code></pre>
-<dl>
-<dt>Apple</dt>
-<dd>Pomaceous fruit of plants of the genus Malus in the family Rosaceae.</dd>
-<dt>Orange</dt>
-<dd>The fruit of an evergreen tree of the genus Citrus.</dd>
-</dl>
+<p>Apple
+: Pomaceous fruit of plants of the genus Malus in the family Rosaceae.</p>
+<p>Orange
+: The fruit of an evergreen tree of the genus Citrus.</p>
 <!-- -->
 
 <pre><code>Termo 1
@@ -799,14 +797,12 @@ Termo 2
 Termo 3
 : Definição do termo 3
 </code></pre>
-<dl>
-<dt>Termo 1</dt>
-<dd>Definição do termo 1</dd>
-<dt>Termo 2</dt>
-<dd>Definição do termo 2</dd>
-<dt>Termo 3</dt>
-<dd>Definição do termo 3</dd>
-</dl>
+<p>Termo 1
+: Definição do termo 1</p>
+<p>Termo 2
+: Definição do termo 2</p>
+<p>Termo 3
+: Definição do termo 3</p>
 <!-- -->
 
 <pre><code>Markdown
@@ -817,14 +813,12 @@ HTML
 : HyperText Markup Language (Linguagem de Marcação de Hipertexto) é a linguagem de marcação padrão para documentos projetados para serem exibidos em um navegador da web.
 Pode ser auxiliado por tecnologias como Cascading Style Sheets (CSS) e linguagens de script como JavaScript.
 </code></pre>
-<dl>
-<dt>Markdown</dt>
-<dd>Uma linguagem de marcação leve com sintaxe de formatação de texto simples.
-  É frequentemente usado para formatar arquivos readme, escrever mensagens em fóruns online e criar texto rico usando um editor de texto comum.</dd>
-<dt>HTML</dt>
-<dd>HyperText Markup Language (Linguagem de Marcação de Hipertexto) é a linguagem de marcação padrão para documentos projetados para serem exibidos em um navegador da web.
-  Pode ser auxiliado por tecnologias como Cascading Style Sheets (CSS) e linguagens de script como JavaScript.</dd>
-</dl>
+<p>Markdown
+: Uma linguagem de marcação leve com sintaxe de formatação de texto simples.
+  É frequentemente usado para formatar arquivos readme, escrever mensagens em fóruns online e criar texto rico usando um editor de texto comum.</p>
+<p>HTML
+: HyperText Markup Language (Linguagem de Marcação de Hipertexto) é a linguagem de marcação padrão para documentos projetados para serem exibidos em um navegador da web.
+  Pode ser auxiliado por tecnologias como Cascading Style Sheets (CSS) e linguagens de script como JavaScript.</p>
 <!-- -->
 
 <pre><code>`git commit`
@@ -836,14 +830,12 @@ Pode ser auxiliado por tecnologias como Cascading Style Sheets (CSS) e linguagen
 **Negrito**
 : Texto com ênfase em negrito.
 </code></pre>
-<dl>
-<dt><code>git commit</code></dt>
-<dd>Este comando registra as alterações no repositório. Use com a flag <code>-m</code> para adicionar uma mensagem: <code>git commit -m "Mensagem do commit"</code>.</dd>
-<dt><em>Itálico</em></dt>
-<dd>Texto com ênfase em itálico.</dd>
-<dt><strong>Negrito</strong></dt>
-<dd>Texto com ênfase em negrito.</dd>
-</dl>
+<p><code>git commit</code>
+: Este comando registra as alterações no repositório. Use com a flag <code>-m</code> para adicionar uma mensagem: <code>git commit -m "Mensagem do commit"</code>.</p>
+<p><em>Itálico</em>
+: Texto com ênfase em itálico.</p>
+<p><strong>Negrito</strong>
+: Texto com ênfase em negrito.</p>
 <hr />
 <h2 id="permalink">permalink</h2>
 <pre><code>`permalink`:
@@ -857,19 +849,16 @@ Pode ser auxiliado por tecnologias como Cascading Style Sheets (CSS) e linguagen
             - toc:
                 permalink: "#"
 </code></pre>
-<dl>
-<dt><code>permalink</code>:</dt>
-<dd>
-<p>Generate permanent links at the end of each header. Default: <code>False</code>.</p>
-<p>When set to True the paragraph symbol (&para; or <code>&amp;para;</code>) is used as the
+<p><code>permalink</code>:
+: Generate permanent links at the end of each header. Default: <code>False</code>.</p>
+<pre><code>When set to True the paragraph symbol (&amp;para; or `&amp;para;`) is used as the
 link text. When set to a string, the provided string is used as the link
-text. For example, to use the hash symbol (<code>#</code>) instead, do:</p>
-<pre><code>markdown_extensions:
-    - toc:
-        permalink: "#"
+text. For example, to use the hash symbol (`#`) instead, do:
+
+    markdown_extensions:
+        - toc:
+            permalink: "#"
 </code></pre>
-</dd>
-</dl>
 <hr />
 <h2 id="katex">Katex</h2>
 <pre><code>$$

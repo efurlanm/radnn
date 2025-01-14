@@ -1,4 +1,4 @@
-# Last edited: 2024-12-25
+# Last edited: 2025-01-14
 # This is a work in progress and, so, subject to constant change.
 site_name: RADNN
 site_author: Eduardo Furlan
@@ -10,18 +10,7 @@ copyright: CC BY 4.0 License
 site_dir: docs
 docs_dir: src
 theme:
-    #name: material
     name: readthedocs
-    # squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
-    #palette:
-        #primary: grey
-        #accent: grey
-    features:
-        #- header.autohide
-        - navigation.instant
-        - navigation.tracking   # address show active anchor
-plugins:
-        - search
 extra_css:
     - docs-assets/extra.css
     - docs-assets/katex/katex.min.css
@@ -31,9 +20,8 @@ extra_javascript:
     - docs-assets/katex/contrib/auto-render.min.js
 markdown_extensions:
     - tables
-    - def_list
     - pymdownx.arithmatex:
-        generic: true     # katex
+        generic: true           # katex
 not_in_nav: |
     docs-assets/
 exclude_docs: |
