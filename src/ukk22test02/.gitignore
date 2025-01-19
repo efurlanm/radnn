@@ -1,0 +1,59 @@
+# Module files
+*.mod
+
+# Libraries
+*.a
+
+# Object files
+*.o
+
+# Intel vectorization reports
+*.optrpt
+
+__pycache__
+
+timing.*
+
+examples/ckdmip/
+examples/garand/
+examples/rfmip-clear-sky/input/
+examples/rfmip-clear-sky/old/
+examples/rfmip-clear-sky/timings/
+examples/rfmip-clear-sky/rrtmgp_rfmip_lw
+examples/rfmip-clear-sky/rrtmgp_rfmip_sw
+examples/rfmip-clear-sky/timing*
+examples/rfmip-clear-sky/*.pgprof
+examples/rfmip-clear-sky/*.qdrep
+*__genmod.f90
+
+examples/all-sky/ref
+examples/all-sky/rrtmgp-allsky.nc
+
+examples/emulator-training/data_training/
+examples/emulator-training/allsky_sw_gendata
+examples/emulator-training/allsky_sw_testmodels
+examples/emulator-training/scripts/CAMS_download_and_preprocess/tmp/*
+examples/emulator-training/scripts/lightning_logs/
+examples/emulator-training/scripts/logs/
+examples/emulator-training/fluxes/*
+
+*.pgprof
+*.gprof
+gprof*
+*.out
+
+# Don't commit specific Makefile variants
+Makefile.libs
+Makefile.conf
+
+# Intel code coverage
+*.dyn
+*.dpi
+*.spi
+*.spl
+*.HTML
+*.html
+*.gif
+
+#Neural network Keras model weight files (not read by program)
+neural/data/*.h5

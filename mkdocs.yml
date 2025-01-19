@@ -1,0 +1,66 @@
+# Last edited: 2025-01-14
+# This is a work in progress and, so, subject to constant change.
+site_name: RADNN
+site_author: Eduardo Furlan
+site_description: radnn repository documentation
+site_url: https://efurlanm.github.io/radnn/
+copyright: CC BY 4.0 License
+repo_name: radnn
+repo_url: https://github.com/efurlanm/radnn/
+site_dir: docs
+docs_dir: src
+use_directory_urls: false
+theme:
+    name: readthedocs
+extra_css:
+    - assets/extra.css
+    - assets/katex/katex.min.css
+extra_javascript:
+    - assets/katex.js
+    - assets/katex/katex.min.js
+    - assets/katex/contrib/auto-render.min.js
+markdown_extensions:
+    - tables
+    - pymdownx.arithmatex:
+        generic: true           # katex
+not_in_nav: |
+    assets/
+exclude_docs: |
+    .*
+    *§*
+    *.F90*
+    *.f90*
+    *.mod
+    *.h
+    *.o
+    *.a
+    *.out
+    *.nc
+    *.py
+    *.pyc
+    *.npy
+    *.sh
+    rrtmgp_*
+    Make*
+    *.yml
+    *LICENSE*
+    *.m
+    *.nam
+    *.mat
+    CONVENTIONS
+    clean
+    MODIFICATIONS
+    *.cfg
+    NOTICE
+    TODO
+    CHANGELOG
+    *variables*
+    COPYING
+    *.pl
+    *.ipynb
+    library-zotero/*
+validation:
+    links:
+        not_found: ignore
+
+#     *data*
