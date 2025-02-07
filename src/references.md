@@ -3,7 +3,6 @@
 The references below contain additional information such as comments, code, and data. The GitHub repositories cited use the GIT version control system, and two terms appear: "Branches" and "Tags". Branches are used for parallel development and can change as new commits are added. Tags are used to mark important points in the project's history and are generally immutable. Zenodo repositories, in addition to files, have descriptions with more information, and even more references.
 
 
-
 ## Papers
 
 (unordered)
@@ -132,3 +131,6 @@ The references below contain additional information such as comments, code, and 
 ## Other
 
 [Other references](references.bib) - file in BibTex format containing  other references and also the previous references on this page.
+
+
+<br><sub>Last edited: 2025-02-07 12:48:35</sub>

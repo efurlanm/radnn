@@ -1,8 +1,7 @@
 # RADNN
 
-*Last edited: 2025-01-14  
 Repository: <https://github.com/efurlanm/radnn>  
-Documentation: <http://efurlanm.github.io/radnn>*
+Documentation: <http://efurlanm.github.io/radnn>
 
 This repository contains some of my research on the application of physics-based machine learning (PIML) to scientific problems, and also includes some experiments done in climate and weather modeling, as well as some of my personal notes. The documentation attempts to provide an overview of the repository structure (most of it was not created by me), and uses Markdown files that are distributed throughout the various directories. There is also an HTML version at <http://efurlanm.github.io/radnn> . As the research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.
 
@@ -102,3 +101,6 @@ The complete listing of the `data/` directory is available in [listingdata](list
 ## My personal notes 
 
 I keep a separate page with some [personal notes](notes.md).
+
+
+<br><sub>Last edited: 2025-02-07 11:21:27</sub>

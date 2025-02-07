@@ -37,3 +37,6 @@ This page contains my personal random notes on different subjects.
 ## Documentation
 
 The documentation uses the [MkDocs](https://www.mkdocs.org/) static documentation page generator and the Markdown files available in the subdirectories. To write the documentation on the local machine, the `mkdocs serve` command for the "write-build-check-repeat-loop" is used, and the final documentation is generated using `mkdocs build`.
+
+
+<br><sub>Last edited: 2024-12-22 22:38:29</sub>
