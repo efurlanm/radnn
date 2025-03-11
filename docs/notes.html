@@ -168,11 +168,14 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="notes">Notes</h1>
-<p>This page contains my personal random notes on different subjects.</p>
+<p>This page contains some of my personal notes, which I make over time.</p>
 <h2 id="general-notes">General notes</h2>
 <ul>
 <li>
-<p><strong>From</strong> <a href="https://github.com/peterukk/rte-rrtmgp-nn/tree/2.0">https://github.com/peterukk/rte-rrtmgp-nn/tree/2.0</a> - Instead of the original lookup-table interpolation routine and "eta" parameter to handle the overlapping absorption of gases in a given band, this fork implements neural networks (NNs) to predict optical properties for given atmospheric conditions and gas concentrations, which includes all minor longwave (LW) gases supported by RRTMGP. The NNs predict molecular absorption (LW/SW), scattering (SW) or emission (LW) for all spectral points from an input vector consisting of temperature, pressure and gas concentrations of an atmospheric layer. The models have been trained on 6-7 million samples (LW) spanning a wide range of conditions (pre-industrial, present-day, future...) so that they may be used for both weather and climate applications.</p>
+<p><strong>From</strong> <a href="https://github.com/peterukk/rte-rrtmgp-nn/tree/2.0">https://github.com/peterukk/rte-rrtmgp-nn/tree/2.0</a> </p>
+<ul>
+<li>Instead of the original lookup-table interpolation routine and "eta" parameter to handle the overlapping absorption of gases in a given band, this fork implements neural networks (NNs) to predict optical properties for given atmospheric conditions and gas concentrations, which includes all minor longwave (LW) gases supported by RRTMGP. The NNs predict molecular absorption (LW/SW), scattering (SW) or emission (LW) for all spectral points from an input vector consisting of temperature, pressure and gas concentrations of an atmospheric layer. The models have been trained on 6-7 million samples (LW) spanning a wide range of conditions (pre-industrial, present-day, future...) so that they may be used for both weather and climate applications.</li>
+</ul>
 </li>
 <li>
 <p><strong>From</strong> <a href="https://zenodo.org/records/7413952">https://zenodo.org/records/7413952</a> :</p>
@@ -182,7 +185,7 @@
 </ul>
 </li>
 <li>
-<p><strong>From</strong> [<a href="references.html#Ukk20">Ukk20</a>] :</p>
+<p><strong>From</strong> [<a href="references.html#Ukk20">Ukk20</a>]</p>
 <ul>
 <li>The GPTL profiler was used to profile the code. <a href="https://jmrosinski.github.io/GPTL/">https://jmrosinski.github.io/GPTL/</a></li>
 <li>Also used to obtain data: RFMIP (Radiative Forcing Model Intercomparison Project).</li>
@@ -193,13 +196,21 @@
 </ul>
 </li>
 <li>Scripts and data used in this paper are available online: <a href="https://doi.org/10.5281/zenodo.3909653">https://doi.org/10.5281/zenodo.3909653</a></li>
+<li>"The NNs, implemented in Fortran and utilizing BLAS for batched inference, are faster by a factor of 1–6, depending on the software and hardware platforms. We combined the accelerated gas optics with a refactored radiative transfer solver, resulting in clear-sky longwave (shortwave) fluxes being 3.5 (1.8) faster to compute on an Intel platform."</li>
+<li>"radiation is often one of the most expensive components in climate models, accounting for nearly 50% of the runtime of the ECHAM atmospheric model in coarse-resolution configurations (Cotronei &amp; Slawig, 2020)"</li>
 </ul>
 </li>
 <li>
-<p><strong>RTE+RRTMGP</strong> [<a href="references.html#Pin19">Pin19</a>] - is a recently developed <strong>radiation transfer scheme</strong> for dynamical models combining two codes: Radiative Transfer for Energetics (RTE), which computes fluxes given a description of boundary conditions, source functions and optical properties of the atmosphere, and RRTM for General circulation model applications — Parallel (RRTMGP), which computes optical properties and source functions of the gaseous atmosphere. The <strong>gas optics scheme RRTMGP</strong> uses a k-distribution based on state-of-the-art spectroscopy, and has 256 g-points in the longwave and 224 g-points in the shortwave, which is high compared to many other schemes. [<a href="references.html#Ukk20">Ukk20</a>]</p>
+<p><strong>RTE+RRTMGP</strong> [<a href="references.html#Pin19">Pin19</a>] </p>
+<ul>
+<li>is a recently developed <strong>radiation transfer scheme</strong> for dynamical models combining two codes: Radiative Transfer for Energetics (RTE), which computes fluxes given a description of boundary conditions, source functions and optical properties of the atmosphere, and RRTM for General circulation model applications — Parallel (RRTMGP), which computes optical properties and source functions of the gaseous atmosphere. The <strong>gas optics scheme RRTMGP</strong> uses a k-distribution based on state-of-the-art spectroscopy, and has 256 g-points in the longwave and 224 g-points in the shortwave, which is high compared to many other schemes. [<a href="references.html#Ukk20">Ukk20</a>]</li>
+</ul>
 </li>
 <li>
-<p><strong>Neural Fortran</strong> - The NN inference and I/O code in RRTGMP-NN is based on Neural-Fortran  [<a href="references.html#Cur19">Cur19</a>].</p>
+<p><strong>Neural Fortran</strong> </p>
+<ul>
+<li>The NN inference and I/O code in RRTGMP-NN is based on Neural-Fortran  [<a href="references.html#Cur19">Cur19</a>].</li>
+</ul>
 </li>
 </ul>
 <h2 id="table-of-contents-toc">Table of Contents (TOC)</h2>
@@ -213,7 +224,7 @@
 </ul>
 <h2 id="documentation">Documentation</h2>
 <p>The documentation uses the <a href="https://www.mkdocs.org/">MkDocs</a> static documentation page generator and the Markdown files available in the subdirectories. To write the documentation on the local machine, the <code>mkdocs serve</code> command for the "write-build-check-repeat-loop" is used, and the final documentation is generated using <code>mkdocs build</code>.</p>
-<p><br><sub>Last edited: 2024-12-22 22:38:29</sub></p>
+<p><br><sub>Last edited: 2025-02-08 00:16:09</sub></p>
               
             </div>
           </div><footer>

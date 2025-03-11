@@ -178,14 +178,8 @@ program rrtmgp_rfmip_sw
   !   all arguments are optional
   !
   !  ------------ I/O and settings -----------------
-
-  
-!======================================
   ! Use neural networks for gas optics? 
   use_rrtmgp_nn = .true.
-!======================================
-
-
   ! Save fluxes
   save_flux = .false.
   ! compare fluxes to reference code as well as line-by-line (RFMIP only)
@@ -197,19 +191,14 @@ program rrtmgp_rfmip_sw
   modelfile_tau           = "../../neural/data/BEST_tau-sw-abs-7-16-16-mae_2.txt" 
   modelfile_ray           = "../../neural/data/BEST_tau-sw-ray-7-16-16_2.txt"
 
-
-!======================================
   if (use_rrtmgp_nn) then
-    print*, "=== using rrtmgp_nn ===" !#ef
-    print *, 'loading shortwave absorption model from ', modelfile_tau
+	  print *, 'loading shortwave absorption model from ', modelfile_tau
     call neural_nets(1) % load(modelfile_tau)
     print *, 'loading rayleigh model from ', modelfile_ray
     call neural_nets(2) % load(modelfile_ray)
     ninputs = size(neural_nets(1) % layers(1) % w_transposed, 2)
   end if  
   ! Note: The coefficients for scaling the inputs and outputs are currently hard-coded in mo_gas_optics_rrtmgp.F90
-!======================================
-
 
   print *, "Usage: rrtmgp_rfmip_sw [block_size] [rfmip_file] [k-distribution_file] [forcing_index (1,2,3)] [optional gas optics input_output file]"
   nargs = command_argument_count()

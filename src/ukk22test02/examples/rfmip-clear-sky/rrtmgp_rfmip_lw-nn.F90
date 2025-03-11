@@ -176,7 +176,6 @@ program rrtmgp_rfmip_lw
 !======================================
   ! Use neural networks for gas optics? 
   use_rrtmgp_nn = .true.
-  print*, 
 !======================================
 
 
@@ -196,7 +195,7 @@ program rrtmgp_rfmip_lw
 
 !======================================
   if (use_rrtmgp_nn) then
-    print*, "=== using rrtmgp_nn ===" !#ef
+    print*, "=== using rrtmgp_nn, line 198 ===" !#ef
     print *, 'loading longwave absorption model from ', modelfile_tau
     call neural_nets(1) % load(modelfile_tau)
     print *, 'loading Planck fraction model from ', modelfile_source
@@ -336,13 +335,27 @@ program rrtmgp_rfmip_lw
 #endif
 
 
+!======================================
   if (use_rrtmgp_nn) then
-    print*, "=== using rrtmgp_nn ===" !#ef
+    print*, "=== using rrtmgp_nn, line 340 ===" !#ef
     print *, "starting clear-sky longwave computations, using neural networks as RRTMGP kernel"
+!======================================
+
   else
     print*, "=== using rrtmgp (without nn), line 340 ===" !#ef
     print *, "starting clear-sky longwave computations, using lookup-table as RRTMGP kernel"
   end if
+
+
+
+
+
+
+
+
+
+
+
   call system_clock(count_rate=count_rate) ! Find the time rate
   call system_clock(iTime1)  !<<<<<<<<<<<<<<<<<<<<<<<<<
   !

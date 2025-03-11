@@ -1,5 +1,7 @@
 # RTE+RRTMGP-NN
 
+https://github.com/peterukk/rte-rrtmgp-nn/tree/2.0
+
 RTE+RRTMGP-NN is an accelerated version of RTE+RRTMGP using neural networks for the gas optics, and a refactored radiative transfer solver
 
 ## Recent changes

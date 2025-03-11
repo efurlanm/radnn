@@ -1,8 +1,11 @@
 # RTE+RRTMGP-NN `nn_dev`
 
+https://github.com/peterukk/rte-rrtmgp-nn/tree/nn_dev
+
 RTE+RRTMGP-NN is an accelerated version of RTE+RRTMGP using neural networks for the gas optics, and a refactored radiative transfer solver 
 
 ## Recent changes
+
 May 2021: Cloud extension and all-sky example now working! Furthermore, cleanup of RTE - no longer separate functions for "broadline fluxes only", instead a logical is passed to indicate whether only broadband fluxes are needed. Some further GPU optimizations for RTE kernels.
 
 January 2021: Use of two source functions (one for layers and one for levels) instead of three (one for layers and two for levels) like in RRTMGP. This had no significant accuracy loss and is faster. RRTMGP(-NN) also now computes the full spectral source functions instead of band-wise sources and finishing the computations in RTE (this was about as fast as the current source implementation, but clunky)
