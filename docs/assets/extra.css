@@ -38,15 +38,13 @@
 
 
 
-
-
 /* Styles for lists */
 
 .rst-content .section ul li,
 .rst-content .section ol li {
     padding-top: 0;
     padding-bottom: 0; /* 0.5rem */
-    margin-top: 0;
+        margin-top: 0;
 }
 
 /* Remove vertical spacing for li's WITHOUT paragraphs */
@@ -68,8 +66,8 @@
 .rst-content .section ol ol li,
 .rst-content .section ul ol li,
 .rst-content .section ol ul li {
-    padding-top: 0rem;
-    padding-bottom: 0.25em; /* 0.5rem */
+    padding-top: 0;
+    padding-bottom: 0.5em;
 }
 
 /* Spacing for paragraphs INSIDE list items of NESTED lists */
@@ -77,7 +75,8 @@
 .rst-content .section ol ol li > p,
 .rst-content .section ul ol li > p,
 .rst-content .section ol ul li > p {
-    margin-bottom: 0.25em; /* 0.5rem */
+    margin-top: 0;
+    margin-bottom: 0.25em;
 }
 
 /* Remove vertical spacing for li WITHOUT paragraphs in NESTED lists */
@@ -87,7 +86,8 @@
 .rst-content .section ol ul li:not(:has(p)){
     padding-top: 0;
     padding-bottom: 0;
-    margin-bottom: 0;  /* */
+    margin-bottom: 0;
+    padding-bottom: 1em;
 }
 
 .rst-content .section > ul > li {
@@ -103,6 +103,8 @@
 .rst-content .section ul li > ul {
     margin-bottom: 0;
 }
+
+
 
 
 
