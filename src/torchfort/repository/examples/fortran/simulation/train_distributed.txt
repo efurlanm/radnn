@@ -1,0 +1,19 @@
+Para rodar o exemplo `train_distributed` do NVIDIA TorchFort na CPU, você ainda precisa executá-lo usando `mpirun` com 2 ranks, porque o código Fortran tem uma verificação explícita (`if (nranks /= 2) then stop`) que força a execução com exatamente 2 processos MPI.
+
+No entanto, você pode instruir o programa a usar a CPU para as partes de simulação e treinamento/inferência, passando os argumentos de linha de comando `--simulation_device -1` e `--train_device -1`. O valor `-1` geralmente indica o uso da CPU no contexto desses exemplos e da biblioteca TorchFort/OpenACC.
+
+Assumindo que você já construiu a imagem Docker e o projeto dentro dela (o que inclui a compilação do executável `train_distributed`), e que você está dentro do contêiner ou executando a partir dele, o comando seria:
+
+```bash
+mpirun -np 2 ./caminho/para/seu/executavel/train_distributed --simulation_device -1 --train_device -1 --configfile config_mlp_native.yaml
+```
+
+**Explicação do Comando:**
+
+* `mpirun -np 2`: Inicia a execução do programa `train_distributed` usando MPI com 2 processos (o que o código exige).
+* `./caminho/para/seu/executavel/train_distributed`: O caminho para o executável compilado dentro do contêiner (provavelmente algo como `/opt/torchfort/bin/examples/fortran/simulation/train_distributed` ou similar, dependendo do seu `CMAKE_INSTALL_PREFIX` e estrutura de pastas).
+* `--simulation_device -1`: Diz ao programa para rodar a parte da simulação na CPU.
+* `--train_device -1`: Diz ao programa para rodar a parte de treinamento/inferência do modelo na CPU.
+* `--configfile config_mlp_native.yaml`: Especifica o arquivo de configuração a ser usado pelo TorchFort. `config_mlp_native.yaml` é o padrão, mas é bom explicitá-lo. Certifique-se de que o caminho para este arquivo esteja correto ou que ele esteja no diretório de execução (geralmente ele é instalado junto com o executável).
+
+Ao executar este comando, os 2 processos MPI serão iniciados, eles passarão pela verificação de `nranks == 2`, e então a lógica subsequente tentará usar a CPU onde especificado pelos argumentos `-1`. As comunicações MPI para shuffling de dados ainda ocorrerão, mas as operações de simulação e tensor (via TorchFort/PyTorch) serão direcionadas para a CPU em vez da GPU. 
