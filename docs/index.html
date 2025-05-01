@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="radnn repository documentation" /><meta name="author" content="Eduardo Furlan" /><link rel="canonical" href="https://efurlanm.github.io/radnn/index.html" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>RADNN</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="assets/extra.css" rel="stylesheet" />
+        <link href="assets/katex/katex.min.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "RADNN";
+        var mkdocs_page_input_path = "README.md";
+        var mkdocs_page_url = "/radnn/index.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="index.html" class="icon icon-home"> RADNN
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">RADNN</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#some-directories">Some directories</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#notebooks">Notebooks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#other-files">Other files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#code-and-data">Code and data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#my-personal-notes">My personal notes</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="ecrad-radiation-user-guide-2022.html">ecRad radiation scheme: User Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="env.html">Conda environment</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="notes.html">Notes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="references.html">Some references and comments</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ecrad</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="ecrad/index.html">ECRAD - ECMWF atmospheric radiation scheme</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tf lib</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Fortran tf lib</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="tf-lib/fortran-tf-lib/index.html">Fortran-TF-lib</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Fortran tf lib</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="tf-lib/fortran-tf-lib/fortran-tf-lib/README2.html">The Fortran to TensorFlow library</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Torchfort</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Markdown doc</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="torchfort/markdown-doc/index.html">TorchFort: An Online Deep Learning Interface for HPC programs on NVIDIA GPUs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="torchfort/markdown-doc/api.html">TorchFort API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="torchfort/markdown-doc/c_api.html">TorchFort C API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="torchfort/markdown-doc/config.html">TorchFort Configuration Files</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="torchfort/markdown-doc/extras.html">Extras</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="torchfort/markdown-doc/f_api.html">TorchFort Fortran API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="torchfort/markdown-doc/usage.html">Usage Guide</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Torchfort repo</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="torchfort/torchfort-repo/index.html">TorchFort</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Examples</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" >Cpp</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" >Cart pole</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" >Fortran</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" >Graph</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >Simulation</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk22test02</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="ukk22test02/index.html">RTE+RRTMGP-NN nn_dev</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="ukk22test02/Contributing.html">Contributing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Examples</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >All sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="ukk22test02/examples/all-sky/index.html">All-sky example</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emulator training</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="ukk22test02/examples/emulator-training/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rfmip clear sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="ukk22test02/examples/rfmip-clear-sky/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk23eo01</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="ukk23eo01/index.html">ECRAD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Rrtmgp nn</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="ukk23eo01/rrtmgp-nn/index.html">RTE+RRTMGP-NN</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk23test01</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="ukk23test01/index.html">RTE+RRTMGP-NN</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="ukk23test01/Contributing.html">Contributing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Examples</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >All sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="ukk23test01/examples/all-sky/index.html">All-sky example</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rfmip clear sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="ukk23test01/examples/rfmip-clear-sky/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rrtmgp nn training</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="ukk23test01/examples/rrtmgp-nn-training/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RADNN</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">RADNN</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/efurlanm/radnn/edit/master/docs/README.md">Edit on radnn</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="radnn">RADNN</h1>
+<p>Repository: <a href="https://github.com/efurlanm/radnn">https://github.com/efurlanm/radnn</a><br />
+Documentation: <a href="http://efurlanm.github.io/radnn">http://efurlanm.github.io/radnn</a></p>
+<p>This repository houses my research notes on physics-based machine learning (PIML) applied to scientific problems, including experiments in climate and weather modeling. Documentation, available in Markdown files and online at <a href="http://efurlanm.github.io/radnn">RADNN</a>, provides a repository overview (including third-party documentation) and is distributed throughout the directories. As the research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.</p>
+<h2 id="some-directories">Some directories</h2>
+<ul>
+<li>
+<p><a href="ukk23test01/index.html">ukk23test01</a> : tests performed on a clone of the git branch <strong>main</strong>, described in <a href="references.html#Ukk22">[Ukk22]</a>. <a href="https://github.com/peterukk/rte-rrtmgp-nn/tree/2.0">https://github.com/peterukk/rte-rrtmgp-nn/tree/2.0</a> . Includes the <code>examples/rrtmgp-nn-training</code> subdirectory with the implementation for NN gas optics training.</p>
+</li>
+<li>
+<p><a href="ukk22test02/index.html">ukk22test02</a> : tests performed on a clone of the git branch <strong>nn_dev</strong>, described in <a href="references.html#Ukk22c">[Ukk22c]</a>. <a href="https://github.com/peterukk/rte-rrtmgp-nn/tree/nn_dev/">https://github.com/peterukk/rte-rrtmgp-nn/tree/nn_dev/</a> .  Includes the <code>examples/rrtmgp-nn-training</code> subdirectory with the implementation for NN gas optics training.</p>
+</li>
+<li>
+<p><a href="ukk23eo01/index.html">ukk23eo01</a> : "ecRad-NN". Contains the optimized version of the ecRad radiation scheme, with the new RRTMGP-NN gas optics, from <a href="https://github.com/peterukk/ecrad-opt">https://github.com/peterukk/ecrad-opt</a> branch <code>clean_no_opt_testing</code> , described in <a href="references.html#Ukk22a">[Ukk22a]</a>. Does not contain the implementation that does the NN training (the implementation, development and testing of RRTMGP-NN is described in <a href="references.html#Ukk23">[Ukk23]</a>).</p>
+</li>
+<li>
+<p><a href="ecrad/index.html">ecrad</a> : original ecRad repo, without NN. <a href="https://github.com/ecmwf-ifs/ecrad">https://github.com/ecmwf-ifs/ecrad</a> .</p>
+</li>
+</ul>
+<h2 id="notebooks">Notebooks</h2>
+<p>(unordered)</p>
+<ul>
+<li>
+<p><a href="rfmip02-clear-sky-NN.ipynb">rfmip02-clear-sky-NN-02.ipynb</a> : junk copy used for various tests.</p>
+</li>
+<li>
+<p><a href="rfmip02-clear-sky.ipynb">rfmip02-clear-sky-02.ipynb</a> : junk copy used for various tests.</p>
+</li>
+<li>
+<p><a href="rfmip02-clear-sky-NN.ipynb">rfmip02-clear-sky-NN.ipynb</a> : "RRTMG-NN". Runs the RFMIP-CLEAR-SKY example with NN, from ukk22test02 dir.</p>
+</li>
+<li>
+<p><a href="rfmip02-clear-sky.ipynb">rfmip02-clear-sky.ipynb</a> : "RRTMG". Runs the RFMIP-CLEAR-SKY example without NN, from ukk22test02 dir.</p>
+</li>
+<li>
+<p><a href="rrtmgp_rfmip_lw-test01.ipynb">rrtmgp_rfmip_lw-test01.ipynb</a> : example program to demonstrate the calculation of longwave radiative fluxes in clear, aerosol-free skies. Based on <code>rfmip-clear-sky/rrtmgp_rfmip_lw.F90</code> from git branch <strong>main</strong>.</p>
+</li>
+<li>
+<p><a href="ukk23test01-train-v2.ipynb">ukk23test01-train-v2.ipynb</a> : continuation of <code>ukk23test01-train-v1.ipynb</code>, adding more documentation, better organization, complete training, etc.</p>
+</li>
+<li>
+<p><a href="ukk23test01-train-v1.ipynb">ukk23test01-train-v1.ipynb</a> : generates files containing the NN model that is later used in the RRTMGP-NN model. The implementation uses TensorFlow/Python for training the NN, and Fortran routines are used to generate the training dataset. Based on Ukk22 git main branch.</p>
+</li>
+<li>
+<p><a href="ukk23test01-train-sd-v240823.ipynb">ukk23test01-train-sd-v240823.ipynb</a> : NN network training for the optical gas radiation problem, running on SDumont.</p>
+</li>
+<li>
+<p><a href="rfmip01-clear-sky.ipynb">rfmip01-clear-sky.ipynb</a> : runs the RFMIP-CLEAR-SKY example, from ukk23test01 dir, described in <a href="references.html#Ukk22">[Ukk22]</a>. Was "ukk23test01-rfmip-clear-sky.ipynb".</p>
+</li>
+<li>
+<p><a href="ecrad01-NN-gprof.ipynb">ecrad01-NN-gprof.ipynb</a> : "ecRad-NN". Gprof of ecRad from <code>ukk23eo01</code> dir (uses RRTMGP-NN). Was "ukk23eo01-NN-gprof.ipynb".</p>
+</li>
+<li>
+<p><a href="ecrad01-gprof.ipynb">ecrad01-gprof.ipynb</a> : "ecRad". Gprof of ecrad (without NN) executable from ecrad dir.</p>
+</li>
+<li>
+<p><a href="ecrad-01-sd-v240823.ipynb">ecrad-01-sd-v240823.ipynb</a> : shows the original ecRad radiation module using conventional numerical method, running on SDumont.</p>
+</li>
+<li>
+<p><a href="ecrad-01-gc.ipynb">ecrad-01-gc.ipynb</a> : ecRad compiling and running on Google Colab.</p>
+</li>
+</ul>
+<h2 id="other-files">Other files</h2>
+<ul>
+<li>
+<p><a href="ecrad-radiation-user-guide-2022.html">ecrad-radiation-user-guide-2022</a> : ecRad Radiation Scheme User Guide document converted from PDF to HTML. Source: [Hogan, R. J. <a href="https://confluence.ecmwf.int/download/attachments/70945505/ecrad_documentation.pdf?version=5&amp;modificationDate=1655480733414&amp;api=v2">ecRad radiation scheme: User Guide</a>. Version 1.5 (June 2022) applicable to ecRad version 1.5.x].</p>
+</li>
+<li>
+<p><code>*.txt</code> and <code>*.yml</code> are auxiliary files.</p>
+</li>
+<li>
+<p><code>*.nc</code> files are of type NetCDF4 and can be browsed and their structure visualized using the Java tool <a href="https://docs.unidata.ucar.edu/netcdf-java/current/userguide/reading_cdm.html">ToolsUI</a> or using the Python library <a href="https://github.com/Unidata/netcdf4-python">netcdf4-python</a>.</p>
+</li>
+<li>
+<p><a href="env.html">env</a> :  briefly describes the environment used in the Notebooks.</p>
+</li>
+</ul>
+<p>Please note that due to space constraints on Github, not all files used are present. The <a href="https://github.com/efurlanm/radnn/blob/main/.gitignore">.gitignore</a> file in the root of the repository contains a list of ignored files. The complete listing of the <code>src/</code> directory on the local machine is available in <a href="listingsrc.html">listingsrc</a>.</p>
+<h2 id="code-and-data">Code and data</h2>
+<p>Due to size restrictions, the data is not present in this repository and must be obtained and installed from several sources:</p>
+<ul>
+<li><a href="https://zenodo.org/records/7413952">https://zenodo.org/records/7413952</a> <a href="references.html#Ukk22d">[Ukk22d]</a></li>
+<li><a href="https://zenodo.org/records/5564314">https://zenodo.org/records/5564314</a> <a href="references.html#Ukk22c">[Ukk22c]</a></li>
+<li><a href="https://zenodo.org/records/7852526">https://zenodo.org/records/7852526</a> <a href="references.html#Ukk22a">[Ukk22a]</a></li>
+<li><a href="https://zenodo.org/records/7413935">https://zenodo.org/records/7413935</a> <a href="references.html#Ukk22">[Ukk22]</a></li>
+<li><a href="https://github.com/peterukk/rte-rrtmgp-nn">https://github.com/peterukk/rte-rrtmgp-nn</a> <a href="references.html#Ukk22">[Ukk22]</a></li>
+<li><a href="https://zenodo.org/records/5833494">https://zenodo.org/records/5833494</a> <a href="references.html#Ukk21">[Ukk21]</a></li>
+<li><a href="https://zenodo.org/records/4030436">https://zenodo.org/records/4030436</a> <a href="references.html#Ukk20">[Ukk20]</a></li>
+<li><a href="https://zenodo.org/records/4029138">https://zenodo.org/records/4029138</a> <a href="references.html#Ukk20">[Ukk20]</a></li>
+</ul>
+<p>The repositories in <a href="https://github.com/peterukk">https://github.com/peterukk</a> contain code and some data, distributed across different repo branches. The RTE+RRTMGP-NN is available on:</p>
+<ul>
+<li>
+<p><a href="https://github.com/peterukk/rte-rrtmgp-nn">https://github.com/peterukk/rte-rrtmgp-nn</a> (there are multiple branches in the repository containing different data files).</p>
+</li>
+<li>
+<p><a href="https://doi.org/10.5281/zenodo.7413935">https://doi.org/10.5281/zenodo.7413935</a> <a href="references.html#Ukk22">[Ukk22]</a>. The link redirects to: <a href="https://zenodo.org/records/7413935">https://zenodo.org/records/7413935</a> . "peterukk/rte-rrtmgp-nn: 2.0".</p>
+</li>
+<li>
+<p>The Fortran programs and Python scripts used for data generation and model training are found in the directory <code>examples/rrtmgp-nn-training</code>.</p>
+</li>
+</ul>
+<p>The training data and the archived version of RTE+RRTMGP-NN 2.0 with its training scripts are available at <a href="https://doi.org/10.5281/zenodo.6576680">https://doi.org/10.5281/zenodo.6576680</a> (see <a href="references.html#Ukk22d">[Ukk22d]</a>). The link redirects to: <a href="https://zenodo.org/records/7413952">https://zenodo.org/records/7413952</a> . "Code and extensive data for training neural networks for radiation, used in "Implementation of a machine-learned gas optics parameterization in the ECMWF Integrated Forecasting System: RRTMGP-NN 2.0" ".</p>
+<p>The optimized version of the ecRad radiation scheme integrated with RRTMGP-NN 2.0 can be accessed at: <a href="https://doi.org/10.5281/zenodo.7148329">https://doi.org/10.5281/zenodo.7148329</a> (see <a href="references.html#Ukk22a">[Ukk22a]</a>). The link redirects to: <a href="https://zenodo.org/records/7852526">https://zenodo.org/records/7852526</a> . "Optimized version of the ecRad radiation scheme with new RRTMGP-NN gas optics".</p>
+<p>There is a data repository hosted on Zenodo titled "Training and evaluation data for machine learning models emulating the RTE+RRTMGP radiation scheme or its components". In this repository there are 3 versions of the data, each version with a DOI and address:</p>
+<ul>
+<li>Version 3: <a href="https://doi.org/10.5281/zenodo.5833494">https://doi.org/10.5281/zenodo.5833494</a></li>
+<li>Version 2: <a href="https://doi.org/10.5281/zenodo.5564314">https://doi.org/10.5281/zenodo.5564314</a></li>
+<li>Version 1: <a href="https://doi.org/10.5281/zenodo.5513435">https://doi.org/10.5281/zenodo.5513435</a></li>
+</ul>
+<p>The complete listing of the <code>data/</code> directory is available in <a href="listingdata.html">listingdata</a>.</p>
+<h2 id="my-personal-notes">My personal notes</h2>
+<p>I keep a separate page with some <a href="notes.html">personal notes</a>.</p>
+<p><br><sub>Last edited: 2025-02-23 14:31:50</sub></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="ecrad-radiation-user-guide-2022.html" class="btn btn-neutral float-right" title="ecRad radiation scheme: User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC BY 4.0 License</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/efurlanm/radnn/" class="fa fa-code-fork" style="color: #fcfcfc"> radnn</a>
+        </span>
+    
+    
+    
+      <span><a href="ecrad-radiation-user-guide-2022.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="assets/katex.js"></script>
+      <script src="assets/katex/katex.min.js"></script>
+      <script src="assets/katex/contrib/auto-render.min.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-05-01 13:24:46.791653+00:00
+-->

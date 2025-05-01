@@ -30,19 +30,19 @@ where $\sigma$ is the function that represents the model.
 For this example, we use the analytical solution as a stand-in for a real numerical solver, sequentially generating $u(x,y,t)$ samples
 at $\Delta t = 0.01$ intervals in time over the course of training. We compute corresponding analytical divergence fields, $\nabla \cdot (\mathbf{a} u(x,y,t))$,
 to use as training labels. This is by no means a rigorous training task, but provides us an opportunity to illustrate how to integrate
-TorchFort in a typical numerical simulation loop. 
+TorchFort in a typical numerical simulation loop.
 
 ## General Details
 
 The example code is split into two main source files.
 
 [`simulation.f90`](simulation.f90) defines a Fortran module to control the simulation. It has an initialization suboutine and a subroutine to advance the solution in time,
-returning both the scalar solution field, `u`, and corresponding divergence field, `u_div`. 
+returning both the scalar solution field, `u`, and corresponding divergence field, `u_div`.
 
 [`train.f90`](train.f90) contains the main program and training/inference loops. The simulation is run on a small numerical grid of $32^2$ points in single precision.
 For training, we run 100,000 training steps with a minibatch size of 16. In other words, we advance and collect training samples from the simulation 16 times per training step.
 After training is complete, we run a validation loop over 1,000 additional samples with a minibatch size of 1. At the end of the program, a training checkpoint and trained
-model are saved using TorchFort utilities. For completeness, the program also enables loading TorchFort checkpoints; however, this is mostly for demostrative purposes as 
+model are saved using TorchFort utilities. For completeness, the program also enables loading TorchFort checkpoints; however, this is mostly for demostrative purposes as
 this example should run fast and not require checkpoint/restart to complete. Run `./train -h` for a full listing of command line options available.
 
 The Fortran program is GPU-accelerated using OpenACC, a common directive-based programming approach in HPC. This example also demonstates OpenACC
@@ -51,7 +51,7 @@ compatibility with TorchFort.
 ## Training a simple MLP using the built-in MLP model
 
 First, we will run the training using the built-in MLP model available in TorchFort using the provided [`config_mlp_native.yaml`](config_mlp_native.yaml) file.
-TorchFort contains a configurable MLP model (defined in [`mlp_model.cpp`](/src/csrc/models/mlp_model.cpp)) that can be used directly by users who
+TorchFort contains a configurable MLP model (defined in [`mlp_model.cpp`](../../../src/csrc/models/mlp_model.cpp)) that can be used directly by users who
 only require these simple networks. We select this model by defining the following block in the configuration file:
 
 ```
@@ -128,7 +128,7 @@ any number of different model architectures you can define and export from PyTor
 
 ## Multi-GPU Training
 
-TorchFort supports basic data-parallel training of models which we demonstrate in this last case. 
+TorchFort supports basic data-parallel training of models which we demonstrate in this last case.
 
 [`train_distributed.f90`](train_distributed.f90) contains the main program, modified to run on two GPUs. Each GPU generates simulation data for only half of the computational grid at
 a given timestep, emulating a typical numerical code using a _slab_ data decomposition; however, the models require the data for the full computation grid for training.
@@ -136,7 +136,7 @@ For each training step, the program runs and gathers 16 training samples from th
 for half of the computational domain. `MPI_Alltoallv` is used to redistribute the sample data so that ultimately each GPU contains 8 training samples over the complete
 computational grid. Each GPU provides these 8 samples to the TorchFort training routines, which are processed in data-parallel (with a global batch size
 of 16). Since the global batch size in this multi-GPU case is equivalent to the batch size used for the single GPU cases, we should expect similar training
-convergence. Validation is run on a single GPU using complete simulation samples collected using `MPI_Allgather`. 
+convergence. Validation is run on a single GPU using complete simulation samples collected using `MPI_Allgather`.
 
 To run this case, use the following command:
 
@@ -147,4 +147,4 @@ mpirun -np 2 ./train_distributed --configfile config_mlp_native.yaml
 You should find that the 2 GPU training converges similarly to the single GPU case, with final validation results of the trained model at equivalent error
 levels.
 
-<br><sub>Last edited: 2025-04-14 15:46:16</sub>
+<br><sub>Last edited: 2025-05-01 10:18:28</sub>

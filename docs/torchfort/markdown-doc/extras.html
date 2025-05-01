@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Eduardo Furlan" /><link rel="canonical" href="https://efurlanm.github.io/radnn/torchfort/markdown-doc/extras.html" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Extras - RADNN</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/katex/katex.min.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Extras";
+        var mkdocs_page_input_path = "torchfort/markdown-doc/extras.md";
+        var mkdocs_page_url = "/radnn/torchfort/markdown-doc/extras.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../index.html" class="icon icon-home"> RADNN
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../index.html">RADNN</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../ecrad-radiation-user-guide-2022.html">ecRad radiation scheme: User Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../env.html">Conda environment</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../notes.html">Notes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../references.html">Some references and comments</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ecrad</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ecrad/index.html">ECRAD - ECMWF atmospheric radiation scheme</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tf lib</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Fortran tf lib</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tf-lib/fortran-tf-lib/index.html">Fortran-TF-lib</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Fortran tf lib</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../tf-lib/fortran-tf-lib/fortran-tf-lib/README2.html">The Fortran to TensorFlow library</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Torchfort</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >Markdown doc</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="index.html">TorchFort: An Online Deep Learning Interface for HPC programs on NVIDIA GPUs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="api.html">TorchFort API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="c_api.html">TorchFort C API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="config.html">TorchFort Configuration Files</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Extras</a>
+    <ul class="current">
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="f_api.html">TorchFort Fortran API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="usage.html">Usage Guide</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Torchfort repo</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../torchfort-repo/index.html">TorchFort</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Examples</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" >Cpp</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" >Cart pole</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" >Fortran</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" >Graph</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >Simulation</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk22test02</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ukk22test02/index.html">RTE+RRTMGP-NN nn_dev</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ukk22test02/Contributing.html">Contributing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Examples</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >All sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../ukk22test02/examples/all-sky/index.html">All-sky example</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emulator training</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../ukk22test02/examples/emulator-training/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rfmip clear sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../ukk22test02/examples/rfmip-clear-sky/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk23eo01</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ukk23eo01/index.html">ECRAD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Rrtmgp nn</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ukk23eo01/rrtmgp-nn/index.html">RTE+RRTMGP-NN</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk23test01</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ukk23test01/index.html">RTE+RRTMGP-NN</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ukk23test01/Contributing.html">Contributing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Examples</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >All sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../ukk23test01/examples/all-sky/index.html">All-sky example</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rfmip clear sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../ukk23test01/examples/rfmip-clear-sky/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rrtmgp nn training</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../ukk23test01/examples/rrtmgp-nn-training/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">RADNN</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Torchfort</li>
+          <li class="breadcrumb-item">Markdown doc</li>
+      <li class="breadcrumb-item active">Extras</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/efurlanm/radnn/edit/master/docs/torchfort/markdown-doc/extras.md">Edit on radnn</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><a href="https://wandb.ai/site">Weights and Biases</a> (wandb) is a popular tool
+for monitoring machine learning training workflows. Wandb supports
+plotting and comparing loss curves and other relevant deep learning
+metrics, system utilization (including GPU, CPU and memory utilization)
+and other advanced logging functionalities like uploading images and/or
+videos, network weights and data artifacts.</p>
+<p>Since wandb does currently not offer a C++ interface and thus cannot be
+called from Fortran or C/C++ directly, we\'ve implemented a wandb daemon
+written in Python instead. This daemon runs as a background process and
+waits for changes in a log file generated by the TorchFort application.
+In order to enable wandb support for your TorchFort application, the
+following steps have to be performed.</p>
+<h1 id="add-custom-metrics-reporting-to-application">Add Custom Metrics Reporting to Application</h1>
+<p>The TorchFort training routines already provide logging of training
+step, loss values as well as learning rate which are captured by the
+wandb daemon. Additional custom metrics can be added manually by the
+user. For this purpose, the user may add calls of <code>torchfort_wandb_log</code>
+or <code>torchfort_rl_off_policy_wandb_log</code> for traditional and reinforcement
+learning applications respectively (see
+<code>supervised_learning-ref</code>{.interpreted-text role="ref"} and
+<code>reinforcement_learning-ref</code>{.interpreted-text role="ref"} for details
+about why we provide different implementations for these two cases). For
+more information, see <code>torchfort_api_c-ref</code>{.interpreted-text
+role="ref"} for C/C++ and <code>torchfort_api_f-ref</code>{.interpreted-text
+role="ref"} for Fortran applications.</p>
+<h1 id="set-up-environment">Set up Environment</h1>
+<p>You need to specify your <a href="https://docs.wandb.ai/guides/track/public-api-guide#authentication">wandb api
+token</a>
+via the environment variable <code>WANDB_API_KEY</code> (see the <a href="https://docs.wandb.ai/guides/track/environment-variables#multiple-wandb-users-on-shared-machines">wandb
+documentation on available environment
+variables</a>
+for details). Furthermore, the daemon needs to know where the the wandb
+logging data from the TorchFort application will be stored. This can be
+done by defining the environment variable <code>TORCHFORT_LOGDIR</code>. Lastly, a
+user0defined wandb logging directory <code>WANDB_LOGGING_DIR</code> can be created
+to gather all wandb information as well as the config file in a place
+specific to the run.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>The logging directory <code>TORCHFORT_LOGDIR</code> needs to be specified before
+the daemon and TorchFort application are launched.
+:::</p>
+<h1 id="start-background-watcher-process">Start Background Watcher Process</h1>
+<p>Now, the wandb daemon process needs to be started. Assuming TorchFort
+was installed in <code>TORCHFORT_INSTALL_DIR</code>, we can run</p>
+<pre><code class="language-bash">python ${TORCHFORT_INSTALL_DIR}/bin/python/wandb_helper.py \
+            --wandb_dir=${WANDB_LOGGING_DIR} \
+            --wandb_group=&lt;wandb-group-name&gt; \
+            --wandb_project=&lt;wandb-project-name&gt; \
+            --wandb_entity=&lt;wandb-entity-name&gt; \
+            --run_tag=&lt;run-name&gt; \
+            --timeout=2400 &amp;
+</code></pre>
+<p>The wandb group, project as well as entity name correspond to the wandb
+project you are logging to. Those correspond to the respective arguments
+of <code>wandb.init</code> documented
+<a href="https://docs.wandb.ai/ref/python/init">here</a>. Note that the group does
+not need to exist and will be created during initialization. The run tag
+can be any alphanumeric string and can be used to identify the specific
+run on the wandb dashboard. Lastly, the timeout (measured in seconds)
+determines for how long the background process will wait for changes to
+appear in <code>${TORCHFORT_LOGIDR}/torchfort.log</code> before wrapping up the
+monitoring.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>Do not forget to launch the daemon into the background.
+:::</p>
+<h1 id="start-your-torchfort-application">Start Your TorchFort Application</h1>
+<p>In the configuration file for your TorchFort application, make sure to
+enable wandb logging in the <code>general</code> section by adding or modifying the
+line <code>enable_wandb_hook: 1</code>. Lastly, start the TorchFort application as
+usual, e.g.:</p>
+<pre><code class="language-bash">./my_torchfort_app arg1 arg2 arg3
+</code></pre>
+<p>The daemone process will pick up the log lines from
+<code>${TORCHFORT_LOGIDR}/torchfort.log</code> and display the data on the
+corresponding job dashboard.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>The daemon can finalize the monitoring while the TorchFort application
+is still running if the timeout is not set sufficiently large,
+especially for long running applications with very sparse logging.
+:::</p>
+<p><br><sub>Last edited: 2025-04-29 15:27:40</sub></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="config.html" class="btn btn-neutral float-left" title="TorchFort Configuration Files"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="f_api.html" class="btn btn-neutral float-right" title="TorchFort Fortran API">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC BY 4.0 License</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/efurlanm/radnn/" class="fa fa-code-fork" style="color: #fcfcfc"> radnn</a>
+        </span>
+    
+    
+      <span><a href="config.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="f_api.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/katex.js"></script>
+      <script src="../../assets/katex/katex.min.js"></script>
+      <script src="../../assets/katex/contrib/auto-render.min.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

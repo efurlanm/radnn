@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Eduardo Furlan" /><link rel="canonical" href="https://efurlanm.github.io/radnn/torchfort/markdown-doc/config.html" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>TorchFort Configuration Files - RADNN</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/katex/katex.min.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "TorchFort Configuration Files";
+        var mkdocs_page_input_path = "torchfort/markdown-doc/config.md";
+        var mkdocs_page_url = "/radnn/torchfort/markdown-doc/config.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../index.html" class="icon icon-home"> RADNN
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../index.html">RADNN</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../ecrad-radiation-user-guide-2022.html">ecRad radiation scheme: User Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../env.html">Conda environment</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../notes.html">Notes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../references.html">Some references and comments</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ecrad</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ecrad/index.html">ECRAD - ECMWF atmospheric radiation scheme</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tf lib</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Fortran tf lib</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tf-lib/fortran-tf-lib/index.html">Fortran-TF-lib</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Fortran tf lib</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../tf-lib/fortran-tf-lib/fortran-tf-lib/README2.html">The Fortran to TensorFlow library</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Torchfort</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >Markdown doc</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="index.html">TorchFort: An Online Deep Learning Interface for HPC programs on NVIDIA GPUs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="api.html">TorchFort API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="c_api.html">TorchFort C API</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">TorchFort Configuration Files</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#general-properties">General Properties</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#optimizer-properties-optimizer_properties-ref">Optimizer Properties {#optimizer_properties-ref}</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#learning-rate-schedule-properties-lr_schedule_properties-ref">Learning Rate Schedule Properties {#lr_schedule_properties-ref}</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="extras.html">Extras</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="f_api.html">TorchFort Fortran API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="usage.html">Usage Guide</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Torchfort repo</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../torchfort-repo/index.html">TorchFort</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Examples</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" >Cpp</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" >Cart pole</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" >Fortran</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" >Graph</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >Simulation</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk22test02</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ukk22test02/index.html">RTE+RRTMGP-NN nn_dev</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ukk22test02/Contributing.html">Contributing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Examples</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >All sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../ukk22test02/examples/all-sky/index.html">All-sky example</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emulator training</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../ukk22test02/examples/emulator-training/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rfmip clear sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../ukk22test02/examples/rfmip-clear-sky/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk23eo01</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ukk23eo01/index.html">ECRAD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Rrtmgp nn</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ukk23eo01/rrtmgp-nn/index.html">RTE+RRTMGP-NN</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk23test01</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ukk23test01/index.html">RTE+RRTMGP-NN</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ukk23test01/Contributing.html">Contributing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Examples</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >All sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../ukk23test01/examples/all-sky/index.html">All-sky example</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rfmip clear sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../ukk23test01/examples/rfmip-clear-sky/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rrtmgp nn training</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../ukk23test01/examples/rrtmgp-nn-training/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">RADNN</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Torchfort</li>
+          <li class="breadcrumb-item">Markdown doc</li>
+      <li class="breadcrumb-item active">TorchFort Configuration Files</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/efurlanm/radnn/edit/master/docs/torchfort/markdown-doc/config.md">Edit on radnn</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>The TorchFort library relies on a user-defined YAML configuration file
+to define several aspects of the training procedure, with specific
+blocks to control:</p>
+<blockquote>
+<ul>
+<li>general properties</li>
+<li>model properties</li>
+<li>optimizer properties</li>
+<li>loss function properties</li>
+<li>learning rate schedule properties</li>
+</ul>
+</blockquote>
+<p>The following sections define each configuration block and available
+options.</p>
+<h1 id="common">Common</h1>
+<p>The following sections list configuration file blocks common to
+supervised learning and reinforcement learning configuration files.</p>
+<h2 id="general-properties">General Properties</h2>
+<p>The block in the configuration file defining general properties takes
+the following structure:</p>
+<pre><code class="language-yaml">general:
+  &lt;option&gt; = &lt;value&gt;
+</code></pre>
+<p>The following table lists the available options:</p>
+<hr />
+<p>Option                Data Type Description</p>
+<hr />
+<p><code>report_frequency</code>    integer   frequency of reported TorchFort training/validation
+                                  output lines to terminal (default = <code>0</code>)</p>
+<p><code>enable_wandb_hook</code>   boolean   flag to control whether wandb hook is active
+                                  (default = <code>false</code>)</p>
+<p><code>verbose</code>             boolean   flag to control verbose output from TorchFort
+                                  (default = <code>false</code>)</p>
+<hr />
+<p>For more information about the wandb hook, see
+<code>wandb_support-ref</code>{.interpreted-text role="ref"}.</p>
+<h2 id="optimizer-properties-optimizer_properties-ref">Optimizer Properties {#optimizer_properties-ref}</h2>
+<p>The block in the configuration file defining optimizer properties takes
+the following structure:</p>
+<pre><code class="language-yaml">optimizer:
+  type: &lt;optimizer_type&gt;
+  parameters:
+    &lt;option&gt; = &lt;value&gt;
+  general:
+    &lt;option&gt; = value
+</code></pre>
+<p>The <code>general</code> block is optional.</p>
+<p>The following table lists the available optimizer types:</p>
+<hr />
+<p>Optimizer Type   Description</p>
+<hr />
+<p><code>sgd</code>            Stochastic Gradient Descent optimizer</p>
+<p><code>adam</code>           ADAM optimizer</p>
+<hr />
+<p>The following table lists the available parameter options by optimizer
+type:</p>
+<p>+----------------+-------------------+-----------+-------------------------------------------------------------------------------------------+
+| Optimizer Type | Option | Data Type | Description |
++================+===================+===========+===========================================================================================+
+| <code>sgd</code> | <code>learning_rate</code> | float | learning rate (default =
+<code>0.001</code>) | +
++-------------------+-----------+-------------------------------------------------------------------------------------------+
+| | <code>momentum</code> | float | mometum factor (default = <code>0.0</code>) | +
++-------------------+-----------+-------------------------------------------------------------------------------------------+
+| | <code>dampening</code> | float | dampening for momentum (default = <code>0.0</code>)
+| +
++-------------------+-----------+-------------------------------------------------------------------------------------------+
+| | <code>weight_decay</code> | float | weight decay/L2 penalty (default =
+<code>0.0</code>) | +
++-------------------+-----------+-------------------------------------------------------------------------------------------+
+| | <code>nesterov</code> | boolean | enables Nesterov momentum (default =
+<code>false</code>) |
++----------------+-------------------+-----------+-------------------------------------------------------------------------------------------+
+| <code>adam</code> | <code>learning_rate</code> | float | learning rate (default =
+<code>0.001</code>) | +
++-------------------+-----------+-------------------------------------------------------------------------------------------+
+| | <code>beta1</code> | float | coefficient used for computing running average
+of gradient (default = <code>0.9</code>) | +
++-------------------+-----------+-------------------------------------------------------------------------------------------+
+| | <code>beta2</code> | float | coefficient use for computing running average
+of square of gradient (default = <code>0.999</code>) | +
++-------------------+-----------+-------------------------------------------------------------------------------------------+
+| | <code>weight_decay</code> | float | weight decay/L2 penalty (default =
+<code>0.0</code>) | +
++-------------------+-----------+-------------------------------------------------------------------------------------------+
+| | <code>eps</code> | float | term added to denominator to improve numerical
+stability (default = <code>1e-8</code>) | +
++-------------------+-----------+-------------------------------------------------------------------------------------------+
+| | <code>amsgrad</code> | boolean | whether to use AMSGrad variant (default =
+<code>false</code>) |
++----------------+-------------------+-----------+-------------------------------------------------------------------------------------------+</p>
+<p>The following table lists the available general options:</p>
+<hr />
+<p>Option                      Data Type Description</p>
+<hr />
+<p><code>grad_accumulation_steps</code>   integer   number of training steps to accumulate gradients
+                                        between optimizer steps (default = <code>1</code>)</p>
+<hr />
+<h2 id="learning-rate-schedule-properties-lr_schedule_properties-ref">Learning Rate Schedule Properties {#lr_schedule_properties-ref}</h2>
+<p>The block in the configuration file defining learning rate schedule
+properties takes the following structure:</p>
+<pre><code class="language-yaml">lr_scheduler:
+  type: &lt;schedule_type&gt;
+  parameters:
+    &lt;option&gt; = &lt;value&gt;
+</code></pre>
+<p>The following table lists the available schedule types:</p>
+<hr />
+<p>Schedule Type        Description</p>
+<hr />
+<p><code>step</code>               Decays learning rate by multiplicative factor every <code>step_size</code> training iterations</p>
+<p><code>multistep</code>          Decays learning rate by multiplicative factor at user-defined training iteration milestones</p>
+<p><code>polynomial</code>         Decays learning rate by polynomial function</p>
+<p><code>cosine_annealing</code>   Decays learning rate using cosine annealing schedule. See PyTorch documentation of
+                       <a href="https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.CosineAnnealingLR.html">torch.optim.lr_scheduler.CosineAnnealingLR</a>
+                       for more details.</p>
+<hr />
+<p>The following table lists the available options by schedule type:</p>
+<p>+----------------------+-----------------+-----------------+------------------------------------------------------------------+
+| Schedule Type | Option | Data Type | Description |
++======================+=================+=================+==================================================================+
+| <code>step</code> | <code>step_size</code> | integer | Number of training steps between
+learning rate decay | +
++-----------------+-----------------+------------------------------------------------------------------+
+| | <code>gamma</code> | float | Multiplicative factor of learning rate decay
+(default = <code>0.1</code>) |
++----------------------+-----------------+-----------------+------------------------------------------------------------------+
+| <code>multistep</code> | <code>milestones</code> | list of integer | Training step
+milestones for learning rate decay | +
++-----------------+-----------------+------------------------------------------------------------------+
+| | <code>gamma</code> | float | Multiplicative factor of learning rate decay
+(default = <code>0.1</code>) |
++----------------------+-----------------+-----------------+------------------------------------------------------------------+
+| <code>polynomial</code> | <code>total_iters</code> | integer | Number of training
+iterations to decay the learning rate | +
++-----------------+-----------------+------------------------------------------------------------------+
+| | <code>power</code> | float | The power of the polynomial (default = <code>1.0</code>)
+|
++----------------------+-----------------+-----------------+------------------------------------------------------------------+
+| <code>cosine_annealing</code> | <code>eta_min</code> | float | Minumum learning rate
+(default = <code>0.0</code>) | +
++-----------------+-----------------+------------------------------------------------------------------+
+| | <code>T_max</code> | float | Maximum number of iterations for decay |
++----------------------+-----------------+-----------------+------------------------------------------------------------------+</p>
+<h1 id="supervised-learning">Supervised Learning</h1>
+<p>The following sections list configuration file blocks specific to
+supervised learning configuration files.</p>
+<h2 id="model-properties-model_properties-ref">Model Properties {#model_properties-ref}</h2>
+<p>The block in the configuration file defining model properties takes the
+following structure:</p>
+<pre><code class="language-yaml">model:
+  type: &lt;model_type&gt;
+  parameters:
+    &lt;option&gt; = &lt;value&gt;
+</code></pre>
+<p>The following table lists the available model types:</p>
+<hr />
+<p>Model Type        Description</p>
+<hr />
+<p><code>torchscript</code>     Load a model from an exported TorchScript file</p>
+<p><code>mlp</code>             Use built-in MLP model</p>
+<hr />
+<p>The following table lists the available options by model type:</p>
+<p>+-----------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Model Type | Option | Data Type | Description |
++=================+=================+==================+====================================================================================================================================================================================+
+| <code>torchscript</code> | <code>filename</code> | string | path to TorchScript exported
+model file |
++-----------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| <code>mlp</code> | <code>layer_sizes</code> | list of integers | sequence of
+input/output sizes for linear layers e.g., <code>[16, 32, 4]</code> will create two
+linear layers with input/output of 16/32 for the first layer and 32/4
+for the second layer. | +
++-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| | <code>dropout</code> | float | probability of an element to be zeroed in
+dropout layers (default = <code>0.0</code>) |
++-----------------+-----------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</p>
+<h2 id="loss-properties">Loss Properties</h2>
+<p>The block in the configuration file defining loss properties takes the
+following structure:</p>
+<pre><code class="language-yaml">loss:
+  type: &lt;loss_type&gt;
+  parameters:
+    &lt;option&gt; = &lt;value&gt;
+</code></pre>
+<p>The following table lists the available loss types:</p>
+<hr />
+<p>Loss Type |      iption
+  Descr             </p>
+<hr />
+<p><code>torchscript</code>     Load a loss from an exported TorchScript file</p>
+<p><code>l1</code>              L1/Mean Average Error</p>
+<p><code>mse</code>             Mean Squared Error</p>
+<hr />
+<p>The following table lists the available options by loss type:</p>
+<hr />
+<p>Loss Type       Option        Data     Description
+                                Type     </p>
+<hr />
+<p><code>torchscript</code>   <code>filename</code>    string   path to TorchScript exported loss file</p>
+<p><code>l1</code>            <code>reduction</code>   string   Specifies type of reduction to apply to output.
+                                         Can be either <code>none</code>, <code>mean</code> or <code>sum</code>. (default =
+                                         <code>mean</code>)</p>
+<p><code>mse</code>           <code>reduction</code>   string   Specifies type of reduction to apply to output.
+                                         Can be either <code>none</code>, <code>mean</code> or <code>sum</code>. (default =
+                                         <code>mean</code>)</p>
+<hr />
+<h1 id="reinforcement-learning">Reinforcement Learning</h1>
+<p>The following sections list configuration file blocks specific to
+reinforcement learning system configuration files.</p>
+<h2 id="reinforcement-learning-training-algorithm-properties">Reinforcement Learning Training Algorithm Properties</h2>
+<p>The block in the configuration file defining algorithm properties takes
+the following structure:</p>
+<pre><code class="language-yaml">algorithm:
+  type: &lt;algorithm_type&gt;
+  parameters:
+    &lt;option&gt; = &lt;value&gt;
+</code></pre>
+<p>The following table lists the available algorithm types:</p>
+<hr />
+<p>Algorithm   Description
+  Type        </p>
+<hr />
+<p><code>ddpg</code>      Deterministic Policy Gradient. See <a href="https://spinningup.openai.com/en/latest/algorithms/ddpg.html">DDPG documentation by
+              OpenAI</a>
+              for details</p>
+<p><code>td3</code>       Twin Delayed DDPG. See <a href="https://spinningup.openai.com/en/latest/algorithms/td3.html">TD3 documentation by
+              OpenAI</a>
+              for details</p>
+<p><code>sac</code>       Soft Actor Critic. See <a href="https://spinningup.openai.com/en/latest/algorithms/sac.html">SAC documentation by
+              OpenAI</a>
+              for details</p>
+<hr />
+<p>The following table lists the available options by algorithm type:</p>
+<p>+----------------+----------------------------+------------+-------------------------------------------------------------------------------------------+
+| Algorithm Type | Option | Data Type | Description |
++================+============================+============+===========================================================================================+
+| <code>ddpg</code> | <code>batch_size</code> | integer | batch size used in training | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>nstep</code> | integer | number of steps for N-step training | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>nstep_reward_reduction</code> | string | reduction mode for N-step
+training (see below) | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>gamma</code> | float | discount factor | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>rho</code> | boolean | weight average factor for target weights (in
+some frameworks called rho = 1-tau) |
++----------------+----------------------------+------------+-------------------------------------------------------------------------------------------+
+| <code>td3</code> | <code>batch_size</code> | integer | batch size used in training | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>nstep</code> | integer | number of steps for N-step training | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>nstep_reward_reduction</code> | string | reduction mode for N-step
+training (see below) | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>gamma</code> | float | discount factor | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>rho</code> | float | weight average factor for target weights (in
+some frameworks called rho = 1-tau) | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>num_critics</code> | integer | number of critic networks used | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>policy_lag</code> | integer | update frequency for the policy in
+units of critic updates |
++----------------+----------------------------+------------+-------------------------------------------------------------------------------------------+
+| <code>sac</code> | <code>batch_size</code> | integer | batch size used in training | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>nstep</code> | integer | number of steps for N-step training | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>nstep_reward_reduction</code> | string | reduction mode for N-step
+training (see below) | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>gamma</code> | float | discount factor | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>alpha</code> | float | entropy regularization coefficient | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>rho</code> | boolean | weight average factor for target weights (in
+some frameworks called rho = 1-tau) | +
++----------------------------+------------+-------------------------------------------------------------------------------------------+
+| | <code>policy_lag</code> | integer | update frequency for the policy in
+units of value updates |
++----------------+----------------------------+------------+-------------------------------------------------------------------------------------------+</p>
+<p>The parameter <code>nstep_reward_reduction</code> defines how the reward is
+accumulated over N-step rollouts. The options are summarized in a table
+below (<span class="arithmatex">\(N\)</span> is the value from parameter <code>nstep</code> described above):</p>
+<hr />
+<p>Reduction Mode            Description</p>
+<hr />
+<p><code>sum</code> or <code>sum_no_skip</code>    <span class="arithmatex">\(r = \sum_{i=1}^{N^\ast} \gamma^{i-1} r_i\)</span></p>
+<p><code>mean</code> or <code>mean_no_skip</code>  <span class="arithmatex">\(r = \sum_{i=1}^{N^\ast} \gamma^{i-1} r_i / N^\ast\)</span></p>
+<p><code>weighted_mean</code> or        <span class="arithmatex">\(r = \sum_{i=1}^{N^\ast} \gamma^{i-1} r_i / (\sum_{k=1}^{N^\ast} \gamma^{k-1})\)</span>
+  <code>weighted_mean_no_skip</code>   </p>
+<hr />
+<p>Here, the value of <span class="arithmatex">\(N^\ast\)</span> depends on whether reduction with or without
+skip is being chosen. In case of the former, <span class="arithmatex">\(N^\ast = N\)</span> and the replay
+buffer is searching for trajectories with <strong>at least</strong> <span class="arithmatex">\(N\)</span> steps. If the
+trajectory terminates earlier, the sample is skipped and a new one is
+searched. If <strong>all trajectories are shorter</strong> than <span class="arithmatex">\(N\)</span> steps, the replay
+buffer <strong>will never find</strong> a suitable sample.</p>
+<p>In this case, it is useful to use the modes with the additional suffix
+<code>_no_skip</code>. In this case, <span class="arithmatex">\(N^{\ast}\)</span> in the formulas will be equal to
+the minimum of <span class="arithmatex">\(N\)</span> and the number of steps needed to reach the end of
+the trajectory. The regular and no-skip modes are both useful in
+different occasions, so it is important to be clear about how the reward
+structure has to be designed in order to achieve the desired goals.</p>
+<h2 id="replay-buffer-properties">Replay Buffer Properties</h2>
+<p>The block in the configuration file defining algorithm properties takes
+the following structure:</p>
+<pre><code class="language-yaml">replay_buffer:
+  type: &lt;replay_buffer_type&gt;
+  parameters:
+    &lt;option&gt; = &lt;value&gt;
+</code></pre>
+<p>Currently, only type <code>uniform</code> is supported. The following table lists
+the available options:</p>
+<p>+---------------------------+-----------------+-----------------+------------------------------------------------------------------+
+| Replay Buffer Type | Option | Data Type | Description |
++===========================+=================+=================+==================================================================+
+| <code>uniform</code> | <code>min_size</code> | integer | Minimum number of samples
+before buffer is ready for training | +
++-----------------+-----------------+------------------------------------------------------------------+
+| | <code>max_size</code> | integer | Maximum capacity |
++---------------------------+-----------------+-----------------+------------------------------------------------------------------+</p>
+<h2 id="action-properties">Action Properties</h2>
+<p>The block in the configuration file defining action properties takes the
+following structure:</p>
+<pre><code class="language-yaml">action:
+  type: &lt;action_type&gt;
+  parameters:
+    &lt;option&gt; = &lt;value&gt;
+</code></pre>
+<p>The following table lists the available options for every action type
+for <code>ddpg</code> and <code>td3</code> algorithms:</p>
+<p>+----------------------------------------------+-------------------+------------+-------------------------------------------------------------------+
+| Action Type | Option | Data Type | Description |
++==============================================+===================+============+===================================================================+
+| <code>space_noise</code> or <code>parameter_noise</code> | <code>a_low</code> | float | lower bound
+for action value | +
++-------------------+------------+-------------------------------------------------------------------+
+| | <code>a_high</code> | float | upper bound for action value | +
++-------------------+------------+-------------------------------------------------------------------+
+| | <code>clip</code> | float | clip value for training noise | +
++-------------------+------------+-------------------------------------------------------------------+
+| | <code>sigma_train</code> | float | standard deviation for gaussian training
+noise | +
++-------------------+------------+-------------------------------------------------------------------+
+| | <code>sigma_explore</code> | float | standard deviation for gaussian
+exploration noise | +
++-------------------+------------+-------------------------------------------------------------------+
+| | <code>adaptive</code> | bool | flag to specify whether the standard
+deviation should be adaptive |
++----------------------------------------------+-------------------+------------+-------------------------------------------------------------------+
+| <code>space_noise_ou</code> or <code>parameter_noise_ou</code> | <code>a_low</code> | float | lower
+bound for action value | +
++-------------------+------------+-------------------------------------------------------------------+
+| | <code>a_high</code> | float | upper bound for action value | +
++-------------------+------------+-------------------------------------------------------------------+
+| | <code>clip</code> | float | clip value for training noise | +
++-------------------+------------+-------------------------------------------------------------------+
+| | <code>sigma_train</code> | float | standard deviation for
+Ornstein-Uhlenbeck training noise | +
++-------------------+------------+-------------------------------------------------------------------+
+| | <code>sigma_explore</code> | float | standard deviation for
+Ornstein-Uhlenbeck exploration noise | +
++-------------------+------------+-------------------------------------------------------------------+
+| | <code>xi</code> | float | mean reversion parameter for Ornstein-Uhlenbeck
+noise | +
++-------------------+------------+-------------------------------------------------------------------+
+| | <code>dt</code> | float | time-step parameter for Ornstein-Uhlenbeck noise
+| +
++-------------------+------------+-------------------------------------------------------------------+
+| | <code>adaptive</code> | bool | flag to specify whether the standard
+deviation should be adaptive |
++----------------------------------------------+-------------------+------------+-------------------------------------------------------------------+</p>
+<p>The meaning for most of these parameters should be evident from looking
+at the details of the implementations for the various RL algorithms
+linked above. However, some parameters require a more detailed
+explanation: in general, the suffix <code>_ou</code> refers to stateful noise of
+Ornstein-Uhlenbeck type with zero drift. This noise type is often used
+if correlation between time steps is desired and thus popular in
+reinforcement learning. Check out the <a href="https://en.wikipedia.org/wiki/Ornstein–Uhlenbeck_process">wikipedia
+page</a> for
+details.</p>
+<p>The prefix <code>space</code> refers to applying the noise to the predicted ation
+directly. For example, if <span class="arithmatex">\(p\)</span> is our (deterministic) policy function, an
+exploration action using space noise type is obtained by computing</p>
+<div class="arithmatex">\[\tilde{a} = \mathrm{clip}(p(\theta, s) + \mathcal{N}(0,\sigma_\mathrm{explore}), a_\mathrm{low}, a_\mathrm{high})\]</div>
+<p>for any input state <span class="arithmatex">\(s\)</span> and policy weights <span class="arithmatex">\(\theta\)</span>. In case of
+parameter noise, the noise will be applied to each weight of <span class="arithmatex">\(p\)</span>
+instead. Hence, the noised action is computed via</p>
+<div class="arithmatex">\[\tilde{a} = \mathrm{clip}(p(\theta + \mathcal{N}(0,\sigma_\mathrm{explore}), s), a_\mathrm{low}, a_\mathrm{high})\]</div>
+<p>The parameter <code>adaptive</code> specifies whether the noise variance <span class="arithmatex">\(\sigma\)</span>
+should be taken relative to the magnitude of the action magnitudes or
+weight magnitudes for space and parameter noise respectively. In terms
+of the former, this would mean that</p>
+<div class="arithmatex">\[a &amp;= p(\theta, s)$$$$\tilde{a} &amp;= \mathrm{clip}(a + \sigma_\mathrm{explore}\,\mathcal{N}(0,\|a\|), a_\mathrm{low}, a_\mathrm{high})\]</div>
+<p>and analogous for parameter noise.</p>
+<p>Whichever noise type and parameters are the best highly depends on the
+behavior of the environment and therefore we cannot give a general
+recommendation.</p>
+<p>For algorithm type <code>sac</code>, only action bounds are supported as the noise
+is built into the algorithm and cannot be customized.</p>
+<h2 id="policy-and-critic-properties">Policy and Critic Properties</h2>
+<p>The block in the configuration file defining model properties for
+actor/policy and critic/value are similar to the supervised learning
+case (see <code>model_properties-ref</code>{.interpreted-text role="ref"}). In this
+case, TorchFort supports different model properties for policy and
+critic. The block configuration looks as follows:</p>
+<pre><code class="language-yaml">critic_model:
+  type: &lt;critic_model_type&gt;
+  parameters:
+    &lt;option&gt; = &lt;value&gt;
+
+policy_model:
+  type: &lt;policy_model_type&gt;
+  parameters:
+    &lt;option&gt; = &lt;value&gt;
+</code></pre>
+<p>Refer to the <code>model_properties-ref</code>{.interpreted-text role="ref"} for
+available model types and options.</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>For algorithms which use multiple critics networks such as TD3, the
+critic model is copied internally <code>num_critic</code> times and the weights are
+randomly initialized for each of these models independently.
+:::</p>
+<p>::: {.note}
+::: {.title}
+Note
+:::</p>
+<p>In case of SAC algorithm, make sure that the policy network not only
+returns the mean actions value tensor but also the log probability sigma
+tensor. As an example see the policy function implementation of <a href="https://github.com/DLR-RM/stable-baselines3/blob/master/stable_baselines3/sac/policies.py">stable
+baselines</a>.
+:::</p>
+<h2 id="learning-rate-schedule-properties">Learning Rate Schedule Properties</h2>
+<p>For reinforcement learning, TorchFort supports different learning rate
+schedules for policy and critic. The block configuration looks as
+follows:</p>
+<pre><code class="language-yaml">critic_lr_scheduler:
+  type: &lt;schedule_type&gt;
+  parameters:
+    &lt;option&gt; = &lt;value&gt;
+
+policy_lr_scheduler:
+  type: &lt;schedule_type&gt;
+  parameters:
+    &lt;option&gt; = &lt;value&gt;
+</code></pre>
+<p>Refer to the <code>lr_schedule_properties-ref</code>{.interpreted-text role="ref"}
+for available scheduler types and options.</p>
+<p><br><sub>Last edited: 2025-04-29 15:27:28</sub></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="c_api.html" class="btn btn-neutral float-left" title="TorchFort C API"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="extras.html" class="btn btn-neutral float-right" title="Extras">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC BY 4.0 License</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/efurlanm/radnn/" class="fa fa-code-fork" style="color: #fcfcfc"> radnn</a>
+        </span>
+    
+    
+      <span><a href="c_api.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="extras.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/katex.js"></script>
+      <script src="../../assets/katex/katex.min.js"></script>
+      <script src="../../assets/katex/contrib/auto-render.min.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

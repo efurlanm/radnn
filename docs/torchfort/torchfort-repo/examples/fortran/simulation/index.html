@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Eduardo Furlan" /><link rel="canonical" href="https://efurlanm.github.io/radnn/torchfort/torchfort-repo/examples/fortran/simulation/index.html" />
+      <link rel="shortcut icon" href="../../../../../img/favicon.ico" />
+    <title>Online Training Example - RADNN</title>
+    <link rel="stylesheet" href="../../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../../../assets/extra.css" rel="stylesheet" />
+        <link href="../../../../../assets/katex/katex.min.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Online Training Example";
+        var mkdocs_page_input_path = "torchfort/torchfort-repo/examples/fortran/simulation/README.md";
+        var mkdocs_page_url = "/radnn/torchfort/torchfort-repo/examples/fortran/simulation/index.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../../../index.html" class="icon icon-home"> RADNN
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../../index.html">RADNN</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../../ecrad-radiation-user-guide-2022.html">ecRad radiation scheme: User Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../../env.html">Conda environment</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../../notes.html">Notes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../../references.html">Some references and comments</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ecrad</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../../ecrad/index.html">ECRAD - ECMWF atmospheric radiation scheme</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tf lib</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Fortran tf lib</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../../tf-lib/fortran-tf-lib/index.html">Fortran-TF-lib</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Fortran tf lib</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../../../tf-lib/fortran-tf-lib/fortran-tf-lib/README2.html">The Fortran to TensorFlow library</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Torchfort</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Markdown doc</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../markdown-doc/index.html">TorchFort: An Online Deep Learning Interface for HPC programs on NVIDIA GPUs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../markdown-doc/api.html">TorchFort API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../markdown-doc/c_api.html">TorchFort C API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../markdown-doc/config.html">TorchFort Configuration Files</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../markdown-doc/extras.html">Extras</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../markdown-doc/f_api.html">TorchFort Fortran API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../markdown-doc/usage.html">Usage Guide</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Torchfort repo</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../../../index.html">TorchFort</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" >Examples</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" >Cpp</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" >Cart pole</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" >Fortran</a>
+    <ul class="current">
+                <li class="toctree-l4"><a class="reference internal" >Graph</a>
+                </li>
+                <li class="toctree-l4 current"><a class="reference internal current" >Simulation</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk22test02</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../../ukk22test02/index.html">RTE+RRTMGP-NN nn_dev</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../../ukk22test02/Contributing.html">Contributing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Examples</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >All sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../../../ukk22test02/examples/all-sky/index.html">All-sky example</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emulator training</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../../../ukk22test02/examples/emulator-training/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rfmip clear sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../../../ukk22test02/examples/rfmip-clear-sky/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk23eo01</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../../ukk23eo01/index.html">ECRAD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Rrtmgp nn</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../../ukk23eo01/rrtmgp-nn/index.html">RTE+RRTMGP-NN</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ukk23test01</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../../ukk23test01/index.html">RTE+RRTMGP-NN</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../../ukk23test01/Contributing.html">Contributing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Examples</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >All sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../../../ukk23test01/examples/all-sky/index.html">All-sky example</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rfmip clear sky</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../../../ukk23test01/examples/rfmip-clear-sky/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rrtmgp nn training</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../../../ukk23test01/examples/rrtmgp-nn-training/Readme.html">Readme</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">RADNN</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Torchfort</li>
+          <li class="breadcrumb-item">Torchfort repo</li>
+          <li class="breadcrumb-item">Examples</li>
+          <li class="breadcrumb-item">Fortran</li>
+          <li class="breadcrumb-item">Simulation</li>
+      <li class="breadcrumb-item active">Online Training Example</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/efurlanm/radnn/edit/master/docs/torchfort/torchfort-repo/examples/fortran/simulation/README.md">Edit on radnn</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="online-training-example">Online Training Example</h1>
+<h2 id="problem-description">Problem Description</h2>
+<p>In this example, we demostrate how to use TorchFort to perform online training with a numerical simulation. Specifically,
+we train two simple models to approximate the divergence of a vector field using data sampled from a running
+numerical simulation.</p>
+<p>For our simulation, we consider the linear advection equation in 2D in a periodic box,</p>
+<div class="arithmatex">\[
+\begin{matrix}
+\frac{du(x,y,t)}{dt} + \nabla \cdot (\mathbf{a} u(x,y,t)) = 0 \\
+u(x,y,0) = \sin(\pi x) \\; \sin(\pi y) \\
+\mathbf{a} = \lbrace a_x, a_y \rbrace \\
+x \in [-1, 1], \\; y \in [-1, 1], \\; t \in [0, T]
+\end{matrix}
+\]</div>
+<p>which has an analytical solution of the form,</p>
+<div class="arithmatex">\[u(x,y,t) = \sin(\pi (x - a_x t)) \\; \sin(\pi (y-a_y t))\]</div>
+<p>We aim to train a model to learn the mapping from the solution field, <span class="arithmatex">\(u(x,y,t)\)</span>, to the divergence, <span class="arithmatex">\(\nabla \cdot (\mathbf{a} u(x,y,t))\)</span>:</p>
+<div class="arithmatex">\[\sigma(u(x,y,t)) = \nabla \cdot (\mathbf{a} u(x,y,t))\]</div>
+<p>where <span class="arithmatex">\(\sigma\)</span> is the function that represents the model.</p>
+<p>For this example, we use the analytical solution as a stand-in for a real numerical solver, sequentially generating <span class="arithmatex">\(u(x,y,t)\)</span> samples
+at <span class="arithmatex">\(\Delta t = 0.01\)</span> intervals in time over the course of training. We compute corresponding analytical divergence fields, <span class="arithmatex">\(\nabla \cdot (\mathbf{a} u(x,y,t))\)</span>,
+to use as training labels. This is by no means a rigorous training task, but provides us an opportunity to illustrate how to integrate
+TorchFort in a typical numerical simulation loop.</p>
+<h2 id="general-details">General Details</h2>
+<p>The example code is split into two main source files.</p>
+<p><a href="simulation.f90"><code>simulation.f90</code></a> defines a Fortran module to control the simulation. It has an initialization suboutine and a subroutine to advance the solution in time,
+returning both the scalar solution field, <code>u</code>, and corresponding divergence field, <code>u_div</code>.</p>
+<p><a href="train.f90"><code>train.f90</code></a> contains the main program and training/inference loops. The simulation is run on a small numerical grid of <span class="arithmatex">\(32^2\)</span> points in single precision.
+For training, we run 100,000 training steps with a minibatch size of 16. In other words, we advance and collect training samples from the simulation 16 times per training step.
+After training is complete, we run a validation loop over 1,000 additional samples with a minibatch size of 1. At the end of the program, a training checkpoint and trained
+model are saved using TorchFort utilities. For completeness, the program also enables loading TorchFort checkpoints; however, this is mostly for demostrative purposes as
+this example should run fast and not require checkpoint/restart to complete. Run <code>./train -h</code> for a full listing of command line options available.</p>
+<p>The Fortran program is GPU-accelerated using OpenACC, a common directive-based programming approach in HPC. This example also demonstates OpenACC
+compatibility with TorchFort.</p>
+<h2 id="training-a-simple-mlp-using-the-built-in-mlp-model">Training a simple MLP using the built-in MLP model</h2>
+<p>First, we will run the training using the built-in MLP model available in TorchFort using the provided <a href="config_mlp_native.yaml"><code>config_mlp_native.yaml</code></a> file.
+TorchFort contains a configurable MLP model (defined in <a href="../../../src/csrc/models/mlp_model.cpp"><code>mlp_model.cpp</code></a>) that can be used directly by users who
+only require these simple networks. We select this model by defining the following block in the configuration file:</p>
+<pre><code>model:
+  type: mlp
+  parameters:
+    dropout: 0.0
+    layer_sizes: [1024, 1024]
+</code></pre>
+<p>This block specifies the built-in MLP model type with dropout disabled and a single linear layer with an input size of 1024 and output size of 1024. Given our
+numerical grid size of <span class="arithmatex">\(32^3\)</span>, this is training a single linear layer to map the flattened discretized solution array of 1024 elements to a flattened array
+of corresponding discrete divergence values.</p>
+<p>The remaining blocks in the configuration file control other aspects of the training, such as the loss, optimizer, and learning rate schedule. See
+the documentation section on configuration file creation for more information.</p>
+<p>To run this case, use the following command:</p>
+<pre><code>$ ./train --configfile config_mlp_native.yaml
+</code></pre>
+<p>The training will proceed for 100,000 steps, printing information on the loss every 100 iterations. This is followed by validation testing of the trained
+model for 1,000 steps, with model input, target output (label), and predicted output fields writted to HDF5 files every 10 steps.</p>
+<p>To visualize the output of the trained model, we've provided a <code>visualize.py</code> Python script to load the validation output samples and produce
+a short video of the results. An example command to run this script is:</p>
+<pre><code>$ python visualize.py --input_path &lt;path to directory containing validation HDF files&gt; --output_path &lt;path to directory to write output video&gt;
+</code></pre>
+<p>The resulting video for the trained MLP should look like this:</p>
+<p><img alt="Simulation Visualization Example" src="media/validation_results.gif" /></p>
+<p>This video shows the input solution field <span class="arithmatex">\(u(x,y,t)\)</span> in the top left, the target analytical divergence field <span class="arithmatex">\(\nabla \cdot (\mathbf{a} u(x,y,t))\)</span> in the top
+right, the predicted divergence field in the lower left. The lower right depicts a 1D sample taken at the location depected by the horizontal dotted line
+in the input solution field plot, where the black solid line is the solution, the blue solid line is the target divergence, and the green dots are the
+predicted divegence values from the model.</p>
+<h2 id="training-a-simple-fully-convolutional-network-fcn-using-an-exported-pytorch-model">Training a simple fully convolutional network (FCN) using an exported PyTorch model</h2>
+<p>In the first case, we used the built-in MLP model available in TorchFort. For greater customization/flexibility, TorchFort also allows users to define
+models in PyTorch, export them in TorchScript using PyTorch JIT, and load the saved models in TorchFort for training and inference. To illustrate this,
+we've provided the <a href="config_fcn_torchscript.yaml"><code>config_fcn_torchscript.yaml</code></a> and corresponding <a href="generate_fcn_model.py"><code>generate_fcn_model.py</code></a> script.</p>
+<p>The <code>generate_fcn_model.py</code> script shows how to define a model in PyTorch, generate a TorchScript model using <code>torch.jit.script</code> and saving the model to
+disk. In this case, we've defined a model that is just a single 2D convolutional layer with a kernel width of 3 and circular padding, which can be trained to approximate a localized stencil-based computation of the divergence. Running this script will create a <code>fcn_torchscript.pt</code> file, which contains the
+TorchScript exported model that can be used with TorchFort.</p>
+<p>To use this model in TorchFort, the model block in the configuration file is changed to:</p>
+<pre><code>model:
+  type: torchscript
+  torchscript_file: fcn_torchscript.pt
+</code></pre>
+<p>which tells TorchFort to use a TorchScript model which TorchScript model file to load.</p>
+<p>To run this case, use the following commands</p>
+<pre><code>$ python generate_fcn_model.py
+$ ./train --configfile config_fcn_torchscript.yaml
+</code></pre>
+<p>The training/validation will run similarly to the case using the built-in MLP model, with the loss converging at a quicker rate using this FCN model.</p>
+<p>A main takeaway from this case is the flexibility enabled using exported TorchScript models. It is simple to replace the FCN model we've defined with
+any number of different model architectures you can define and export from PyTorch without requiring any modification to the compiled simulation program.</p>
+<h2 id="multi-gpu-training">Multi-GPU Training</h2>
+<p>TorchFort supports basic data-parallel training of models which we demonstrate in this last case.</p>
+<p><a href="train_distributed.f90"><code>train_distributed.f90</code></a> contains the main program, modified to run on two GPUs. Each GPU generates simulation data for only half of the computational grid at
+a given timestep, emulating a typical numerical code using a <em>slab</em> data decomposition; however, the models require the data for the full computation grid for training.
+For each training step, the program runs and gathers 16 training samples from the simulation for the minibatch, with each GPU only producing data
+for half of the computational domain. <code>MPI_Alltoallv</code> is used to redistribute the sample data so that ultimately each GPU contains 8 training samples over the complete
+computational grid. Each GPU provides these 8 samples to the TorchFort training routines, which are processed in data-parallel (with a global batch size
+of 16). Since the global batch size in this multi-GPU case is equivalent to the batch size used for the single GPU cases, we should expect similar training
+convergence. Validation is run on a single GPU using complete simulation samples collected using <code>MPI_Allgather</code>.</p>
+<p>To run this case, use the following command:</p>
+<pre><code>mpirun -np 2 ./train_distributed --configfile config_mlp_native.yaml
+</code></pre>
+<p>You should find that the 2 GPU training converges similarly to the single GPU case, with final validation results of the trained model at equivalent error
+levels.</p>
+<p><br><sub>Last edited: 2025-05-01 10:18:28</sub></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../graph/index.html" class="btn btn-neutral float-left" title="MeshGraphNet Online Training Example"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../../../../ukk22test02/index.html" class="btn btn-neutral float-right" title="RTE+RRTMGP-NN nn_dev">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC BY 4.0 License</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/efurlanm/radnn/" class="fa fa-code-fork" style="color: #fcfcfc"> radnn</a>
+        </span>
+    
+    
+      <span><a href="../graph/index.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../../../../ukk22test02/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../../..";</script>
+    <script src="../../../../../js/theme_extra.js"></script>
+    <script src="../../../../../js/theme.js"></script>
+      <script src="../../../../../assets/katex.js"></script>
+      <script src="../../../../../assets/katex/katex.min.js"></script>
+      <script src="../../../../../assets/katex/contrib/auto-render.min.js"></script>
+      <script src="../../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
