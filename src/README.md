@@ -1,53 +1,52 @@
 # RADNN
 
-Repository: <https://github.com/efurlanm/radnn>  
-Documentation: <http://efurlanm.github.io/radnn>
-
-This repository houses my research notes on physics-based machine learning (PIML) applied to scientific problems, including experiments in climate and weather modeling. Documentation, available in Markdown files and online at [RADNN](http://efurlanm.github.io/radnn), provides a repository overview (including third-party documentation) and is distributed throughout the directories. As the research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.
+This repository houses my research notes on physics-based machine learning (PIML) applied to scientific problems, including experiments in climate and weather modeling. As the research is actively progressing, this repository remains a work in progress (WIP) and is subject to change.
 
 ## Some directories
 
-- [ukk23test01](ukk23test01/README.md) : tests performed on a clone of the git branch **main**, described in [[Ukk22]](references.md#Ukk22). <https://github.com/peterukk/rte-rrtmgp-nn/tree/2.0> . Includes the `examples/rrtmgp-nn-training` subdirectory with the implementation for NN gas optics training.
+- [ukk23test01](ukk23test01/README.md) - tests performed on a clone of the **main** git branch described in [[Ukk22]](references.md#Ukk22): <https://github.com/peterukk/rte-rrtmgp-nn/tree/2.0> . Includes the `examples/rrtmgp-nn-training` subdirectory with the implementation for NN gas optics training.
 
-- [ukk22test02](ukk22test02/README.md) : tests performed on a clone of the git branch **nn_dev**, described in [[Ukk22c]](references.md#Ukk22c). <https://github.com/peterukk/rte-rrtmgp-nn/tree/nn_dev/> .  Includes the `examples/rrtmgp-nn-training` subdirectory with the implementation for NN gas optics training.
+- [ukk22test02](ukk22test02/README.md) - tests performed on a clone of the **nn_dev** git branch described in [[Ukk22c]](references.md#Ukk22c): <https://github.com/peterukk/rte-rrtmgp-nn/tree/nn_dev/> .  Includes the `examples/rrtmgp-nn-training` subdirectory with the implementation for NN gas optics training.
 
-- [ukk23eo01](ukk23eo01/README.md) : "ecRad-NN". Contains the optimized version of the ecRad radiation scheme, with the new RRTMGP-NN gas optics, from <https://github.com/peterukk/ecrad-opt> branch `clean_no_opt_testing` , described in [[Ukk22a]](references.md#Ukk22a). Does not contain the implementation that does the NN training (the implementation, development and testing of RRTMGP-NN is described in [[Ukk23]](references.md#Ukk23)).
+- [ukk23eo01](ukk23eo01/README.md) - "ecRad-NN". Contains the optimized version of the ecRad radiation scheme, with the new RRTMGP-NN gas optics, from the `clean_no_opt_testing` branch of <https://github.com/peterukk/ecrad-opt>, described in [[Ukk22a]](references.md#Ukk22a). It does not contain the implementation that performs NN training (the implementation, development and testing of RRTMGP-NN are described in [[Ukk23]](references.md#Ukk23)).
 
-- [ecrad](ecrad/README.md) : original ecRad repo, without NN. <https://github.com/ecmwf-ifs/ecrad> .
+- [ecrad](ecrad/README.md) - original ecRad repo, without NN. <https://github.com/ecmwf-ifs/ecrad> .
+
+- [torchfort](torchfort/README.md) - tests performed on a clone of the Nvidia TorchFort git repository <https://github.com/NVIDIA/TorchFort>
 
 ## Notebooks
 
 (unordered)
 
-- [rfmip02-clear-sky-NN-02.ipynb](rfmip02-clear-sky-NN.ipynb) : junk copy used for various tests.
+- [rfmip02-clear-sky-NN-02.ipynb](rfmip02-clear-sky-NN.ipynb) - junk copy used for various tests.
 
-- [rfmip02-clear-sky-02.ipynb](rfmip02-clear-sky.ipynb) : junk copy used for various tests.
+- [rfmip02-clear-sky-02.ipynb](rfmip02-clear-sky.ipynb) - junk copy used for various tests.
 
-- [rfmip02-clear-sky-NN.ipynb](rfmip02-clear-sky-NN.ipynb) : "RRTMG-NN". Runs the RFMIP-CLEAR-SKY example with NN, from ukk22test02 dir.
+- [rfmip02-clear-sky-NN.ipynb](rfmip02-clear-sky-NN.ipynb) - "RRTMG-NN". Runs the RFMIP-CLEAR-SKY example with NN, from ukk22test02 dir.
 
-- [rfmip02-clear-sky.ipynb](rfmip02-clear-sky.ipynb) : "RRTMG". Runs the RFMIP-CLEAR-SKY example without NN, from ukk22test02 dir.
+- [rfmip02-clear-sky.ipynb](rfmip02-clear-sky.ipynb) - "RRTMG". Runs the RFMIP-CLEAR-SKY example without NN, from ukk22test02 dir.
 
-- [rrtmgp_rfmip_lw-test01.ipynb](rrtmgp_rfmip_lw-test01.ipynb) : example program to demonstrate the calculation of longwave radiative fluxes in clear, aerosol-free skies. Based on `rfmip-clear-sky/rrtmgp_rfmip_lw.F90` from git branch **main**.
+- [rrtmgp_rfmip_lw-test01.ipynb](rrtmgp_rfmip_lw-test01.ipynb) - example program to demonstrate the calculation of longwave radiative fluxes in clear, aerosol-free skies. Based on `rfmip-clear-sky/rrtmgp_rfmip_lw.F90` from git branch **main**.
 
-- [ukk23test01-train-v2.ipynb](ukk23test01-train-v2.ipynb) : continuation of `ukk23test01-train-v1.ipynb`, adding more documentation, better organization, complete training, etc.
+- [ukk23test01-train-v2.ipynb](ukk23test01-train-v2.ipynb) - continuation of `ukk23test01-train-v1.ipynb`, adding more documentation, better organization, complete training, etc.
 
-- [ukk23test01-train-v1.ipynb](ukk23test01-train-v1.ipynb) : generates files containing the NN model that is later used in the RRTMGP-NN model. The implementation uses TensorFlow/Python for training the NN, and Fortran routines are used to generate the training dataset. Based on Ukk22 git main branch.
+- [ukk23test01-train-v1.ipynb](ukk23test01-train-v1.ipynb) - generates files containing the NN model that is later used in the RRTMGP-NN model. The implementation uses TensorFlow/Python for training the NN, and Fortran routines are used to generate the training dataset. Based on Ukk22 git main branch.
 
-- [ukk23test01-train-sd-v240823.ipynb](ukk23test01-train-sd-v240823.ipynb) : NN network training for the optical gas radiation problem, running on SDumont.
+- [ukk23test01-train-sd-v240823.ipynb](ukk23test01-train-sd-v240823.ipynb) - NN network training for the optical gas radiation problem, running on SDumont.
 
-- [rfmip01-clear-sky.ipynb](rfmip01-clear-sky.ipynb) : runs the RFMIP-CLEAR-SKY example, from ukk23test01 dir, described in [[Ukk22]](references.md#Ukk22). Was "ukk23test01-rfmip-clear-sky.ipynb".
+- [rfmip01-clear-sky.ipynb](rfmip01-clear-sky.ipynb) - runs the RFMIP-CLEAR-SKY example, from ukk23test01 dir, described in [[Ukk22]](references.md#Ukk22). Was "ukk23test01-rfmip-clear-sky.ipynb".
 
-- [ecrad01-NN-gprof.ipynb](ecrad01-NN-gprof.ipynb) : "ecRad-NN". Gprof of ecRad from `ukk23eo01` dir (uses RRTMGP-NN). Was "ukk23eo01-NN-gprof.ipynb".
+- [ecrad01-NN-gprof.ipynb](ecrad01-NN-gprof.ipynb) - "ecRad-NN". Gprof of ecRad from `ukk23eo01` dir (uses RRTMGP-NN). Was "ukk23eo01-NN-gprof.ipynb".
 
-- [ecrad01-gprof.ipynb](ecrad01-gprof.ipynb) : "ecRad". Gprof of ecrad (without NN) executable from ecrad dir.
+- [ecrad01-gprof.ipynb](ecrad01-gprof.ipynb) - "ecRad". Gprof of ecrad (without NN) executable from ecrad dir.
 
-- [ecrad-01-sd-v240823.ipynb](ecrad-01-sd-v240823.ipynb) : shows the original ecRad radiation module using conventional numerical method, running on SDumont.
+- [ecrad-01-sd-v240823.ipynb](ecrad-01-sd-v240823.ipynb) - shows the original ecRad radiation module using conventional numerical method, running on SDumont.
 
-- [ecrad-01-gc.ipynb](ecrad-01-gc.ipynb) : ecRad compiling and running on Google Colab.
+- [ecrad-01-gc.ipynb](ecrad-01-gc.ipynb) - ecRad compiling and running on Google Colab.
 
 ## Other files
 
-- [ecrad-radiation-user-guide-2022](ecrad-radiation-user-guide-2022.md) : ecRad Radiation Scheme User Guide document converted from PDF to HTML. Source: [Hogan, R. J. [ecRad radiation scheme: User Guide](https://confluence.ecmwf.int/download/attachments/70945505/ecrad_documentation.pdf?version=5&modificationDate=1655480733414&api=v2). Version 1.5 (June 2022) applicable to ecRad version 1.5.x].
+- [ecrad-radiation-user-guide-2022](ecrad-radiation-user-guide-2022.md) - ecRad Radiation Scheme User Guide document converted from PDF to HTML. Source: [Hogan, R. J. [ecRad radiation scheme: User Guide](https://confluence.ecmwf.int/download/attachments/70945505/ecrad_documentation.pdf?version=5&modificationDate=1655480733414&api=v2). Version 1.5 (June 2022) applicable to ecRad version 1.5.x].
 
 - `*.txt` and `*.yml` are auxiliary files.
 
@@ -90,8 +89,9 @@ There is a data repository hosted on Zenodo titled "Training and evaluation data
 
 The complete listing of the `data/` directory is available in [listingdata](listingdata.html).
 
-## My personal notes
+## Miscellaneous
 
-I keep a separate page with some [personal notes](notes.md).
+- [Personal notes](notes.md) - I keep a separate file (page) with random notes.
+- [pd1b24](https://github.com/efurlanm/pd1b24) - repository containing code, data, manuscripts and other files used in my research used in the Exams and Qualification Proposal, related to Physics-Informed Machine Learning (PIML) and Physics-Informed Neural Networks (PINN) methods.
 
-<br><sub>Last edited: 2025-02-23 14:31:50</sub>
+<br><sub>Last edited: 2025-05-02 12:05:17</sub>
