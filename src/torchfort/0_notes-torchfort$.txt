@@ -1,0 +1,119 @@
+# TORCHFORT
+
+
+## INSTALL
+git clone --depth 1 --single-branch --branch master https://github.com/NVIDIA/TorchFort.git
+cd TorchFort
+git ls-files | xargs -I{} git log -1 --date=format:%Y%m%d%H%M.%S --format='touch -t %ad "{}"' "{}" | $SHELL
+rm -rf .git
+- instalacao conforme o manual online (usa nvfortran)
+- entra no conteiner:
+sudo docker run -it -v /home/x:/mnt/x -w /home -p 8895:8895 --gpus=all --name torchfort f4a1749ea5e5
+adduser x
+su x -
+sudo docker start torchfort
+sudo docker exec -it torchfort bash
+
+
+
+- os executáveis dos exemplos estão em
+cd /opt/torchfort/bin/examples/fortran/simulation
+
+mpirun --allow-run-as-root -np 2 ./train_distributed
+
+mpif90 -c train_distributed.f90 -I/usr/local/torchfort/include -fopenacc
+mpif90 -o train_distributed train_distributed.o -L/usr/local/torchfort/lib -ltorchfort -lm -fopenacc
+
+mkdir build
+cd build
+cmake -DCMAKE_Fortran_COMPILER=gfortran ..
+make -j
+
+
+- da documentação para construir tudo:
+mkdir build && cd build
+cmake -DCMAKE_INSTALL_PREFIX=<TorchFort installation prefix> \
+      -DTORCHFORT_YAML_CPP_ROOT=<path to yaml-cpp installation> \
+      -DTORCHFORT_BUILD_EXAMPLES=1 \
+      -DCMAKE_PREFIX_PATH="`python -c 'import torch;print(torch.utils.cmake_prefix_path)'`" \
+    ..
+make -j install
+
+
+- GPU
+cmake -DCUF_GPU_ARG="sm_80"
+
+
+## startjupyterlab
+pkill -f "jupyter-lab"
+source $HOME/conda/bin/activate
+nohup jupyter-lab --allow-root --notebook-dir=/ --no-browser --NotebookApp.token='' --ip=0.0.0.0 --port=8895 >/dev/null 2>&1 &
+
+
+
+## CRIA VOLUME
+sudo docker volume create --driver local \
+    --opt type=nfs \
+    --opt o=addr=192.168.84.238,rw \
+    --opt device=:/home/x \
+    shared
+sudo docker run -d -it --gpus=all --privileged \
+    -p 8895:8895 \
+    --name to01 5ef57bf9de13 \
+    -w /home/x \
+    -v shared:/mnt/x
+sudo docker volume rm shared
+
+
+## SSH
+apt update && apt install -y openssh-server
+passwd root
+echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+service ssh enable
+service ssh start
+
+
+## CRIA NOVO CONTAINER
+sudo docker commit nome_do_container nova_imagem
+sudo docker commit to01 torchfort:v3
+$ zd images
+REPOSITORY    TAG                       IMAGE ID       CREATED          SIZE                                                                        
+torchfort     v3                        588b0fba0bad   14 seconds ago   32GB                                                                        
+torchfort     v2                        5ef57bf9de13   36 hours ago     30.3GB                                                                      
+torchfort     latest                    f4a1749ea5e5   7 days ago       28.9GB    
+
+
+
+sudo docker run -it -v /home/x:/mnt/x -w /home/x -p 8895:8895 --gpus=all --privileged --name to01 5ef57bf9de13
+
+sudo docker exec -it to01 
+
+source $HOME/conda/bin/activate
+nohup jupyter-lab --allow-root --notebook-dir=/ --no-browser --NotebookApp.token='' --ip=0.0.0.0 --port=8895 >/dev/null 2>&1 &
+
+dentro do container:
+zd exec -it to01 bash
++++ vi /home/x/startjupyterlab
+source $HOME/conda/bin/activate base
+nohup jupyter-lab --allow-root --notebook-dir=/ --no-browser --NotebookApp.token='' --ip=0.0.0.0 --port=8895 >/dev/null 2>&1 &
++--
+chmod +x /home/x/startjupyterlab
+
+fora do conteiner:
+sudo docker exec to01 bash /home/x/startjupyterlab
+
+
+
+
+## CUF_GPU_ARG DO CMAKELIST.TXT DE EXAMPLES
+Se a variável TORCHFORT_CUDA_CC_LIST (no CMAKELIST.TXT principal do repositório) for definida para "70;75;86", o processo de geração resultaria em algo como:
+
+A lista inicial seria ["70", "75", "86"] (internamente no loop foreach, o CMake trata strings separadas por ponto e vírgula como listas).
+Após o loop foreach, a lista temporária CUF_GPU_ARG seria ["cc70", "cc75", "cc86"].
+É adicionado o elemento da versão CUDA, resultando em ["cc70", "cc75", "cc86", "cudaX.Y"] (onde X.Y é a versão do CUDA encontrada, como 11.8, 12.0, etc.).
+Finalmente, a lista é junta em uma única string usando vírgulas como separador.
+Portanto, o valor final de CUF_GPU_ARG seria algo como:
+
+Se TORCHFORT_CUDA_CC_LIST for o padrão "70;80;90" e NVHPC_CUDA_VERSION for 11.8, CUF_GPU_ARG seria "cc70,cc80,cc90,cuda11.8".
+Se TORCHFORT_CUDA_CC_LIST for definida como "70;75;86" e NVHPC_CUDA_VERSION for 12.0, CUF_GPU_ARG seria "cc70,cc75,cc86,cuda12.0".
+O valor final de CUF_GPU_ARG será uma string única contendo as capacidades de computação prefixadas com "cc" e a versão do CUDA prefixada com "cuda", separadas por vírgulas.
