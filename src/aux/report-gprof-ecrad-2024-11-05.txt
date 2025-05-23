@@ -1,0 +1,1288 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 25.65      0.49     0.49       10    49.00    64.78  __radiation_tripleclouds_sw_MOD_solver_tripleclouds_sw
+ 13.61      0.75     0.26       12    21.67    60.42  __radiation_ifs_rrtm_MOD_gas_optics
+ 10.47      0.95     0.20       12    16.67    31.85  __radiation_tripleclouds_lw_MOD_solver_tripleclouds_lw
+  6.28      1.07     0.12       11    10.91    10.91  __radiation_aerosol_optics_MOD_add_aerosol_optics
+  6.28      1.19     0.12     4696     0.03     0.03  __radiation_two_stream_MOD_calc_ref_trans_sw
+  4.71      1.28     0.09    10098     0.01     0.01  __radiation_two_stream_MOD_calc_ref_trans_lw
+  4.19      1.36     0.08    20692     0.00     0.00  __radiation_matrix_MOD_singlemat_x_vec
+  4.19      1.44     0.08       12     6.67     6.67  __radiation_ifs_rrtm_MOD_planck_function_atmos
+  3.14      1.50     0.06       12     5.00    18.33  rrtm_gas_optical_depth_
+  2.09      1.54     0.04       12     3.33    11.25  srtm_gas_optical_depth_
+  1.57      1.57     0.03      349     0.09     0.09  __radiation_adding_ica_lw_MOD_calc_fluxes_no_scattering_lw
+  1.57      1.60     0.03       12     2.50     2.50  rrtm_taumol5_
+  1.57      1.63     0.03       12     2.50     2.50  rrtm_taumol8_
+  1.31      1.66     0.03       10     2.50     2.50  srtm_taumol17_
+  1.05      1.68     0.02    10145     0.00     0.00  __radiation_liquid_optics_socrates_MOD_calc_liq_optics_socrates
+  1.05      1.70     0.02      349     0.06     0.06  __radiation_two_stream_MOD_calc_no_scattering_transmittance_lw
+  1.05      1.72     0.02       12     1.67     1.67  rrtm_taumol1_
+  1.05      1.74     0.02       12     1.67     1.67  rrtm_taumol2_
+  1.05      1.76     0.02       12     1.67     1.67  rrtm_taumol3_
+  1.05      1.78     0.02       12     1.67     1.67  rrtm_taumol4_
+  1.05      1.80     0.02       12     1.67     1.67  rrtm_taumol7_
+  1.05      1.82     0.02       10     2.00     2.00  srtm_taumol20_
+  0.52      1.83     0.01       12     0.83     2.50  __radiation_cloud_optics_MOD_cloud_optics
+  0.52      1.84     0.01       12     0.83     0.83  rrtm_prepare_gases_
+  0.52      1.85     0.01       12     0.83     0.83  rrtm_setcoef_140gp_
+  0.52      1.86     0.01       12     0.83     0.83  srtm_setcoef_
+  0.52      1.87     0.01       10     1.00     1.00  srtm_taumol16_
+  0.52      1.88     0.01       10     1.00     1.00  srtm_taumol22_
+  0.52      1.89     0.01       10     1.00     1.00  srtm_taumol23_
+  0.52      1.90     0.01       10     1.00     1.00  srtm_taumol28_
+  0.52      1.91     0.01       10     1.00     1.00  srtm_taumol29_
+  0.00      1.91     0.00   189312     0.00     0.00  __radiation_cloud_optics_MOD_delta_eddington_scat_od
+  0.00      1.91     0.00    90592     0.00     0.00  __radiation_overlap_MOD_calc_alpha_overlap_matrix
+  0.00      1.91     0.00    46678     0.00     0.00  __radiation_aerosol_optics_data_MOD_calc_rh_index
+  0.00      1.91     0.00     3929     0.00     0.00  __radiation_ice_optics_fu_MOD_calc_ice_optics_fu_lw
+  0.00      1.91     0.00     3919     0.00     0.00  __radiation_ice_optics_fu_MOD_calc_ice_optics_fu_sw
+  0.00      1.91     0.00      350     0.00     0.00  __radiation_aerosol_optics_MOD_delta_eddington_extensive_vec
+  0.00      1.91     0.00      150     0.00     0.00  __radiation_spectral_definition_MOD_calc_planck_function_wavenumber
+  0.00      1.91     0.00       72     0.00     0.00  __easy_netcdf_MOD_get_array_dimensions
+  0.00      1.91     0.00       64     0.00     0.00  __easy_netcdf_MOD_get_variable_id
+  0.00      1.91     0.00       31     0.00     0.00  __easy_netcdf_MOD_get_real_matrix
+  0.00      1.91     0.00       23     0.00     0.00  __radiation_config_MOD_print_logical
+  0.00      1.91     0.00       23     0.00     0.00  __radiation_overlap_MOD_calc_overlap_matrices
+  0.00      1.91     0.00       22     0.00     0.00  __radiation_regions_MOD_calc_region_properties
+  0.00      1.91     0.00       19     0.00     0.00  __radiation_check_MOD_out_of_bounds_2d
+  0.00      1.91     0.00       14     0.00     0.00  __easy_netcdf_MOD_exists
+  0.00      1.91     0.00       13     0.00     0.00  __easy_netcdf_MOD_define_variable
+  0.00      1.91     0.00       13     0.00     0.00  __easy_netcdf_MOD_end_define_mode
+  0.00      1.91     0.00       12     0.00     0.00  __easy_netcdf_MOD_get_rank
+  0.00      1.91     0.00       12     0.00     0.00  __radiation_flux_MOD_calc_surface_spectral
+  0.00      1.91     0.00       12     0.00     0.00  __radiation_flux_MOD_calc_toa_spectral
+  0.00      1.91     0.00       12     0.00     0.00  __radiation_gas_MOD_assert_units_gas
+  0.00      1.91     0.00       12     0.00     0.00  __radiation_gas_MOD_get_gas
+  0.00      1.91     0.00       12     0.00     0.00  __radiation_gas_MOD_scale_gas
+  0.00      1.91     0.00       12     0.00     0.00  __radiation_ifs_rrtm_MOD_planck_function_surf
+  0.00      1.91     0.00       12     0.00     0.00  __radiation_single_level_MOD_get_albedos
+  0.00      1.91     0.00       12     0.00     0.00  rrtm_taumol10_
+  0.00      1.91     0.00       12     0.00     0.00  rrtm_taumol11_
+  0.00      1.91     0.00       12     0.00     0.00  rrtm_taumol12_
+  0.00      1.91     0.00       12     0.00     0.00  rrtm_taumol13_
+  0.00      1.91     0.00       12     0.00     0.00  rrtm_taumol14_
+  0.00      1.91     0.00       12     0.00     0.00  rrtm_taumol15_
+  0.00      1.91     0.00       12     0.00     0.00  rrtm_taumol16_
+  0.00      1.91     0.00       12     0.00     0.00  rrtm_taumol6_
+  0.00      1.91     0.00       12     0.00     0.00  rrtm_taumol9_
+  0.00      1.91     0.00       11     0.00     0.00  __easy_netcdf_MOD_get_real_array3
+  0.00      1.91     0.00       11     0.00     0.00  __easy_netcdf_MOD_put_real_matrix
+  0.00      1.91     0.00       11     0.00     0.00  __radiation_aerosol_optics_data_MOD_get_line
+  0.00      1.91     0.00       10     0.00     0.00  __radiation_check_MOD_out_of_bounds_3d
+  0.00      1.91     0.00       10     0.00     0.00  __radiation_cloud_MOD_crop_cloud_fraction
+  0.00      1.91     0.00       10     0.00     0.00  __radiation_config_MOD_get_enum_code
+  0.00      1.91     0.00       10     0.00     0.00  srtm_taumol18_
+  0.00      1.91     0.00       10     0.00     0.00  srtm_taumol19_
+  0.00      1.91     0.00       10     0.00     0.00  srtm_taumol24_
+  0.00      1.91     0.00       10     0.00     0.00  srtm_taumol25_
+  0.00      1.91     0.00       10     0.00     0.00  srtm_taumol26_
+  0.00      1.91     0.00        9     0.00     0.00  srtm_taumol21_
+  0.00      1.91     0.00        9     0.00     0.00  srtm_taumol27_
+  0.00      1.91     0.00        8     0.00     0.00  __easy_netcdf_MOD_get_real_vector
+  0.00      1.91     0.00        8     0.00     0.00  __radiation_config_MOD_print_enum
+  0.00      1.91     0.00        7     0.00     0.00  __radiation_gas_MOD_put_gas
+  0.00      1.91     0.00        6     0.00     0.00  __radiation_aerosol_optics_data_MOD_set_hydrophobic_type
+  0.00      1.91     0.00        5     0.00     0.00  __easy_netcdf_MOD_close_netcdf_file
+  0.00      1.91     0.00        5     0.00     0.00  __radiation_aerosol_optics_data_MOD_set_hydrophilic_type
+  0.00      1.91     0.00        4     0.00     0.00  __easy_netcdf_MOD_open_netcdf_file
+  0.00      1.91     0.00        4     0.00     0.00  __easy_netcdf_MOD_transpose_matrices
+  0.00      1.91     0.00        3     0.00     0.00  __radiation_config_MOD_print_real
+  0.00      1.91     0.00        3     0.00   635.01  __radiation_interface_MOD_radiation
+  0.00      1.91     0.00        2     0.00     0.00  __easy_netcdf_MOD_define_dimension
+  0.00      1.91     0.00        2     0.00     0.00  __easy_netcdf_MOD_get_global_attribute
+  0.00      1.91     0.00        2     0.00     0.00  __easy_netcdf_MOD_put_real_vector
+  0.00      1.91     0.00        2     0.00     0.00  __radiation_check_MOD_out_of_bounds_1d
+  0.00      1.91     0.00        2     0.00     0.00  __radiation_spectral_definition_MOD_allocate_bands_only
+  0.00      1.91     0.00        2     0.00     0.00  __radiation_spectral_definition_MOD_calc_mapping_from_bands
+  0.00      1.91     0.00        2     0.00     0.00  __radiation_spectral_definition_MOD_deallocate
+  0.00      1.91     0.00        1     0.00     0.00  MAIN__
+  0.00      1.91     0.00        1     0.00     0.00  __easy_netcdf_MOD_create_netcdf_file
+  0.00      1.91     0.00        1     0.00     0.00  __easy_netcdf_MOD_double_precision
+  0.00      1.91     0.00        1     0.00     0.00  __easy_netcdf_MOD_get_real_scalar
+  0.00      1.91     0.00        1     0.00     0.00  __easy_netcdf_MOD_permute_3d_arrays
+  0.00      1.91     0.00        1     0.00     0.00  __easy_netcdf_MOD_put_global_attribute
+  0.00      1.91     0.00        1     0.00     0.00  __easy_netcdf_MOD_put_global_attributes
+  0.00      1.91     0.00        1     0.00     0.00  __ecrad_driver_config_MOD_read_config_from_namelist
+  0.00      1.91     0.00        1     0.00     0.00  __ecrad_driver_read_input_MOD_read_input
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_aerosol_MOD_out_of_physical_bounds
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_aerosol_optics_MOD_setup_aerosol_optics
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_aerosol_optics_data_MOD_initialize_types
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_aerosol_optics_data_MOD_print_description
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_aerosol_optics_data_MOD_set_types
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_aerosol_optics_data_MOD_setup_aerosol_optics
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_cloud_MOD_create_fractional_std
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_cloud_MOD_out_of_physical_bounds
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_cloud_optics_MOD_setup_cloud_optics
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_cloud_optics_data_MOD_setup_cloud_optics
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_config_MOD_consolidate_config
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_config_MOD_consolidate_lw_emiss_intervals
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_config_MOD_consolidate_sw_albedo_intervals
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_config_MOD_print_config
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_config_MOD_read_config_from_namelist
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_flux_MOD_allocate_flux_type
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_flux_MOD_out_of_physical_bounds
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_gas_MOD_allocate_gas
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_gas_MOD_deallocate_gas
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_gas_MOD_out_of_physical_bounds
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_gas_MOD_put_well_mixed_gas
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_gas_MOD_set_units_gas
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_ifs_rrtm_MOD_set_gas_units
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_ifs_rrtm_MOD_setup_gas_optics
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_interface_MOD_set_gas_units
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_interface_MOD_setup_radiation
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_save_MOD_save_fluxes
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_single_level_MOD_init_seed_simple
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_single_level_MOD_out_of_physical_bounds
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_thermodynamics_MOD_calc_saturation_wrt_liquid
+  0.00      1.91     0.00        1     0.00     0.00  __radiation_thermodynamics_MOD_out_of_physical_bounds
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb10_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb11_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb12_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb13_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb14_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb15_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb16_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb1_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb2_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb3_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb4_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb5_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb6_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb7_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb8_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_cmbgb9_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_init_140gp_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb10_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb11_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb12_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb13_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb14_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb15_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb16_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb1_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb2_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb3_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb4_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb5_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb6_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb7_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb8_
+  0.00      1.91     0.00        1     0.00     0.00  rrtm_kgb9_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_cmbgb16_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_cmbgb17_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_cmbgb18_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_cmbgb19_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_cmbgb20_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_cmbgb21_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_cmbgb22_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_cmbgb23_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_cmbgb24_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_cmbgb25_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_cmbgb26_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_cmbgb27_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_cmbgb28_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_cmbgb29_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_init_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_kgb16_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_kgb17_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_kgb18_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_kgb19_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_kgb20_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_kgb21_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_kgb22_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_kgb23_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_kgb24_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_kgb25_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_kgb26_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_kgb27_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_kgb28_
+  0.00      1.91     0.00        1     0.00     0.00  srtm_kgb29_
+  0.00      1.91     0.00        1     0.00     0.00  surrtab_
+  0.00      1.91     0.00        1     0.00     0.00  surrtftr_
+  0.00      1.91     0.00        1     0.00     0.00  surrtpk_
+  0.00      1.91     0.00        1     0.00     0.00  surrtrf_
+  0.00      1.91     0.00        1     0.00     0.00  susrtm_
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.52% of 1.91 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.00    1.91                 frame_dummy [1]
+                0.00    1.91       3/3           __radiation_interface_MOD_radiation [2]
+-----------------------------------------------
+                0.00    1.91       3/3           frame_dummy [1]
+[2]    100.0    0.00    1.91       3         __radiation_interface_MOD_radiation [2]
+                0.26    0.47      12/12          __radiation_ifs_rrtm_MOD_gas_optics [3]
+                0.49    0.16      10/10          __radiation_tripleclouds_sw_MOD_solver_tripleclouds_sw [4]
+                0.20    0.18      12/12          __radiation_tripleclouds_lw_MOD_solver_tripleclouds_lw [5]
+                0.12    0.00      11/11          __radiation_aerosol_optics_MOD_add_aerosol_optics [8]
+                0.01    0.02      12/12          __radiation_cloud_optics_MOD_cloud_optics [16]
+                0.00    0.00      12/12          __radiation_single_level_MOD_get_albedos [149]
+                0.00    0.00      12/12          __radiation_flux_MOD_calc_surface_spectral [143]
+                0.00    0.00      12/12          __radiation_flux_MOD_calc_toa_spectral [144]
+                0.00    0.00      10/10          __radiation_cloud_MOD_crop_cloud_fraction [154]
+-----------------------------------------------
+                0.26    0.47      12/12          __radiation_interface_MOD_radiation [2]
+[3]     38.1    0.26    0.47      12         __radiation_ifs_rrtm_MOD_gas_optics [3]
+                0.06    0.16      12/12          rrtm_gas_optical_depth_ [6]
+                0.04    0.10      12/12          srtm_gas_optical_depth_ [7]
+                0.08    0.00      12/12          __radiation_ifs_rrtm_MOD_planck_function_atmos [12]
+                0.01    0.00      12/12          rrtm_prepare_gases_ [26]
+                0.01    0.00      12/12          rrtm_setcoef_140gp_ [27]
+                0.01    0.00      12/12          srtm_setcoef_ [28]
+                0.00    0.00      12/12          __radiation_gas_MOD_assert_units_gas [145]
+                0.00    0.00      12/12          __radiation_ifs_rrtm_MOD_planck_function_surf [148]
+-----------------------------------------------
+                0.49    0.16      10/10          __radiation_interface_MOD_radiation [2]
+[4]     34.0    0.49    0.16      10         __radiation_tripleclouds_sw_MOD_solver_tripleclouds_sw [4]
+                0.12    0.00    4696/4696        __radiation_two_stream_MOD_calc_ref_trans_sw [9]
+                0.04    0.00    9765/20692       __radiation_matrix_MOD_singlemat_x_vec [11]
+                0.00    0.00      12/23          __radiation_overlap_MOD_calc_overlap_matrices [136]
+                0.00    0.00      10/22          __radiation_regions_MOD_calc_region_properties [137]
+-----------------------------------------------
+                0.20    0.18      12/12          __radiation_interface_MOD_radiation [2]
+[5]     20.1    0.20    0.18      12         __radiation_tripleclouds_lw_MOD_solver_tripleclouds_lw [5]
+                0.09    0.00   10098/10098       __radiation_two_stream_MOD_calc_ref_trans_lw [10]
+                0.04    0.00   10927/20692       __radiation_matrix_MOD_singlemat_x_vec [11]
+                0.03    0.00     349/349         __radiation_adding_ica_lw_MOD_calc_fluxes_no_scattering_lw [15]
+                0.02    0.00     349/349         __radiation_two_stream_MOD_calc_no_scattering_transmittance_lw [25]
+                0.00    0.00      12/22          __radiation_regions_MOD_calc_region_properties [137]
+                0.00    0.00      11/23          __radiation_overlap_MOD_calc_overlap_matrices [136]
+-----------------------------------------------
+                0.06    0.16      12/12          __radiation_ifs_rrtm_MOD_gas_optics [3]
+[6]     11.5    0.06    0.16      12         rrtm_gas_optical_depth_ [6]
+                0.03    0.00      12/12          rrtm_taumol5_ [13]
+                0.03    0.00      12/12          rrtm_taumol8_ [14]
+                0.02    0.00      12/12          rrtm_taumol1_ [18]
+                0.02    0.00      12/12          rrtm_taumol2_ [19]
+                0.02    0.00      12/12          rrtm_taumol3_ [20]
+                0.02    0.00      12/12          rrtm_taumol4_ [21]
+                0.02    0.00      12/12          rrtm_taumol7_ [22]
+                0.00    0.00      12/12          rrtm_taumol6_ [41]
+                0.00    0.00      12/12          rrtm_taumol9_ [42]
+                0.00    0.00      12/12          rrtm_taumol10_ [34]
+                0.00    0.00      12/12          rrtm_taumol11_ [35]
+                0.00    0.00      12/12          rrtm_taumol12_ [36]
+                0.00    0.00      12/12          rrtm_taumol13_ [37]
+                0.00    0.00      12/12          rrtm_taumol14_ [38]
+                0.00    0.00      12/12          rrtm_taumol15_ [39]
+                0.00    0.00      12/12          rrtm_taumol16_ [40]
+-----------------------------------------------
+                0.04    0.10      12/12          __radiation_ifs_rrtm_MOD_gas_optics [3]
+[7]      7.1    0.04    0.10      12         srtm_gas_optical_depth_ [7]
+                0.03    0.00      10/10          srtm_taumol17_ [17]
+                0.02    0.00      10/10          srtm_taumol20_ [23]
+                0.01    0.00      10/10          srtm_taumol16_ [29]
+                0.01    0.00      10/10          srtm_taumol22_ [30]
+                0.01    0.00      10/10          srtm_taumol23_ [31]
+                0.01    0.00      10/10          srtm_taumol28_ [32]
+                0.01    0.00      10/10          srtm_taumol29_ [33]
+                0.00    0.00      10/10          srtm_taumol18_ [43]
+                0.00    0.00      10/10          srtm_taumol19_ [44]
+                0.00    0.00      10/10          srtm_taumol24_ [45]
+                0.00    0.00      10/10          srtm_taumol25_ [46]
+                0.00    0.00      10/10          srtm_taumol26_ [47]
+                0.00    0.00       9/9           srtm_taumol21_ [48]
+                0.00    0.00       9/9           srtm_taumol27_ [49]
+-----------------------------------------------
+                0.12    0.00      11/11          __radiation_interface_MOD_radiation [2]
+[8]      6.3    0.12    0.00      11         __radiation_aerosol_optics_MOD_add_aerosol_optics [8]
+                0.00    0.00   46678/46678       __radiation_aerosol_optics_data_MOD_calc_rh_index [127]
+                0.00    0.00     350/350         __radiation_aerosol_optics_MOD_delta_eddington_extensive_vec [130]
+                0.00    0.00      12/12          __radiation_gas_MOD_get_gas [146]
+-----------------------------------------------
+                0.12    0.00    4696/4696        __radiation_tripleclouds_sw_MOD_solver_tripleclouds_sw [4]
+[9]      6.3    0.12    0.00    4696         __radiation_two_stream_MOD_calc_ref_trans_sw [9]
+-----------------------------------------------
+                0.09    0.00   10098/10098       __radiation_tripleclouds_lw_MOD_solver_tripleclouds_lw [5]
+[10]     4.7    0.09    0.00   10098         __radiation_two_stream_MOD_calc_ref_trans_lw [10]
+-----------------------------------------------
+                0.04    0.00    9765/20692       __radiation_tripleclouds_sw_MOD_solver_tripleclouds_sw [4]
+                0.04    0.00   10927/20692       __radiation_tripleclouds_lw_MOD_solver_tripleclouds_lw [5]
+[11]     4.2    0.08    0.00   20692         __radiation_matrix_MOD_singlemat_x_vec [11]
+-----------------------------------------------
+                0.08    0.00      12/12          __radiation_ifs_rrtm_MOD_gas_optics [3]
+[12]     4.2    0.08    0.00      12         __radiation_ifs_rrtm_MOD_planck_function_atmos [12]
+-----------------------------------------------
+                0.03    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[13]     1.6    0.03    0.00      12         rrtm_taumol5_ [13]
+-----------------------------------------------
+                0.03    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[14]     1.6    0.03    0.00      12         rrtm_taumol8_ [14]
+-----------------------------------------------
+                0.03    0.00     349/349         __radiation_tripleclouds_lw_MOD_solver_tripleclouds_lw [5]
+[15]     1.6    0.03    0.00     349         __radiation_adding_ica_lw_MOD_calc_fluxes_no_scattering_lw [15]
+-----------------------------------------------
+                0.01    0.02      12/12          __radiation_interface_MOD_radiation [2]
+[16]     1.6    0.01    0.02      12         __radiation_cloud_optics_MOD_cloud_optics [16]
+                0.02    0.00   10145/10145       __radiation_liquid_optics_socrates_MOD_calc_liq_optics_socrates [24]
+                0.00    0.00  189312/189312      __radiation_cloud_optics_MOD_delta_eddington_scat_od [125]
+                0.00    0.00    3929/3929        __radiation_ice_optics_fu_MOD_calc_ice_optics_fu_lw [128]
+                0.00    0.00    3919/3919        __radiation_ice_optics_fu_MOD_calc_ice_optics_fu_sw [129]
+-----------------------------------------------
+                0.03    0.00      10/10          srtm_gas_optical_depth_ [7]
+[17]     1.3    0.03    0.00      10         srtm_taumol17_ [17]
+-----------------------------------------------
+                0.02    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[18]     1.0    0.02    0.00      12         rrtm_taumol1_ [18]
+-----------------------------------------------
+                0.02    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[19]     1.0    0.02    0.00      12         rrtm_taumol2_ [19]
+-----------------------------------------------
+                0.02    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[20]     1.0    0.02    0.00      12         rrtm_taumol3_ [20]
+-----------------------------------------------
+                0.02    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[21]     1.0    0.02    0.00      12         rrtm_taumol4_ [21]
+-----------------------------------------------
+                0.02    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[22]     1.0    0.02    0.00      12         rrtm_taumol7_ [22]
+-----------------------------------------------
+                0.02    0.00      10/10          srtm_gas_optical_depth_ [7]
+[23]     1.0    0.02    0.00      10         srtm_taumol20_ [23]
+-----------------------------------------------
+                0.02    0.00   10145/10145       __radiation_cloud_optics_MOD_cloud_optics [16]
+[24]     1.0    0.02    0.00   10145         __radiation_liquid_optics_socrates_MOD_calc_liq_optics_socrates [24]
+-----------------------------------------------
+                0.02    0.00     349/349         __radiation_tripleclouds_lw_MOD_solver_tripleclouds_lw [5]
+[25]     1.0    0.02    0.00     349         __radiation_two_stream_MOD_calc_no_scattering_transmittance_lw [25]
+-----------------------------------------------
+                0.01    0.00      12/12          __radiation_ifs_rrtm_MOD_gas_optics [3]
+[26]     0.5    0.01    0.00      12         rrtm_prepare_gases_ [26]
+-----------------------------------------------
+                0.01    0.00      12/12          __radiation_ifs_rrtm_MOD_gas_optics [3]
+[27]     0.5    0.01    0.00      12         rrtm_setcoef_140gp_ [27]
+-----------------------------------------------
+                0.01    0.00      12/12          __radiation_ifs_rrtm_MOD_gas_optics [3]
+[28]     0.5    0.01    0.00      12         srtm_setcoef_ [28]
+-----------------------------------------------
+                0.01    0.00      10/10          srtm_gas_optical_depth_ [7]
+[29]     0.5    0.01    0.00      10         srtm_taumol16_ [29]
+-----------------------------------------------
+                0.01    0.00      10/10          srtm_gas_optical_depth_ [7]
+[30]     0.5    0.01    0.00      10         srtm_taumol22_ [30]
+-----------------------------------------------
+                0.01    0.00      10/10          srtm_gas_optical_depth_ [7]
+[31]     0.5    0.01    0.00      10         srtm_taumol23_ [31]
+-----------------------------------------------
+                0.01    0.00      10/10          srtm_gas_optical_depth_ [7]
+[32]     0.5    0.01    0.00      10         srtm_taumol28_ [32]
+-----------------------------------------------
+                0.01    0.00      10/10          srtm_gas_optical_depth_ [7]
+[33]     0.5    0.01    0.00      10         srtm_taumol29_ [33]
+-----------------------------------------------
+                0.00    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[34]     0.0    0.00    0.00      12         rrtm_taumol10_ [34]
+-----------------------------------------------
+                0.00    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[35]     0.0    0.00    0.00      12         rrtm_taumol11_ [35]
+-----------------------------------------------
+                0.00    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[36]     0.0    0.00    0.00      12         rrtm_taumol12_ [36]
+-----------------------------------------------
+                0.00    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[37]     0.0    0.00    0.00      12         rrtm_taumol13_ [37]
+-----------------------------------------------
+                0.00    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[38]     0.0    0.00    0.00      12         rrtm_taumol14_ [38]
+-----------------------------------------------
+                0.00    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[39]     0.0    0.00    0.00      12         rrtm_taumol15_ [39]
+-----------------------------------------------
+                0.00    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[40]     0.0    0.00    0.00      12         rrtm_taumol16_ [40]
+-----------------------------------------------
+                0.00    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[41]     0.0    0.00    0.00      12         rrtm_taumol6_ [41]
+-----------------------------------------------
+                0.00    0.00      12/12          rrtm_gas_optical_depth_ [6]
+[42]     0.0    0.00    0.00      12         rrtm_taumol9_ [42]
+-----------------------------------------------
+                0.00    0.00      10/10          srtm_gas_optical_depth_ [7]
+[43]     0.0    0.00    0.00      10         srtm_taumol18_ [43]
+-----------------------------------------------
+                0.00    0.00      10/10          srtm_gas_optical_depth_ [7]
+[44]     0.0    0.00    0.00      10         srtm_taumol19_ [44]
+-----------------------------------------------
+                0.00    0.00      10/10          srtm_gas_optical_depth_ [7]
+[45]     0.0    0.00    0.00      10         srtm_taumol24_ [45]
+-----------------------------------------------
+                0.00    0.00      10/10          srtm_gas_optical_depth_ [7]
+[46]     0.0    0.00    0.00      10         srtm_taumol25_ [46]
+-----------------------------------------------
+                0.00    0.00      10/10          srtm_gas_optical_depth_ [7]
+[47]     0.0    0.00    0.00      10         srtm_taumol26_ [47]
+-----------------------------------------------
+                0.00    0.00       9/9           srtm_gas_optical_depth_ [7]
+[48]     0.0    0.00    0.00       9         srtm_taumol21_ [48]
+-----------------------------------------------
+                0.00    0.00       9/9           srtm_gas_optical_depth_ [7]
+[49]     0.0    0.00    0.00       9         srtm_taumol27_ [49]
+-----------------------------------------------
+                0.00    0.00       1/1           main [122]
+[50]     0.0    0.00    0.00       1         MAIN__ [50]
+                0.00    0.00       1/1           __radiation_config_MOD_read_config_from_namelist [194]
+                0.00    0.00       1/1           __ecrad_driver_config_MOD_read_config_from_namelist [178]
+                0.00    0.00       1/1           __radiation_interface_MOD_setup_radiation [205]
+                0.00    0.00       1/4           __easy_netcdf_MOD_open_netcdf_file [162]
+                0.00    0.00       1/4           __easy_netcdf_MOD_transpose_matrices [163]
+                0.00    0.00       1/1           __ecrad_driver_read_input_MOD_read_input [179]
+                0.00    0.00       1/5           __easy_netcdf_MOD_close_netcdf_file [160]
+                0.00    0.00       1/1           __radiation_interface_MOD_set_gas_units [204]
+                0.00    0.00       1/1           __radiation_thermodynamics_MOD_calc_saturation_wrt_liquid [209]
+                0.00    0.00       1/1           __radiation_gas_MOD_out_of_physical_bounds [199]
+                0.00    0.00       1/1           __radiation_single_level_MOD_out_of_physical_bounds [208]
+                0.00    0.00       1/1           __radiation_thermodynamics_MOD_out_of_physical_bounds [210]
+                0.00    0.00       1/1           __radiation_cloud_MOD_out_of_physical_bounds [187]
+                0.00    0.00       1/1           __radiation_aerosol_MOD_out_of_physical_bounds [180]
+                0.00    0.00       1/1           __radiation_flux_MOD_allocate_flux_type [195]
+                0.00    0.00       1/1           __radiation_config_MOD_print_config [193]
+                0.00    0.00       1/1           __radiation_flux_MOD_out_of_physical_bounds [196]
+                0.00    0.00       1/1           __radiation_save_MOD_save_fluxes [206]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[51]     0.0    0.00    0.00       1         rrtm_cmbgb10_ [51]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[52]     0.0    0.00    0.00       1         rrtm_cmbgb11_ [52]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[53]     0.0    0.00    0.00       1         rrtm_cmbgb12_ [53]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[54]     0.0    0.00    0.00       1         rrtm_cmbgb13_ [54]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[55]     0.0    0.00    0.00       1         rrtm_cmbgb14_ [55]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[56]     0.0    0.00    0.00       1         rrtm_cmbgb15_ [56]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[57]     0.0    0.00    0.00       1         rrtm_cmbgb16_ [57]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[58]     0.0    0.00    0.00       1         rrtm_cmbgb1_ [58]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[59]     0.0    0.00    0.00       1         rrtm_cmbgb2_ [59]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[60]     0.0    0.00    0.00       1         rrtm_cmbgb3_ [60]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[61]     0.0    0.00    0.00       1         rrtm_cmbgb4_ [61]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[62]     0.0    0.00    0.00       1         rrtm_cmbgb5_ [62]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[63]     0.0    0.00    0.00       1         rrtm_cmbgb6_ [63]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[64]     0.0    0.00    0.00       1         rrtm_cmbgb7_ [64]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[65]     0.0    0.00    0.00       1         rrtm_cmbgb8_ [65]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[66]     0.0    0.00    0.00       1         rrtm_cmbgb9_ [66]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_ifs_rrtm_MOD_setup_gas_optics [203]
+[67]     0.0    0.00    0.00       1         rrtm_init_140gp_ [67]
+                0.00    0.00       1/1           surrtftr_ [114]
+                0.00    0.00       1/1           rrtm_kgb3_ [77]
+                0.00    0.00       1/1           rrtm_kgb2_ [76]
+                0.00    0.00       1/1           rrtm_kgb1_ [75]
+                0.00    0.00       1/1           rrtm_kgb7_ [81]
+                0.00    0.00       1/1           rrtm_kgb6_ [80]
+                0.00    0.00       1/1           rrtm_kgb5_ [79]
+                0.00    0.00       1/1           rrtm_kgb4_ [78]
+                0.00    0.00       1/1           rrtm_kgb10_ [68]
+                0.00    0.00       1/1           rrtm_kgb9_ [83]
+                0.00    0.00       1/1           rrtm_kgb8_ [82]
+                0.00    0.00       1/1           rrtm_kgb13_ [71]
+                0.00    0.00       1/1           rrtm_kgb12_ [70]
+                0.00    0.00       1/1           rrtm_kgb11_ [69]
+                0.00    0.00       1/1           rrtm_kgb16_ [74]
+                0.00    0.00       1/1           rrtm_kgb15_ [73]
+                0.00    0.00       1/1           rrtm_kgb14_ [72]
+                0.00    0.00       1/1           rrtm_cmbgb3_ [60]
+                0.00    0.00       1/1           rrtm_cmbgb2_ [59]
+                0.00    0.00       1/1           rrtm_cmbgb1_ [58]
+                0.00    0.00       1/1           rrtm_cmbgb6_ [63]
+                0.00    0.00       1/1           rrtm_cmbgb5_ [62]
+                0.00    0.00       1/1           rrtm_cmbgb4_ [61]
+                0.00    0.00       1/1           rrtm_cmbgb10_ [51]
+                0.00    0.00       1/1           rrtm_cmbgb9_ [66]
+                0.00    0.00       1/1           rrtm_cmbgb8_ [65]
+                0.00    0.00       1/1           rrtm_cmbgb7_ [64]
+                0.00    0.00       1/1           rrtm_cmbgb13_ [54]
+                0.00    0.00       1/1           rrtm_cmbgb12_ [53]
+                0.00    0.00       1/1           rrtm_cmbgb11_ [52]
+                0.00    0.00       1/1           rrtm_cmbgb16_ [57]
+                0.00    0.00       1/1           rrtm_cmbgb15_ [56]
+                0.00    0.00       1/1           rrtm_cmbgb14_ [55]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[68]     0.0    0.00    0.00       1         rrtm_kgb10_ [68]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[69]     0.0    0.00    0.00       1         rrtm_kgb11_ [69]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[70]     0.0    0.00    0.00       1         rrtm_kgb12_ [70]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[71]     0.0    0.00    0.00       1         rrtm_kgb13_ [71]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[72]     0.0    0.00    0.00       1         rrtm_kgb14_ [72]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[73]     0.0    0.00    0.00       1         rrtm_kgb15_ [73]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[74]     0.0    0.00    0.00       1         rrtm_kgb16_ [74]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[75]     0.0    0.00    0.00       1         rrtm_kgb1_ [75]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[76]     0.0    0.00    0.00       1         rrtm_kgb2_ [76]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[77]     0.0    0.00    0.00       1         rrtm_kgb3_ [77]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[78]     0.0    0.00    0.00       1         rrtm_kgb4_ [78]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[79]     0.0    0.00    0.00       1         rrtm_kgb5_ [79]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[80]     0.0    0.00    0.00       1         rrtm_kgb6_ [80]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[81]     0.0    0.00    0.00       1         rrtm_kgb7_ [81]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[82]     0.0    0.00    0.00       1         rrtm_kgb8_ [82]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[83]     0.0    0.00    0.00       1         rrtm_kgb9_ [83]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[84]     0.0    0.00    0.00       1         srtm_cmbgb16_ [84]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[85]     0.0    0.00    0.00       1         srtm_cmbgb17_ [85]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[86]     0.0    0.00    0.00       1         srtm_cmbgb18_ [86]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[87]     0.0    0.00    0.00       1         srtm_cmbgb19_ [87]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[88]     0.0    0.00    0.00       1         srtm_cmbgb20_ [88]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[89]     0.0    0.00    0.00       1         srtm_cmbgb21_ [89]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[90]     0.0    0.00    0.00       1         srtm_cmbgb22_ [90]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[91]     0.0    0.00    0.00       1         srtm_cmbgb23_ [91]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[92]     0.0    0.00    0.00       1         srtm_cmbgb24_ [92]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[93]     0.0    0.00    0.00       1         srtm_cmbgb25_ [93]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[94]     0.0    0.00    0.00       1         srtm_cmbgb26_ [94]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[95]     0.0    0.00    0.00       1         srtm_cmbgb27_ [95]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[96]     0.0    0.00    0.00       1         srtm_cmbgb28_ [96]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[97]     0.0    0.00    0.00       1         srtm_cmbgb29_ [97]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_ifs_rrtm_MOD_setup_gas_optics [203]
+[98]     0.0    0.00    0.00       1         srtm_init_ [98]
+                0.00    0.00       1/1           susrtm_ [117]
+                0.00    0.00       1/1           srtm_kgb17_ [100]
+                0.00    0.00       1/1           srtm_kgb16_ [99]
+                0.00    0.00       1/1           srtm_kgb20_ [103]
+                0.00    0.00       1/1           srtm_kgb19_ [102]
+                0.00    0.00       1/1           srtm_kgb18_ [101]
+                0.00    0.00       1/1           srtm_kgb23_ [106]
+                0.00    0.00       1/1           srtm_kgb22_ [105]
+                0.00    0.00       1/1           srtm_kgb21_ [104]
+                0.00    0.00       1/1           srtm_kgb26_ [109]
+                0.00    0.00       1/1           srtm_kgb25_ [108]
+                0.00    0.00       1/1           srtm_kgb24_ [107]
+                0.00    0.00       1/1           srtm_kgb29_ [112]
+                0.00    0.00       1/1           srtm_kgb28_ [111]
+                0.00    0.00       1/1           srtm_kgb27_ [110]
+                0.00    0.00       1/1           srtm_cmbgb18_ [86]
+                0.00    0.00       1/1           srtm_cmbgb17_ [85]
+                0.00    0.00       1/1           srtm_cmbgb16_ [84]
+                0.00    0.00       1/1           srtm_cmbgb21_ [89]
+                0.00    0.00       1/1           srtm_cmbgb20_ [88]
+                0.00    0.00       1/1           srtm_cmbgb19_ [87]
+                0.00    0.00       1/1           srtm_cmbgb24_ [92]
+                0.00    0.00       1/1           srtm_cmbgb23_ [91]
+                0.00    0.00       1/1           srtm_cmbgb22_ [90]
+                0.00    0.00       1/1           srtm_cmbgb27_ [95]
+                0.00    0.00       1/1           srtm_cmbgb26_ [94]
+                0.00    0.00       1/1           srtm_cmbgb25_ [93]
+                0.00    0.00       1/1           srtm_cmbgb29_ [97]
+                0.00    0.00       1/1           srtm_cmbgb28_ [96]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[99]     0.0    0.00    0.00       1         srtm_kgb16_ [99]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[100]    0.0    0.00    0.00       1         srtm_kgb17_ [100]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[101]    0.0    0.00    0.00       1         srtm_kgb18_ [101]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[102]    0.0    0.00    0.00       1         srtm_kgb19_ [102]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[103]    0.0    0.00    0.00       1         srtm_kgb20_ [103]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[104]    0.0    0.00    0.00       1         srtm_kgb21_ [104]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[105]    0.0    0.00    0.00       1         srtm_kgb22_ [105]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[106]    0.0    0.00    0.00       1         srtm_kgb23_ [106]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[107]    0.0    0.00    0.00       1         srtm_kgb24_ [107]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[108]    0.0    0.00    0.00       1         srtm_kgb25_ [108]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[109]    0.0    0.00    0.00       1         srtm_kgb26_ [109]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[110]    0.0    0.00    0.00       1         srtm_kgb27_ [110]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[111]    0.0    0.00    0.00       1         srtm_kgb28_ [111]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[112]    0.0    0.00    0.00       1         srtm_kgb29_ [112]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_ifs_rrtm_MOD_setup_gas_optics [203]
+[113]    0.0    0.00    0.00       1         surrtab_ [113]
+-----------------------------------------------
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+[114]    0.0    0.00    0.00       1         surrtftr_ [114]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_ifs_rrtm_MOD_setup_gas_optics [203]
+[115]    0.0    0.00    0.00       1         surrtpk_ [115]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_ifs_rrtm_MOD_setup_gas_optics [203]
+[116]    0.0    0.00    0.00       1         surrtrf_ [116]
+-----------------------------------------------
+                0.00    0.00       1/1           srtm_init_ [98]
+[117]    0.0    0.00    0.00       1         susrtm_ [117]
+-----------------------------------------------
+                0.00    0.00  189312/189312      __radiation_cloud_optics_MOD_cloud_optics [16]
+[125]    0.0    0.00    0.00  189312         __radiation_cloud_optics_MOD_delta_eddington_scat_od [125]
+-----------------------------------------------
+                0.00    0.00   90592/90592       __radiation_overlap_MOD_calc_overlap_matrices [136]
+[126]    0.0    0.00    0.00   90592         __radiation_overlap_MOD_calc_alpha_overlap_matrix [126]
+-----------------------------------------------
+                0.00    0.00   46678/46678       __radiation_aerosol_optics_MOD_add_aerosol_optics [8]
+[127]    0.0    0.00    0.00   46678         __radiation_aerosol_optics_data_MOD_calc_rh_index [127]
+-----------------------------------------------
+                0.00    0.00    3929/3929        __radiation_cloud_optics_MOD_cloud_optics [16]
+[128]    0.0    0.00    0.00    3929         __radiation_ice_optics_fu_MOD_calc_ice_optics_fu_lw [128]
+-----------------------------------------------
+                0.00    0.00    3919/3919        __radiation_cloud_optics_MOD_cloud_optics [16]
+[129]    0.0    0.00    0.00    3919         __radiation_ice_optics_fu_MOD_calc_ice_optics_fu_sw [129]
+-----------------------------------------------
+                0.00    0.00     350/350         __radiation_aerosol_optics_MOD_add_aerosol_optics [8]
+[130]    0.0    0.00    0.00     350         __radiation_aerosol_optics_MOD_delta_eddington_extensive_vec [130]
+-----------------------------------------------
+                0.00    0.00     150/150         __radiation_spectral_definition_MOD_calc_mapping_from_bands [170]
+[131]    0.0    0.00    0.00     150         __radiation_spectral_definition_MOD_calc_planck_function_wavenumber [131]
+-----------------------------------------------
+                0.00    0.00       1/72          __easy_netcdf_MOD_get_real_scalar [174]
+                0.00    0.00       2/72          __easy_netcdf_MOD_put_real_vector [167]
+                0.00    0.00       8/72          __easy_netcdf_MOD_get_rank [142]
+                0.00    0.00       8/72          __easy_netcdf_MOD_get_real_vector [156]
+                0.00    0.00      11/72          __easy_netcdf_MOD_put_real_matrix [151]
+                0.00    0.00      11/72          __easy_netcdf_MOD_get_real_array3 [150]
+                0.00    0.00      31/72          __easy_netcdf_MOD_get_real_matrix [134]
+[132]    0.0    0.00    0.00      72         __easy_netcdf_MOD_get_array_dimensions [132]
+-----------------------------------------------
+                0.00    0.00       1/64          __easy_netcdf_MOD_get_real_scalar [174]
+                0.00    0.00       2/64          __easy_netcdf_MOD_put_real_vector [167]
+                0.00    0.00       8/64          __easy_netcdf_MOD_get_real_vector [156]
+                0.00    0.00      11/64          __easy_netcdf_MOD_put_real_matrix [151]
+                0.00    0.00      11/64          __easy_netcdf_MOD_get_real_array3 [150]
+                0.00    0.00      31/64          __easy_netcdf_MOD_get_real_matrix [134]
+[133]    0.0    0.00    0.00      64         __easy_netcdf_MOD_get_variable_id [133]
+-----------------------------------------------
+                0.00    0.00       4/31          __radiation_cloud_optics_data_MOD_setup_cloud_optics [189]
+                0.00    0.00      10/31          __radiation_aerosol_optics_data_MOD_setup_aerosol_optics [185]
+                0.00    0.00      17/31          __ecrad_driver_read_input_MOD_read_input [179]
+[134]    0.0    0.00    0.00      31         __easy_netcdf_MOD_get_real_matrix [134]
+                0.00    0.00      31/64          __easy_netcdf_MOD_get_variable_id [133]
+                0.00    0.00      31/72          __easy_netcdf_MOD_get_array_dimensions [132]
+-----------------------------------------------
+                0.00    0.00      23/23          __radiation_config_MOD_print_config [193]
+[135]    0.0    0.00    0.00      23         __radiation_config_MOD_print_logical [135]
+-----------------------------------------------
+                0.00    0.00      11/23          __radiation_tripleclouds_lw_MOD_solver_tripleclouds_lw [5]
+                0.00    0.00      12/23          __radiation_tripleclouds_sw_MOD_solver_tripleclouds_sw [4]
+[136]    0.0    0.00    0.00      23         __radiation_overlap_MOD_calc_overlap_matrices [136]
+                0.00    0.00   90592/90592       __radiation_overlap_MOD_calc_alpha_overlap_matrix [126]
+-----------------------------------------------
+                0.00    0.00      10/22          __radiation_tripleclouds_sw_MOD_solver_tripleclouds_sw [4]
+                0.00    0.00      12/22          __radiation_tripleclouds_lw_MOD_solver_tripleclouds_lw [5]
+[137]    0.0    0.00    0.00      22         __radiation_regions_MOD_calc_region_properties [137]
+-----------------------------------------------
+                0.00    0.00       3/19          __radiation_thermodynamics_MOD_out_of_physical_bounds [210]
+                0.00    0.00       3/19          __radiation_single_level_MOD_out_of_physical_bounds [208]
+                0.00    0.00       5/19          __radiation_cloud_MOD_out_of_physical_bounds [187]
+                0.00    0.00       8/19          __radiation_flux_MOD_out_of_physical_bounds [196]
+[138]    0.0    0.00    0.00      19         __radiation_check_MOD_out_of_bounds_2d [138]
+-----------------------------------------------
+                0.00    0.00       2/14          __radiation_aerosol_optics_data_MOD_setup_aerosol_optics [185]
+                0.00    0.00       2/14          __radiation_cloud_optics_data_MOD_setup_cloud_optics [189]
+                0.00    0.00      10/14          __ecrad_driver_read_input_MOD_read_input [179]
+[139]    0.0    0.00    0.00      14         __easy_netcdf_MOD_exists [139]
+-----------------------------------------------
+                0.00    0.00      13/13          __radiation_save_MOD_save_fluxes [206]
+[140]    0.0    0.00    0.00      13         __easy_netcdf_MOD_define_variable [140]
+-----------------------------------------------
+                0.00    0.00       2/13          __easy_netcdf_MOD_put_real_vector [167]
+                0.00    0.00      11/13          __easy_netcdf_MOD_put_real_matrix [151]
+[141]    0.0    0.00    0.00      13         __easy_netcdf_MOD_end_define_mode [141]
+-----------------------------------------------
+                0.00    0.00      12/12          __ecrad_driver_read_input_MOD_read_input [179]
+[142]    0.0    0.00    0.00      12         __easy_netcdf_MOD_get_rank [142]
+                0.00    0.00       8/72          __easy_netcdf_MOD_get_array_dimensions [132]
+-----------------------------------------------
+                0.00    0.00      12/12          __radiation_interface_MOD_radiation [2]
+[143]    0.0    0.00    0.00      12         __radiation_flux_MOD_calc_surface_spectral [143]
+-----------------------------------------------
+                0.00    0.00      12/12          __radiation_interface_MOD_radiation [2]
+[144]    0.0    0.00    0.00      12         __radiation_flux_MOD_calc_toa_spectral [144]
+-----------------------------------------------
+                                  96             __radiation_gas_MOD_assert_units_gas [145]
+                0.00    0.00      12/12          __radiation_ifs_rrtm_MOD_gas_optics [3]
+[145]    0.0    0.00    0.00      12+96      __radiation_gas_MOD_assert_units_gas [145]
+                                  96             __radiation_gas_MOD_assert_units_gas [145]
+-----------------------------------------------
+                0.00    0.00      12/12          __radiation_aerosol_optics_MOD_add_aerosol_optics [8]
+[146]    0.0    0.00    0.00      12         __radiation_gas_MOD_get_gas [146]
+-----------------------------------------------
+                0.00    0.00      12/12          __ecrad_driver_read_input_MOD_read_input [179]
+[147]    0.0    0.00    0.00      12         __radiation_gas_MOD_scale_gas [147]
+-----------------------------------------------
+                0.00    0.00      12/12          __radiation_ifs_rrtm_MOD_gas_optics [3]
+[148]    0.0    0.00    0.00      12         __radiation_ifs_rrtm_MOD_planck_function_surf [148]
+-----------------------------------------------
+                0.00    0.00      12/12          __radiation_interface_MOD_radiation [2]
+[149]    0.0    0.00    0.00      12         __radiation_single_level_MOD_get_albedos [149]
+-----------------------------------------------
+                0.00    0.00       1/11          __ecrad_driver_read_input_MOD_read_input [179]
+                0.00    0.00      10/11          __radiation_aerosol_optics_data_MOD_setup_aerosol_optics [185]
+[150]    0.0    0.00    0.00      11         __easy_netcdf_MOD_get_real_array3 [150]
+                0.00    0.00      11/64          __easy_netcdf_MOD_get_variable_id [133]
+                0.00    0.00      11/72          __easy_netcdf_MOD_get_array_dimensions [132]
+-----------------------------------------------
+                0.00    0.00      11/11          __radiation_save_MOD_save_fluxes [206]
+[151]    0.0    0.00    0.00      11         __easy_netcdf_MOD_put_real_matrix [151]
+                0.00    0.00      11/13          __easy_netcdf_MOD_end_define_mode [141]
+                0.00    0.00      11/64          __easy_netcdf_MOD_get_variable_id [133]
+                0.00    0.00      11/72          __easy_netcdf_MOD_get_array_dimensions [132]
+-----------------------------------------------
+                0.00    0.00      11/11          __radiation_aerosol_optics_data_MOD_print_description [183]
+[152]    0.0    0.00    0.00      11         __radiation_aerosol_optics_data_MOD_get_line [152]
+-----------------------------------------------
+                0.00    0.00       1/10          __radiation_gas_MOD_out_of_physical_bounds [199]
+                0.00    0.00       2/10          __radiation_cloud_MOD_out_of_physical_bounds [187]
+                0.00    0.00       7/10          __radiation_aerosol_MOD_out_of_physical_bounds [180]
+[153]    0.0    0.00    0.00      10         __radiation_check_MOD_out_of_bounds_3d [153]
+-----------------------------------------------
+                0.00    0.00      10/10          __radiation_interface_MOD_radiation [2]
+[154]    0.0    0.00    0.00      10         __radiation_cloud_MOD_crop_cloud_fraction [154]
+-----------------------------------------------
+                0.00    0.00      10/10          __radiation_config_MOD_read_config_from_namelist [194]
+[155]    0.0    0.00    0.00      10         __radiation_config_MOD_get_enum_code [155]
+-----------------------------------------------
+                0.00    0.00       2/8           __ecrad_driver_read_input_MOD_read_input [179]
+                0.00    0.00       6/8           __radiation_aerosol_optics_data_MOD_setup_aerosol_optics [185]
+[156]    0.0    0.00    0.00       8         __easy_netcdf_MOD_get_real_vector [156]
+                0.00    0.00       8/64          __easy_netcdf_MOD_get_variable_id [133]
+                0.00    0.00       8/72          __easy_netcdf_MOD_get_array_dimensions [132]
+-----------------------------------------------
+                0.00    0.00       8/8           __radiation_config_MOD_print_config [193]
+[157]    0.0    0.00    0.00       8         __radiation_config_MOD_print_enum [157]
+-----------------------------------------------
+                0.00    0.00       7/7           __ecrad_driver_read_input_MOD_read_input [179]
+[158]    0.0    0.00    0.00       7         __radiation_gas_MOD_put_gas [158]
+-----------------------------------------------
+                0.00    0.00       6/6           __radiation_aerosol_optics_data_MOD_set_types [184]
+[159]    0.0    0.00    0.00       6         __radiation_aerosol_optics_data_MOD_set_hydrophobic_type [159]
+-----------------------------------------------
+                0.00    0.00       1/5           MAIN__ [50]
+                0.00    0.00       1/5           __radiation_save_MOD_save_fluxes [206]
+                0.00    0.00       1/5           __radiation_aerosol_optics_data_MOD_setup_aerosol_optics [185]
+                0.00    0.00       2/5           __radiation_cloud_optics_data_MOD_setup_cloud_optics [189]
+[160]    0.0    0.00    0.00       5         __easy_netcdf_MOD_close_netcdf_file [160]
+-----------------------------------------------
+                0.00    0.00       5/5           __radiation_aerosol_optics_data_MOD_set_types [184]
+[161]    0.0    0.00    0.00       5         __radiation_aerosol_optics_data_MOD_set_hydrophilic_type [161]
+-----------------------------------------------
+                0.00    0.00       1/4           MAIN__ [50]
+                0.00    0.00       1/4           __radiation_aerosol_optics_data_MOD_setup_aerosol_optics [185]
+                0.00    0.00       2/4           __radiation_cloud_optics_data_MOD_setup_cloud_optics [189]
+[162]    0.0    0.00    0.00       4         __easy_netcdf_MOD_open_netcdf_file [162]
+-----------------------------------------------
+                0.00    0.00       1/4           MAIN__ [50]
+                0.00    0.00       1/4           __radiation_save_MOD_save_fluxes [206]
+                0.00    0.00       2/4           __radiation_cloud_optics_data_MOD_setup_cloud_optics [189]
+[163]    0.0    0.00    0.00       4         __easy_netcdf_MOD_transpose_matrices [163]
+-----------------------------------------------
+                0.00    0.00       3/3           __radiation_config_MOD_print_config [193]
+[164]    0.0    0.00    0.00       3         __radiation_config_MOD_print_real [164]
+-----------------------------------------------
+                0.00    0.00       2/2           __radiation_save_MOD_save_fluxes [206]
+[165]    0.0    0.00    0.00       2         __easy_netcdf_MOD_define_dimension [165]
+-----------------------------------------------
+                0.00    0.00       2/2           __radiation_aerosol_optics_data_MOD_setup_aerosol_optics [185]
+[166]    0.0    0.00    0.00       2         __easy_netcdf_MOD_get_global_attribute [166]
+-----------------------------------------------
+                0.00    0.00       2/2           __radiation_save_MOD_save_fluxes [206]
+[167]    0.0    0.00    0.00       2         __easy_netcdf_MOD_put_real_vector [167]
+                0.00    0.00       2/13          __easy_netcdf_MOD_end_define_mode [141]
+                0.00    0.00       2/64          __easy_netcdf_MOD_get_variable_id [133]
+                0.00    0.00       2/72          __easy_netcdf_MOD_get_array_dimensions [132]
+-----------------------------------------------
+                0.00    0.00       2/2           __radiation_single_level_MOD_out_of_physical_bounds [208]
+[168]    0.0    0.00    0.00       2         __radiation_check_MOD_out_of_bounds_1d [168]
+-----------------------------------------------
+                0.00    0.00       2/2           __radiation_ifs_rrtm_MOD_setup_gas_optics [203]
+[169]    0.0    0.00    0.00       2         __radiation_spectral_definition_MOD_allocate_bands_only [169]
+                0.00    0.00       2/2           __radiation_spectral_definition_MOD_deallocate [171]
+-----------------------------------------------
+                0.00    0.00       1/2           __radiation_config_MOD_consolidate_lw_emiss_intervals [191]
+                0.00    0.00       1/2           __radiation_config_MOD_consolidate_sw_albedo_intervals [192]
+[170]    0.0    0.00    0.00       2         __radiation_spectral_definition_MOD_calc_mapping_from_bands [170]
+                0.00    0.00     150/150         __radiation_spectral_definition_MOD_calc_planck_function_wavenumber [131]
+-----------------------------------------------
+                0.00    0.00       2/2           __radiation_spectral_definition_MOD_allocate_bands_only [169]
+[171]    0.0    0.00    0.00       2         __radiation_spectral_definition_MOD_deallocate [171]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_save_MOD_save_fluxes [206]
+[172]    0.0    0.00    0.00       1         __easy_netcdf_MOD_create_netcdf_file [172]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_save_MOD_save_fluxes [206]
+[173]    0.0    0.00    0.00       1         __easy_netcdf_MOD_double_precision [173]
+-----------------------------------------------
+                0.00    0.00       1/1           __ecrad_driver_read_input_MOD_read_input [179]
+[174]    0.0    0.00    0.00       1         __easy_netcdf_MOD_get_real_scalar [174]
+                0.00    0.00       1/64          __easy_netcdf_MOD_get_variable_id [133]
+                0.00    0.00       1/72          __easy_netcdf_MOD_get_array_dimensions [132]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_save_MOD_save_fluxes [206]
+[175]    0.0    0.00    0.00       1         __easy_netcdf_MOD_permute_3d_arrays [175]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_save_MOD_save_fluxes [206]
+[176]    0.0    0.00    0.00       1         __easy_netcdf_MOD_put_global_attribute [176]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_save_MOD_save_fluxes [206]
+[177]    0.0    0.00    0.00       1         __easy_netcdf_MOD_put_global_attributes [177]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[178]    0.0    0.00    0.00       1         __ecrad_driver_config_MOD_read_config_from_namelist [178]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[179]    0.0    0.00    0.00       1         __ecrad_driver_read_input_MOD_read_input [179]
+                0.00    0.00      17/31          __easy_netcdf_MOD_get_real_matrix [134]
+                0.00    0.00      12/12          __easy_netcdf_MOD_get_rank [142]
+                0.00    0.00      12/12          __radiation_gas_MOD_scale_gas [147]
+                0.00    0.00      10/14          __easy_netcdf_MOD_exists [139]
+                0.00    0.00       7/7           __radiation_gas_MOD_put_gas [158]
+                0.00    0.00       2/8           __easy_netcdf_MOD_get_real_vector [156]
+                0.00    0.00       1/1           __radiation_single_level_MOD_init_seed_simple [207]
+                0.00    0.00       1/1           __radiation_cloud_MOD_create_fractional_std [186]
+                0.00    0.00       1/11          __easy_netcdf_MOD_get_real_array3 [150]
+                0.00    0.00       1/1           __radiation_gas_MOD_allocate_gas [197]
+                0.00    0.00       1/1           __easy_netcdf_MOD_get_real_scalar [174]
+                0.00    0.00       1/1           __radiation_gas_MOD_put_well_mixed_gas [200]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[180]    0.0    0.00    0.00       1         __radiation_aerosol_MOD_out_of_physical_bounds [180]
+                0.00    0.00       7/10          __radiation_check_MOD_out_of_bounds_3d [153]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_interface_MOD_setup_radiation [205]
+[181]    0.0    0.00    0.00       1         __radiation_aerosol_optics_MOD_setup_aerosol_optics [181]
+                0.00    0.00       1/1           __radiation_aerosol_optics_data_MOD_initialize_types [182]
+                0.00    0.00       1/1           __radiation_aerosol_optics_data_MOD_set_types [184]
+                0.00    0.00       1/1           __radiation_aerosol_optics_data_MOD_setup_aerosol_optics [185]
+                0.00    0.00       1/1           __radiation_aerosol_optics_data_MOD_print_description [183]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_aerosol_optics_MOD_setup_aerosol_optics [181]
+[182]    0.0    0.00    0.00       1         __radiation_aerosol_optics_data_MOD_initialize_types [182]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_aerosol_optics_MOD_setup_aerosol_optics [181]
+[183]    0.0    0.00    0.00       1         __radiation_aerosol_optics_data_MOD_print_description [183]
+                0.00    0.00      11/11          __radiation_aerosol_optics_data_MOD_get_line [152]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_aerosol_optics_MOD_setup_aerosol_optics [181]
+[184]    0.0    0.00    0.00       1         __radiation_aerosol_optics_data_MOD_set_types [184]
+                0.00    0.00       6/6           __radiation_aerosol_optics_data_MOD_set_hydrophobic_type [159]
+                0.00    0.00       5/5           __radiation_aerosol_optics_data_MOD_set_hydrophilic_type [161]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_aerosol_optics_MOD_setup_aerosol_optics [181]
+[185]    0.0    0.00    0.00       1         __radiation_aerosol_optics_data_MOD_setup_aerosol_optics [185]
+                0.00    0.00      10/31          __easy_netcdf_MOD_get_real_matrix [134]
+                0.00    0.00      10/11          __easy_netcdf_MOD_get_real_array3 [150]
+                0.00    0.00       6/8           __easy_netcdf_MOD_get_real_vector [156]
+                0.00    0.00       2/14          __easy_netcdf_MOD_exists [139]
+                0.00    0.00       2/2           __easy_netcdf_MOD_get_global_attribute [166]
+                0.00    0.00       1/4           __easy_netcdf_MOD_open_netcdf_file [162]
+                0.00    0.00       1/5           __easy_netcdf_MOD_close_netcdf_file [160]
+-----------------------------------------------
+                0.00    0.00       1/1           __ecrad_driver_read_input_MOD_read_input [179]
+[186]    0.0    0.00    0.00       1         __radiation_cloud_MOD_create_fractional_std [186]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[187]    0.0    0.00    0.00       1         __radiation_cloud_MOD_out_of_physical_bounds [187]
+                0.00    0.00       5/19          __radiation_check_MOD_out_of_bounds_2d [138]
+                0.00    0.00       2/10          __radiation_check_MOD_out_of_bounds_3d [153]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_interface_MOD_setup_radiation [205]
+[188]    0.0    0.00    0.00       1         __radiation_cloud_optics_MOD_setup_cloud_optics [188]
+                0.00    0.00       1/1           __radiation_cloud_optics_data_MOD_setup_cloud_optics [189]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_cloud_optics_MOD_setup_cloud_optics [188]
+[189]    0.0    0.00    0.00       1         __radiation_cloud_optics_data_MOD_setup_cloud_optics [189]
+                0.00    0.00       4/31          __easy_netcdf_MOD_get_real_matrix [134]
+                0.00    0.00       2/4           __easy_netcdf_MOD_open_netcdf_file [162]
+                0.00    0.00       2/4           __easy_netcdf_MOD_transpose_matrices [163]
+                0.00    0.00       2/14          __easy_netcdf_MOD_exists [139]
+                0.00    0.00       2/5           __easy_netcdf_MOD_close_netcdf_file [160]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_interface_MOD_setup_radiation [205]
+[190]    0.0    0.00    0.00       1         __radiation_config_MOD_consolidate_config [190]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_interface_MOD_setup_radiation [205]
+[191]    0.0    0.00    0.00       1         __radiation_config_MOD_consolidate_lw_emiss_intervals [191]
+                0.00    0.00       1/2           __radiation_spectral_definition_MOD_calc_mapping_from_bands [170]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_interface_MOD_setup_radiation [205]
+[192]    0.0    0.00    0.00       1         __radiation_config_MOD_consolidate_sw_albedo_intervals [192]
+                0.00    0.00       1/2           __radiation_spectral_definition_MOD_calc_mapping_from_bands [170]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[193]    0.0    0.00    0.00       1         __radiation_config_MOD_print_config [193]
+                0.00    0.00      23/23          __radiation_config_MOD_print_logical [135]
+                0.00    0.00       8/8           __radiation_config_MOD_print_enum [157]
+                0.00    0.00       3/3           __radiation_config_MOD_print_real [164]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[194]    0.0    0.00    0.00       1         __radiation_config_MOD_read_config_from_namelist [194]
+                0.00    0.00      10/10          __radiation_config_MOD_get_enum_code [155]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[195]    0.0    0.00    0.00       1         __radiation_flux_MOD_allocate_flux_type [195]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[196]    0.0    0.00    0.00       1         __radiation_flux_MOD_out_of_physical_bounds [196]
+                0.00    0.00       8/19          __radiation_check_MOD_out_of_bounds_2d [138]
+-----------------------------------------------
+                0.00    0.00       1/1           __ecrad_driver_read_input_MOD_read_input [179]
+[197]    0.0    0.00    0.00       1         __radiation_gas_MOD_allocate_gas [197]
+                0.00    0.00       1/1           __radiation_gas_MOD_deallocate_gas [198]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_gas_MOD_allocate_gas [197]
+[198]    0.0    0.00    0.00       1         __radiation_gas_MOD_deallocate_gas [198]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[199]    0.0    0.00    0.00       1         __radiation_gas_MOD_out_of_physical_bounds [199]
+                0.00    0.00       1/10          __radiation_check_MOD_out_of_bounds_3d [153]
+-----------------------------------------------
+                0.00    0.00       1/1           __ecrad_driver_read_input_MOD_read_input [179]
+[200]    0.0    0.00    0.00       1         __radiation_gas_MOD_put_well_mixed_gas [200]
+-----------------------------------------------
+                                   8             __radiation_gas_MOD_set_units_gas [201]
+                0.00    0.00       1/1           __radiation_ifs_rrtm_MOD_set_gas_units [202]
+[201]    0.0    0.00    0.00       1+8       __radiation_gas_MOD_set_units_gas [201]
+                                   8             __radiation_gas_MOD_set_units_gas [201]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_interface_MOD_set_gas_units [204]
+[202]    0.0    0.00    0.00       1         __radiation_ifs_rrtm_MOD_set_gas_units [202]
+                0.00    0.00       1/1           __radiation_gas_MOD_set_units_gas [201]
+-----------------------------------------------
+                0.00    0.00       1/1           __radiation_interface_MOD_setup_radiation [205]
+[203]    0.0    0.00    0.00       1         __radiation_ifs_rrtm_MOD_setup_gas_optics [203]
+                0.00    0.00       2/2           __radiation_spectral_definition_MOD_allocate_bands_only [169]
+                0.00    0.00       1/1           surrtrf_ [116]
+                0.00    0.00       1/1           surrtpk_ [115]
+                0.00    0.00       1/1           surrtab_ [113]
+                0.00    0.00       1/1           srtm_init_ [98]
+                0.00    0.00       1/1           rrtm_init_140gp_ [67]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[204]    0.0    0.00    0.00       1         __radiation_interface_MOD_set_gas_units [204]
+                0.00    0.00       1/1           __radiation_ifs_rrtm_MOD_set_gas_units [202]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[205]    0.0    0.00    0.00       1         __radiation_interface_MOD_setup_radiation [205]
+                0.00    0.00       1/1           __radiation_config_MOD_consolidate_config [190]
+                0.00    0.00       1/1           __radiation_ifs_rrtm_MOD_setup_gas_optics [203]
+                0.00    0.00       1/1           __radiation_config_MOD_consolidate_sw_albedo_intervals [192]
+                0.00    0.00       1/1           __radiation_config_MOD_consolidate_lw_emiss_intervals [191]
+                0.00    0.00       1/1           __radiation_cloud_optics_MOD_setup_cloud_optics [188]
+                0.00    0.00       1/1           __radiation_aerosol_optics_MOD_setup_aerosol_optics [181]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[206]    0.0    0.00    0.00       1         __radiation_save_MOD_save_fluxes [206]
+                0.00    0.00      13/13          __easy_netcdf_MOD_define_variable [140]
+                0.00    0.00      11/11          __easy_netcdf_MOD_put_real_matrix [151]
+                0.00    0.00       2/2           __easy_netcdf_MOD_define_dimension [165]
+                0.00    0.00       2/2           __easy_netcdf_MOD_put_real_vector [167]
+                0.00    0.00       1/1           __easy_netcdf_MOD_create_netcdf_file [172]
+                0.00    0.00       1/4           __easy_netcdf_MOD_transpose_matrices [163]
+                0.00    0.00       1/1           __easy_netcdf_MOD_double_precision [173]
+                0.00    0.00       1/1           __easy_netcdf_MOD_permute_3d_arrays [175]
+                0.00    0.00       1/1           __easy_netcdf_MOD_put_global_attributes [177]
+                0.00    0.00       1/5           __easy_netcdf_MOD_close_netcdf_file [160]
+                0.00    0.00       1/1           __easy_netcdf_MOD_put_global_attribute [176]
+-----------------------------------------------
+                0.00    0.00       1/1           __ecrad_driver_read_input_MOD_read_input [179]
+[207]    0.0    0.00    0.00       1         __radiation_single_level_MOD_init_seed_simple [207]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[208]    0.0    0.00    0.00       1         __radiation_single_level_MOD_out_of_physical_bounds [208]
+                0.00    0.00       3/19          __radiation_check_MOD_out_of_bounds_2d [138]
+                0.00    0.00       2/2           __radiation_check_MOD_out_of_bounds_1d [168]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[209]    0.0    0.00    0.00       1         __radiation_thermodynamics_MOD_calc_saturation_wrt_liquid [209]
+-----------------------------------------------
+                0.00    0.00       1/1           MAIN__ [50]
+[210]    0.0    0.00    0.00       1         __radiation_thermodynamics_MOD_out_of_physical_bounds [210]
+                0.00    0.00       3/19          __radiation_check_MOD_out_of_bounds_2d [138]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [50] MAIN__ (ecrad_driver.F90) [147] __radiation_gas_MOD_scale_gas [34] rrtm_taumol10_
+ [160] __easy_netcdf_MOD_close_netcdf_file [201] __radiation_gas_MOD_set_units_gas [35] rrtm_taumol11_
+ [172] __easy_netcdf_MOD_create_netcdf_file [128] __radiation_ice_optics_fu_MOD_calc_ice_optics_fu_lw [36] rrtm_taumol12_
+ [165] __easy_netcdf_MOD_define_dimension [129] __radiation_ice_optics_fu_MOD_calc_ice_optics_fu_sw [37] rrtm_taumol13_
+ [140] __easy_netcdf_MOD_define_variable [3] __radiation_ifs_rrtm_MOD_gas_optics [38] rrtm_taumol14_
+ [173] __easy_netcdf_MOD_double_precision [12] __radiation_ifs_rrtm_MOD_planck_function_atmos [39] rrtm_taumol15_
+ [141] __easy_netcdf_MOD_end_define_mode [148] __radiation_ifs_rrtm_MOD_planck_function_surf [40] rrtm_taumol16_
+ [139] __easy_netcdf_MOD_exists [202] __radiation_ifs_rrtm_MOD_set_gas_units [18] rrtm_taumol1_
+ [132] __easy_netcdf_MOD_get_array_dimensions [203] __radiation_ifs_rrtm_MOD_setup_gas_optics [19] rrtm_taumol2_
+ [166] __easy_netcdf_MOD_get_global_attribute [2] __radiation_interface_MOD_radiation [20] rrtm_taumol3_
+ [142] __easy_netcdf_MOD_get_rank [204] __radiation_interface_MOD_set_gas_units [21] rrtm_taumol4_
+ [150] __easy_netcdf_MOD_get_real_array3 [205] __radiation_interface_MOD_setup_radiation [13] rrtm_taumol5_
+ [134] __easy_netcdf_MOD_get_real_matrix [24] __radiation_liquid_optics_socrates_MOD_calc_liq_optics_socrates [41] rrtm_taumol6_
+ [174] __easy_netcdf_MOD_get_real_scalar [11] __radiation_matrix_MOD_singlemat_x_vec [22] rrtm_taumol7_
+ [156] __easy_netcdf_MOD_get_real_vector [126] __radiation_overlap_MOD_calc_alpha_overlap_matrix [14] rrtm_taumol8_
+ [133] __easy_netcdf_MOD_get_variable_id [136] __radiation_overlap_MOD_calc_overlap_matrices [42] rrtm_taumol9_
+ [162] __easy_netcdf_MOD_open_netcdf_file [137] __radiation_regions_MOD_calc_region_properties [84] srtm_cmbgb16_
+ [175] __easy_netcdf_MOD_permute_3d_arrays [206] __radiation_save_MOD_save_fluxes [85] srtm_cmbgb17_
+ [176] __easy_netcdf_MOD_put_global_attribute [149] __radiation_single_level_MOD_get_albedos [86] srtm_cmbgb18_
+ [177] __easy_netcdf_MOD_put_global_attributes [207] __radiation_single_level_MOD_init_seed_simple [87] srtm_cmbgb19_
+ [151] __easy_netcdf_MOD_put_real_matrix [208] __radiation_single_level_MOD_out_of_physical_bounds [88] srtm_cmbgb20_
+ [167] __easy_netcdf_MOD_put_real_vector [169] __radiation_spectral_definition_MOD_allocate_bands_only [89] srtm_cmbgb21_
+ [163] __easy_netcdf_MOD_transpose_matrices [170] __radiation_spectral_definition_MOD_calc_mapping_from_bands [90] srtm_cmbgb22_
+ [178] __ecrad_driver_config_MOD_read_config_from_namelist [131] __radiation_spectral_definition_MOD_calc_planck_function_wavenumber [91] srtm_cmbgb23_
+ [179] __ecrad_driver_read_input_MOD_read_input [171] __radiation_spectral_definition_MOD_deallocate [92] srtm_cmbgb24_
+  [15] __radiation_adding_ica_lw_MOD_calc_fluxes_no_scattering_lw [209] __radiation_thermodynamics_MOD_calc_saturation_wrt_liquid [93] srtm_cmbgb25_
+ [180] __radiation_aerosol_MOD_out_of_physical_bounds [210] __radiation_thermodynamics_MOD_out_of_physical_bounds [94] srtm_cmbgb26_
+   [8] __radiation_aerosol_optics_MOD_add_aerosol_optics [5] __radiation_tripleclouds_lw_MOD_solver_tripleclouds_lw [95] srtm_cmbgb27_
+ [130] __radiation_aerosol_optics_MOD_delta_eddington_extensive_vec [4] __radiation_tripleclouds_sw_MOD_solver_tripleclouds_sw [96] srtm_cmbgb28_
+ [181] __radiation_aerosol_optics_MOD_setup_aerosol_optics [25] __radiation_two_stream_MOD_calc_no_scattering_transmittance_lw [97] srtm_cmbgb29_
+ [127] __radiation_aerosol_optics_data_MOD_calc_rh_index [10] __radiation_two_stream_MOD_calc_ref_trans_lw [7] srtm_gas_optical_depth_
+ [152] __radiation_aerosol_optics_data_MOD_get_line (radiation_aerosol_optics_data.F90) [9] __radiation_two_stream_MOD_calc_ref_trans_sw [98] srtm_init_
+ [182] __radiation_aerosol_optics_data_MOD_initialize_types [51] rrtm_cmbgb10_ [99] srtm_kgb16_
+ [183] __radiation_aerosol_optics_data_MOD_print_description [52] rrtm_cmbgb11_ [100] srtm_kgb17_
+ [161] __radiation_aerosol_optics_data_MOD_set_hydrophilic_type [53] rrtm_cmbgb12_ [101] srtm_kgb18_
+ [159] __radiation_aerosol_optics_data_MOD_set_hydrophobic_type [54] rrtm_cmbgb13_ [102] srtm_kgb19_
+ [184] __radiation_aerosol_optics_data_MOD_set_types [55] rrtm_cmbgb14_ [103] srtm_kgb20_
+ [185] __radiation_aerosol_optics_data_MOD_setup_aerosol_optics [56] rrtm_cmbgb15_ [104] srtm_kgb21_
+ [168] __radiation_check_MOD_out_of_bounds_1d [57] rrtm_cmbgb16_ [105] srtm_kgb22_
+ [138] __radiation_check_MOD_out_of_bounds_2d [58] rrtm_cmbgb1_ [106] srtm_kgb23_
+ [153] __radiation_check_MOD_out_of_bounds_3d [59] rrtm_cmbgb2_ [107] srtm_kgb24_
+ [186] __radiation_cloud_MOD_create_fractional_std [60] rrtm_cmbgb3_ [108] srtm_kgb25_
+ [154] __radiation_cloud_MOD_crop_cloud_fraction [61] rrtm_cmbgb4_ [109] srtm_kgb26_
+ [187] __radiation_cloud_MOD_out_of_physical_bounds [62] rrtm_cmbgb5_ [110] srtm_kgb27_
+  [16] __radiation_cloud_optics_MOD_cloud_optics [63] rrtm_cmbgb6_ [111] srtm_kgb28_
+ [125] __radiation_cloud_optics_MOD_delta_eddington_scat_od [64] rrtm_cmbgb7_ [112] srtm_kgb29_
+ [188] __radiation_cloud_optics_MOD_setup_cloud_optics [65] rrtm_cmbgb8_ [28] srtm_setcoef_
+ [189] __radiation_cloud_optics_data_MOD_setup_cloud_optics [66] rrtm_cmbgb9_ [29] srtm_taumol16_
+ [190] __radiation_config_MOD_consolidate_config [6] rrtm_gas_optical_depth_ [17] srtm_taumol17_
+ [191] __radiation_config_MOD_consolidate_lw_emiss_intervals [67] rrtm_init_140gp_ [43] srtm_taumol18_
+ [192] __radiation_config_MOD_consolidate_sw_albedo_intervals [68] rrtm_kgb10_ [44] srtm_taumol19_
+ [155] __radiation_config_MOD_get_enum_code [69] rrtm_kgb11_ [23] srtm_taumol20_
+ [193] __radiation_config_MOD_print_config [70] rrtm_kgb12_ [48] srtm_taumol21_
+ [157] __radiation_config_MOD_print_enum [71] rrtm_kgb13_ [30] srtm_taumol22_
+ [135] __radiation_config_MOD_print_logical [72] rrtm_kgb14_ [31] srtm_taumol23_
+ [164] __radiation_config_MOD_print_real [73] rrtm_kgb15_ [45] srtm_taumol24_
+ [194] __radiation_config_MOD_read_config_from_namelist [74] rrtm_kgb16_ [46] srtm_taumol25_
+ [195] __radiation_flux_MOD_allocate_flux_type [75] rrtm_kgb1_ [47] srtm_taumol26_
+ [143] __radiation_flux_MOD_calc_surface_spectral [76] rrtm_kgb2_ [49] srtm_taumol27_
+ [144] __radiation_flux_MOD_calc_toa_spectral [77] rrtm_kgb3_ [32] srtm_taumol28_
+ [196] __radiation_flux_MOD_out_of_physical_bounds [78] rrtm_kgb4_ [33] srtm_taumol29_
+ [197] __radiation_gas_MOD_allocate_gas [79] rrtm_kgb5_  [113] surrtab_
+ [145] __radiation_gas_MOD_assert_units_gas [80] rrtm_kgb6_ [114] surrtftr_
+ [198] __radiation_gas_MOD_deallocate_gas [81] rrtm_kgb7_ [115] surrtpk_
+ [146] __radiation_gas_MOD_get_gas [82] rrtm_kgb8_       [116] surrtrf_
+ [199] __radiation_gas_MOD_out_of_physical_bounds [83] rrtm_kgb9_ [117] susrtm_
+ [158] __radiation_gas_MOD_put_gas [26] rrtm_prepare_gases_
+ [200] __radiation_gas_MOD_put_well_mixed_gas [27] rrtm_setcoef_140gp_

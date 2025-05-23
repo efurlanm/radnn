@@ -1,0 +1,27 @@
+general:
+  enable_wandb_hook: 1  # Ativa a integração com o Weights & Biases (WandB), útil para monitorar experimentos
+  report_frequency: 100  # Frequência para geração de relatórios durante o treinamento (a cada 100 iterações)
+
+model:
+  type: mlp  # Define que o modelo é um Multi-Layer Perceptron (MLP)
+  parameters:
+    dropout: 0.0  # Define o dropout como 0 (nenhuma desativação de neurônios para evitar overfitting)
+    layer_sizes: [1024, 1024]  # Número de neurônios em cada camada oculta do MLP (duas camadas de 1024 neurônios)
+
+loss:
+  type: MSE  # Função de perda Mean Squared Error (MSE), apropriada para tarefas de regressão
+
+optimizer:
+  type: adam  # Define o otimizador como Adam, um dos mais utilizados e eficazes
+  parameters:
+    learning_rate: 1e-3  # Taxa de aprendizado inicial (controla o quanto os pesos mudam a cada atualização)
+    beta1: 0.9  # Hiperparâmetro que controla a média dos gradientes no Adam
+    beta2: 0.999  # Hiperparâmetro que controla a média das variâncias dos gradientes
+    weight_decay: 0  # Regularização L2; definido como 0 (nenhum decaimento dos pesos)
+    eps: 1e-8  # Pequeno valor para evitar divisão por zero
+    amsgrad: 0  # Especifica que o AMSGrad, uma variação do Adam, está desativado
+
+lr_scheduler:
+  type: cosine_annealing  # Reduz a taxa de aprendizado progressivamente com Cosine Annealing
+  parameters:
+    T_max: 100000  # Número máximo de iterações ou ciclos para o scheduler
