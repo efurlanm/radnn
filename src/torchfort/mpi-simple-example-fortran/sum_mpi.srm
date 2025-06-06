@@ -1,0 +1,39 @@
+#!/bin/bash
+#SBATCH --partition=sequana_cpu_dev   # SLURM_JOB_PARTITION
+#SBATCH --job-name=hv-tf1-mnist       # SLURM_JOB_NAME
+#SBATCH --nodes=4                     # SLURM_JOB_NUM_NODES
+#SBATCH --ntasks-per-node=1           # SLURM_NTASKS_PER_NODE
+#SBATCH --cpus-per-task=1             # SLURM_CPUS_PER_TASK
+#SBATCH --distribution=block:cyclic   # SLURM_DISTRIBUTION
+#SBATCH --time=00:05:00               # Limit execution time
+# SLURM output environment variables:
+# https://slurm.schedmd.com/sbatch.html#SECTION_OUTPUT-ENVIRONMENT-VARIABLES
+echo '======================================='
+echo '- Job ID:' $SLURM_JOB_ID
+echo '- Nº of nodes in the job:' $SLURM_JOB_NUM_NODES
+echo '- Nº of tasks per node:' $SLURM_NTASKS_PER_NODE
+echo '- Nº of tasks:' $SLURM_NTASKS
+echo '- Nº of cpus per task:' $SLURM_CPUS_PER_TASK
+echo '- Partition:' $SLURM_JOB_PARTITION
+echo '- Dir from which sbatch was invoked:' ${SLURM_SUBMIT_DIR##*/}
+echo -n '- Nodes allocated to the job: '
+nodeset -e $SLURM_JOB_NODELIST
+echo '----------------------------------------'
+#cd $SLURM_SUBMIT_DIR
+cd /scratch/ampemi/eduardo.miranda2/
+# Run
+export SLURM_MPI_TYPE=pmi2
+#export OMPI_HOME=$(dirname $(dirname $(which mpirun)))
+module load openmpi/gnu/4.1.4+cuda-11.2_sequana
+echo -n '<1. starting python script > ' && date
+echo '-- output -----------------------------'
+#srun --cpu_bind=cores singularity exec torchfort.sif mpirun -np 4 ./sum_mpi
+#srun --mpi=pmi2 -n 4 hostname
+#srun singularity exec \
+#    --bind /usr/lib64/mpi:/usr/lib64/mpi \
+#    torchfort.sif ./sum_mpi
+#srun --mpi=none singularity exec torchfort.sif mpirun --allow-run-as-root ./sum_mpi
+srun singularity exec --nv --bind /usr/lib64:/host_libs \
+    torchfort.sif bash -c "export LD_LIBRARY_PATH=/host_libs:\$LD_LIBRARY_PATH && ./sum_mpi"
+echo '-- end --------------------------------'
+echo -n '<2. quit>                    ' && date
