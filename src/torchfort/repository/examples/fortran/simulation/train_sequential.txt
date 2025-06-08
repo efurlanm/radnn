@@ -1,0 +1,47 @@
+(em desenvolvimento)
+
+Foi modificado o programa Fortran train_distributed para remover a dependência de MPI e rodar sequencialmente em uma única GPU.
+
+O programa original usa MPI com 2 ranks (nranks == 2) e mapeia cada rank para uma GPU diferente (usando local_rank para definir o model_device e o dispositivo OpenACC). Ele também divide a simulação e os dados de treinamento/inferência entre os ranks, usando MPI_Alltoallv e MPI_Allgather para comunicação.
+
+Para rodar em uma única GPU sequencialmente, faremos o seguinte:
+
+Remover toda a lógica de MPI: Inicialização, comunicação, finalização e verificações de rank/size.
+
+Simular um único rank: Definiremos rank, local_rank como 0 e nranks como 1.
+Ajustar Alocação de Dados: Os arrays não precisam mais ser divididos por nranks; eles serão alocados para o tamanho total.
+
+Ajustar Atribuição de Dispositivo: O dispositivo para o modelo e simulação será o especificado pelo usuário (0 para GPU, -1 para CPU), sem depender do rank local.
+
+Remover Comunicação de Dados: Os loops e chamadas MPI (MPI_Alltoallv, MPI_Allgather) para redistribuição de dados serão removidos.
+
+Modificar Chamada do TorchFort: A chamada torchfort_create_distributed_model provavelmente precisa ser substituída por uma versão não-distribuída, como torchfort_create_model. (Assumimos que a biblioteca torchfort fornece tal interface).
+
+O código modificado pressupõe que as sub-rotinas nos módulos simulation e torchfort (especialmente run_simulation_step, init_simulation, write_sample, torchfort_create_model, torchfort_train, torchfort_inference, etc.) podem lidar com dados no tamanho total (não mais divididos por rank) e operar em um único dispositivo CUDA quando especificado. A interface Fortran torchfort_create_model é uma suposição, pois o original usava a interface distribuída. 
+
+
+Resumo das Alterações e Considerações:
+
+MPI Removido: Todas as chamadas e declarações relacionadas ao MPI foram retiradas.
+
+Modo Sequencial: As variáveis rank, local_rank e nranks são definidas como constantes para simular um único processo.
+
+Alocação Global: Arrays como u, u_div, input, label, output agora são alocados para o tamanho completo do problema (n, n) e o batch size total (16), em vez de serem divididos por nranks.
+
+Comunicação Removida: Os loops de MPI_Alltoallv e MPI_Allgather foram removidos. Os dados da simulação são copiados diretamente para os arrays de treinamento/inferência globais.
+
+Criação do Modelo: A chamada torchfort_create_distributed_model foi substituída por torchfort_create_model. Esta é uma suposição; a biblioteca torchfort precisa ter uma interface Fortran para criar modelos não-distribuídos que aceite o nome, arquivo de configuração e o índice do dispositivo.
+
+Atribuição de Dispositivo: O dispositivo (GPU 0 ou CPU -1) é determinado pelos argumentos de linha de comando --train_device e --simulation_device e usado diretamente nas chamadas OpenACC e, presumivelmente, na nova chamada torchfort_create_model.
+
+Pragmas OpenACC: Os pragmas $acc data e $acc host_data use_device foram ajustados para referenciar os arrays globais e o novo layout de dados.
+
+Sub-rotinas Assumidas: Presume-se que init_simulation, run_simulation_step, e write_sample possam operar no grid completo de tamanho n, n. torchfort_train deve aceitar o batch size total (16) e torchfort_inference deve funcionar com o slicing de batch size 1 (1:1). O cálculo do mse foi ajustado para o divisor correto (n*n).
+
+Para compilar e executar este novo programa, não usaremos mais mpirun. Assumindo que o CMakeLists.txt está configurado corretamente para compilar o alvo train_sequential (é necessário adicionar um alvo add_executable(train_sequential ...) similar aos outros no seu CMakeLists.txt, referenciando este novo arquivo fonte), rodaremos algo como:
+
+## Dentro do contêiner Docker, após compilar:
+./caminho/para/seu/executavel/train_sequential --train_device 0 --simulation_device 0 --configfile config_mlp_native.yaml [outras opções]
+
+## ou para CPU:
+./caminho/para/seu/executavel/train_sequential --train_device -1 --simulation_device -1 --configfile config_mlp_native.yaml [outras opções]
