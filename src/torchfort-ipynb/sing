@@ -1,0 +1,6 @@
+singularity exec --nv \
+  --bind ~/torchfort:/torchfort \
+  ~/containers/torchfort.sif \
+  bash -c "CUDA_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/25.3/cuda && \
+    cd /torchfort/build && \
+    $* "
