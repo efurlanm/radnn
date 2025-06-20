@@ -1,0 +1,56 @@
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+True nu: 0.05
+Initial nu_pinn guess: 0.100000
+Epoch 0: Loss = 0.081961, Discovered nu = 0.101000
+Epoch 100: Loss = 0.048995, Discovered nu = 0.037148
+Epoch 200: Loss = 0.030262, Discovered nu = -0.006595
+Epoch 300: Loss = 0.022722, Discovered nu = -0.009449
+Epoch 400: Loss = 0.013353, Discovered nu = -0.015909
+Epoch 500: Loss = 0.008997, Discovered nu = -0.016479
+Epoch 600: Loss = 0.007194, Discovered nu = -0.015738
+Epoch 700: Loss = 0.005663, Discovered nu = -0.015073
+Epoch 800: Loss = 0.004406, Discovered nu = -0.012713
+Epoch 900: Loss = 0.003391, Discovered nu = -0.010706
+Epoch 1000: Loss = 0.002646, Discovered nu = -0.009816
+Epoch 1100: Loss = 0.002108, Discovered nu = -0.009536
+Epoch 1200: Loss = 0.001703, Discovered nu = -0.008474
+Epoch 1300: Loss = 0.001367, Discovered nu = -0.006305
+Epoch 1400: Loss = 0.001108, Discovered nu = -0.003646
+Epoch 1500: Loss = 0.000946, Discovered nu = -0.001878
+Epoch 1600: Loss = 0.000850, Discovered nu = -0.000854
+Epoch 1700: Loss = 0.000782, Discovered nu = -0.000094
+Epoch 1800: Loss = 0.000728, Discovered nu = 0.000422
+Epoch 1900: Loss = 0.000685, Discovered nu = 0.000805
+Epoch 2000: Loss = 0.000646, Discovered nu = 0.001183
+Epoch 2100: Loss = 0.000610, Discovered nu = 0.001499
+Epoch 2200: Loss = 0.000585, Discovered nu = 0.001798
+Epoch 2300: Loss = 0.000549, Discovered nu = 0.002164
+Epoch 2400: Loss = 0.000510, Discovered nu = 0.002473
+Epoch 2500: Loss = 0.000477, Discovered nu = 0.002851
+Epoch 2600: Loss = 0.000452, Discovered nu = 0.003179
+Epoch 2700: Loss = 0.000417, Discovered nu = 0.003671
+Epoch 2800: Loss = 0.000385, Discovered nu = 0.004008
+Epoch 2900: Loss = 0.000371, Discovered nu = 0.004475
+Epoch 3000: Loss = 0.000334, Discovered nu = 0.004937
+Epoch 3100: Loss = 0.000316, Discovered nu = 0.005363
+Epoch 3200: Loss = 0.000294, Discovered nu = 0.005755
+Epoch 3300: Loss = 0.000271, Discovered nu = 0.006226
+Epoch 3400: Loss = 0.000266, Discovered nu = 0.006548
+Epoch 3500: Loss = 0.000238, Discovered nu = 0.007004
+Epoch 3600: Loss = 0.000224, Discovered nu = 0.007323
+Epoch 3700: Loss = 0.000213, Discovered nu = 0.007663
+Epoch 3800: Loss = 0.000199, Discovered nu = 0.007935
+Epoch 3900: Loss = 0.000187, Discovered nu = 0.008211
+Epoch 4000: Loss = 0.000189, Discovered nu = 0.008442
+Epoch 4100: Loss = 0.000180, Discovered nu = 0.008762
+Epoch 4200: Loss = 0.000169, Discovered nu = 0.009050
+Epoch 4300: Loss = 0.000154, Discovered nu = 0.009295
+Epoch 4400: Loss = 0.000148, Discovered nu = 0.009496
+Epoch 4500: Loss = 0.000138, Discovered nu = 0.009822
+Epoch 4600: Loss = 0.000137, Discovered nu = 0.010010
+Epoch 4700: Loss = 0.000124, Discovered nu = 0.010215
+Epoch 4800: Loss = 0.000118, Discovered nu = 0.010458
+Epoch 4900: Loss = 0.000115, Discovered nu = 0.010705
+--------------------------------------------------
+Final Discovered nu: 0.010981
+True nu: 0.05

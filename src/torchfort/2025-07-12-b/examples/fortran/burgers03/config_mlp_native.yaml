@@ -1,0 +1,134 @@
+# Arquivo de configuração para o treinamento de um modelo MLP (Multi-Layer Perceptron).
+# Este arquivo define a arquitetura do modelo, a função de perda, o otimizador,
+# o agendador de taxa de aprendizado e outras configurações gerais para o treinamento.
+
+general:
+  # Seção 'general' (Geral): Contém configurações que afetam o comportamento global do treinamento.
+
+  enable_wandb_hook: 1
+  # 'enable_wandb_hook': Controla a integração com Weights & Biases (WandB).
+  # WandB (wandb.ai) é uma plataforma para rastrear, visualizar e comparar experimentos de aprendizado de máquina.
+  # Um valor de '1' (ou True) indica que o hook (gancho) do WandB será ativado.
+  # Isso significa que métricas de treinamento (perda, acurácia, etc.), configurações do modelo,
+  # e possivelmente outros dados serão logados automaticamente para o painel do WandB,
+  # permitindo monitoramento e análise em tempo real ou posterior.
+  # Um valor de '0' (ou False) desativaria essa integração.
+
+  report_frequency: 100
+  # 'report_frequency': Define a frequência com que as métricas de treinamento serão reportadas/logadas.
+  # Neste caso, '100' provavelmente significa que as métricas serão logadas a cada 100 passos (iterações/batches)
+  # do treinamento. Isso ajuda a controlar o volume de dados logados e a frequência de atualizações
+  # nos painéis de monitoramento (como WandB), evitando sobrecarga.
+
+model:
+  # Seção 'model' (Modelo): Define a arquitetura e as características do modelo de aprendizado de máquina.
+
+  type: mlp
+  # 'type': Especifica o tipo de arquitetura de modelo a ser utilizada.
+  # 'mlp' (Multi-Layer Perceptron) indica que será utilizada uma rede neural feed-forward.
+  # Uma MLP é composta por múltiplas camadas de neurônios (camadas ocultas) entre a camada de entrada e a de saída,
+  # onde cada neurônio de uma camada está conectado a todos os neurônios da próxima camada.
+
+  parameters:
+    # 'parameters': Contém os hiperparâmetros específicos para a arquitetura 'mlp'.
+
+    dropout: 0.0
+    # 'dropout': Um hiperparâmetro para a técnica de regularização Dropout.
+    # Dropout é usado para prevenir overfitting (sobreajuste) em redes neurais.
+    # Durante o treinamento, uma fração dos neurônios (e suas conexões) é "desativada" aleatoriamente em cada passo.
+    # O valor '0.0' indica que **nenhum** dropout será aplicado (ou seja, 0% dos neurônios serão desativados).
+    # Valores comuns variam de 0.1 a 0.5.
+
+    layer_sizes: [1024, 1024]
+    # 'layer_sizes': Define o número de neurônios em cada camada oculta da MLP.
+    # Esta é uma lista, onde cada elemento representa o número de neurônios em uma camada oculta.
+    # Neste exemplo, há duas camadas ocultas, cada uma com 1024 neurônios.
+    # A primeira camada oculta terá 1024 neurônios, e a segunda camada oculta também terá 1024 neurônios.
+    # O número de neurônios na camada de entrada e saída é geralmente inferido dos dados
+    # e da tarefa (por exemplo, número de características de entrada e número de classes/saídas).
+
+loss:
+  # Seção 'loss' (Perda): Define a função de perda (também conhecida como função de custo ou erro).
+  # A função de perda mede quão bem o modelo está se desempenhando, comparando as previsões do modelo
+  # com os valores reais (ground truth). O objetivo do treinamento é minimizar essa perda.
+
+  type: MSE
+  # 'type': Especifica o tipo de função de perda a ser usada.
+  # 'MSE' (Mean Squared Error - Erro Quadrático Médio) é uma função de perda comum para tarefas de regressão.
+  # Ela calcula a média dos quadrados das diferenças entre os valores previstos pelo modelo e os valores reais.
+  # É particularmente sensível a grandes erros.
+
+optimizer:
+  # Seção 'optimizer' (Otimizador): Define o algoritmo usado para ajustar os pesos do modelo
+  # durante o treinamento, a fim de minimizar a função de perda.
+
+  type: adam
+  # 'type': Especifica o algoritmo otimizador a ser utilizado.
+  # 'adam' (Adaptive Moment Estimation) é um otimizador popular que combina as vantagens do AdaGrad e do RMSProp.
+  # Ele calcula taxas de aprendizado adaptativas para cada parâmetro do modelo, o que o torna eficiente
+  # para uma ampla gama de problemas.
+
+  parameters:
+    # 'parameters': Contém os hiperparâmetros específicos para o otimizador Adam.
+
+    learning_rate: 1e-3
+    # 'learning_rate': A taxa de aprendizado (também conhecida como passo de aprendizado).
+    # É um dos hiperparâmetros mais críticos e controla o tamanho do passo que o otimizador dá
+    # na direção do gradiente descendente para ajustar os pesos do modelo.
+    # Um valor de '1e-3' (ou 0.001) é um valor inicial comum para muitos modelos.
+    # Valores muito altos podem causar instabilidade no treinamento; valores muito baixos podem torná-lo muito lento.
+
+    beta1: 0.9
+    # 'beta1': Parâmetro exponencial de decaimento para a estimativa do primeiro momento (média dos gradientes).
+    # Este parâmetro controla a taxa de decaimento das médias móveis dos gradientes.
+    # Um valor de '0.9' é o valor padrão e comum para Adam.
+    # Ele influencia a "memória" do otimizador sobre a direção média dos gradientes.
+
+    beta2: 0.999
+    # 'beta2': Parâmetro exponencial de decaimento para a estimativa do segundo momento (média dos gradientes quadrados).
+    # Este parâmetro controla a taxa de decaimento das médias móveis dos gradientes quadrados.
+    # Um valor de '0.999' é o valor padrão e comum para Adam.
+    # Ele influencia a "memória" do otimizador sobre a magnitude da variabilidade dos gradientes.
+
+    weight_decay: 0
+    # 'weight_decay': Também conhecido como regularização L2.
+    # É uma técnica de regularização que adiciona um termo à função de perda proporcional
+    # ao quadrado da magnitude dos pesos do modelo.
+    # O objetivo é penalizar grandes pesos, incentivando o modelo a usar pesos menores e mais esparsos,
+    # o que ajuda a prevenir overfitting.
+    # Um valor de '0' significa que nenhuma regularização L2 será aplicada.
+    # Valores comuns para regularização L2 variam de 1e-5 a 1e-2, dependendo do problema.
+
+    eps: 1e-8
+    # 'eps' (epsilon): Um pequeno valor adicionado ao denominador ao calcular a atualização dos pesos.
+    # Isso é feito para melhorar a estabilidade numérica e evitar divisões por zero,
+    # especialmente quando o segundo momento estimado (beta2) é muito pequeno.
+    # Um valor de '1e-8' é o valor padrão e comum para Adam.
+
+    amsgrad: 0
+    # 'amsgrad': Um booleano que, quando True (1), ativa uma variante do Adam.
+    # AMSGrad é uma extensão do Adam que tenta corrigir um problema de convergência em certos cenários,
+    # garantindo que o segundo momento estimado (beta2) seja não-crescente.
+    # Um valor de '0' (ou False) significa que a versão padrão do Adam será usada, sem AMSGrad.
+
+lr_scheduler:
+  # Seção 'lr_scheduler' (Agendador de Taxa de Aprendizado):
+  # Define uma estratégia para ajustar dinamicamente a taxa de aprendizado do otimizador durante o treinamento.
+  # Isso pode ajudar a melhorar a convergência e a qualidade do modelo.
+
+  type: cosine_annealing
+  # 'type': Especifica o tipo de agendador de taxa de aprendizado.
+  # 'cosine_annealing' (Recozimento Cosenoidal) é uma estratégia popular onde a taxa de aprendizado
+  # segue uma função cosseno, decaindo de seu valor inicial para um valor mínimo
+  # e potencialmente se reaquecendo (reiniciando) em ciclos.
+  # É conhecido por ajudar na convergência para melhores mínimos e evitar plateaus.
+
+  parameters:
+    # 'parameters': Contém os hiperparâmetros específicos para o agendador 'cosine_annealing'.
+
+    T_max: 100000
+    # 'T_max': O número máximo de iterações (passos) ou épocas para um ciclo completo do agendador.
+    # Neste caso, '100000' significa que a taxa de aprendizado fará um ciclo completo de decaimento
+    # (seguindo a curva cosseno) ao longo de 100.000 passos de treinamento.
+    # Após 100.000 passos, a taxa de aprendizado pode reiniciar seu ciclo, dependendo da implementação específica
+    # do agendador cosseno.

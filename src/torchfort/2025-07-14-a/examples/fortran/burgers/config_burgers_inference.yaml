@@ -1,0 +1,4 @@
+model:
+  type: torchscript
+  parameters:
+    filename: "burgers_inference_trained.pt"

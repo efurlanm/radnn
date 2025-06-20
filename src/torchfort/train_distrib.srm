@@ -1,0 +1,38 @@
+#!/bin/bash
+#SBATCH --partition=sequana_gpu_dev   # SLURM_JOB_PARTITION
+#SBATCH --job-name=train_distributed  # SLURM_JOB_NAME
+#SBATCH --nodes=1                     # SLURM_JOB_NUM_NODES
+#SBATCH --ntasks-per-node=2           # SLURM_NTASKS_PER_NODE
+#SBATCH --cpus-per-task=1             # SLURM_CPUS_PER_TASK
+#SBATCH --gpus=2                      # SLURM_GPUS
+#SBATCH --distribution=block:cyclic   # SLURM_DISTRIBUTION
+#SBATCH --time=00:10:00               # Limit execution time
+# SLURM output environment variables:
+# https://slurm.schedmd.com/sbatch.html#SECTION_OUTPUT-ENVIRONMENT-VARIABLES
+echo '======================================='
+echo '- Job ID:' $SLURM_JOB_ID
+echo '- Nº of nodes in the job:' $SLURM_JOB_NUM_NODES
+echo '- Nº of tasks per node:' $SLURM_NTASKS_PER_NODE
+echo '- Nº of tasks:' $SLURM_NTASKS
+echo '- Nº of cpus per task:' $SLURM_CPUS_PER_TASK
+echo '- Partition:' $SLURM_JOB_PARTITION
+echo '- Dir from which sbatch was invoked:' ${SLURM_SUBMIT_DIR##*/}
+echo -n '- Nodes allocated to the job: '
+nodeset -e $SLURM_JOB_NODELIST
+echo '----------------------------------------'
+#cd $SLURM_SUBMIT_DIR
+cd /scratch/ampemi/eduardo.miranda2/radnn/torchfort/repository/examples/fortran/simulation
+export SLURM_MPI_TYPE=pmi2
+#export OMPI_HOME=$(dirname $(dirname $(which mpirun)))
+#module load openmpi/gnu/4.1.6
+module load openmpi/gnu/4.1.4+gcc-12.4+cuda-11.6_sequana
+echo -n '<1. starting python script > ' && date
+echo '-- output -----------------------------'
+
+srun \
+singularity exec --nv /scratch/ampemi/eduardo.miranda2/torchfort.sif \
+    bash -c " mpirun --allow-run-as-root \
+                     ./train_distributed"
+
+echo '-- end --------------------------------'
+echo -n '<2. quit>                    ' && date

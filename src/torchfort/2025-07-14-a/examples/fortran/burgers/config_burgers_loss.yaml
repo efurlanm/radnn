@@ -1,0 +1,4 @@
+loss:
+  type: torchscript
+  parameters:
+    filename: "burgers_loss.pt"

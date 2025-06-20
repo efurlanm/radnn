@@ -1,0 +1,14 @@
+model:
+  type: torchscript
+  parameters:
+    filename: "../examples/fortran/burgers/burgers_model.pt"
+
+loss:
+  type: torchscript
+  parameters:
+    filename: "../examples/fortran/burgers/burgers_loss.pt"
+
+optimizer:
+  type: adam
+  parameters:
+    learning_rate: 1e-3

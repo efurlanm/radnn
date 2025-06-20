@@ -1,0 +1,66 @@
+Valor real de nu para a simulação: 0.05
+Valor inicial de nu (chute): 0.10000000149011612
+Época 0: Perda = 0.000215, nu = 0.090004
+Época 50: Perda = 0.000000, nu = 0.050883
+Época 100: Perda = 0.000000, nu = 0.050023
+Época 150: Perda = 0.000000, nu = 0.049997
+Época 200: Perda = 0.000000, nu = 0.050001
+Época 250: Perda = 0.000000, nu = 0.050000
+--------------------------------------------------
+Valor real de nu: 0.05
+Valor descoberto de nu: 0.050000
+True nu: 0.05
+Initial nu_pinn guess: 0.100000
+Epoch 0: Loss = 0.150177, Discovered nu = 0.101000
+Epoch 100: Loss = 0.062643, Discovered nu = 0.104294
+Epoch 200: Loss = 0.042575, Discovered nu = -0.018676
+Epoch 300: Loss = 0.032090, Discovered nu = -0.019291
+Epoch 400: Loss = 0.026084, Discovered nu = -0.008593
+Epoch 500: Loss = 0.018642, Discovered nu = -0.006761
+Epoch 600: Loss = 0.011232, Discovered nu = -0.010978
+Epoch 700: Loss = 0.009214, Discovered nu = -0.012782
+Epoch 800: Loss = 0.007908, Discovered nu = -0.014497
+Epoch 900: Loss = 0.006925, Discovered nu = -0.016304
+Epoch 1000: Loss = 0.006187, Discovered nu = -0.017498
+Epoch 1100: Loss = 0.005687, Discovered nu = -0.017791
+Epoch 1200: Loss = 0.005284, Discovered nu = -0.017161
+Epoch 1300: Loss = 0.004885, Discovered nu = -0.016500
+Epoch 1400: Loss = 0.004540, Discovered nu = -0.015598
+Epoch 1500: Loss = 0.004089, Discovered nu = -0.014771
+Epoch 1600: Loss = 0.003650, Discovered nu = -0.014107
+Epoch 1700: Loss = 0.003018, Discovered nu = -0.013878
+Epoch 1800: Loss = 0.002472, Discovered nu = -0.013545
+Epoch 1900: Loss = 0.002015, Discovered nu = -0.013194
+Epoch 2000: Loss = 0.001712, Discovered nu = -0.012850
+Epoch 2100: Loss = 0.001473, Discovered nu = -0.012470
+Epoch 2200: Loss = 0.001394, Discovered nu = -0.012137
+Epoch 2300: Loss = 0.001200, Discovered nu = -0.011688
+Epoch 2400: Loss = 0.001093, Discovered nu = -0.011267
+Epoch 2500: Loss = 0.001013, Discovered nu = -0.010815
+Epoch 2600: Loss = 0.000949, Discovered nu = -0.010338
+Epoch 2700: Loss = 0.000895, Discovered nu = -0.009743
+Epoch 2800: Loss = 0.000842, Discovered nu = -0.009102
+Epoch 2900: Loss = 0.000814, Discovered nu = -0.008479
+Epoch 3000: Loss = 0.000812, Discovered nu = -0.007688
+Epoch 3100: Loss = 0.000709, Discovered nu = -0.006922
+Epoch 3200: Loss = 0.000686, Discovered nu = -0.006095
+Epoch 3300: Loss = 0.000660, Discovered nu = -0.005204
+Epoch 3400: Loss = 0.000667, Discovered nu = -0.004372
+Epoch 3500: Loss = 0.000562, Discovered nu = -0.003262
+Epoch 3600: Loss = 0.000538, Discovered nu = -0.002347
+Epoch 3700: Loss = 0.000507, Discovered nu = -0.001328
+Epoch 3800: Loss = 0.000483, Discovered nu = -0.000312
+Epoch 3900: Loss = 0.000431, Discovered nu = 0.000715
+Epoch 4000: Loss = 0.000401, Discovered nu = 0.001605
+Epoch 4100: Loss = 0.000472, Discovered nu = 0.002475
+Epoch 4200: Loss = 0.000345, Discovered nu = 0.003455
+Epoch 4300: Loss = 0.000319, Discovered nu = 0.004265
+Epoch 4400: Loss = 0.000296, Discovered nu = 0.004993
+Epoch 4500: Loss = 0.000274, Discovered nu = 0.005654
+Epoch 4600: Loss = 0.000270, Discovered nu = 0.006245
+Epoch 4700: Loss = 0.000246, Discovered nu = 0.006859
+Epoch 4800: Loss = 0.000224, Discovered nu = 0.007413
+Epoch 4900: Loss = 0.000252, Discovered nu = 0.007781
+--------------------------------------------------
+Final Discovered nu: 0.008212
+True nu: 0.05
