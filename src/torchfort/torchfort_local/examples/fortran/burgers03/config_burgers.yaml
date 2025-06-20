@@ -1,0 +1,20 @@
+model:
+  type: torchscript
+  parameters:
+    filename: "burgers_model.pt"
+
+loss:
+  type: torchscript
+  parameters:
+    filename: "burgers_loss.pt"
+
+optimizer:
+  type: adam
+  parameters:
+    learning_rate: 1e-3
+
+lr_scheduler:
+  type: step_lr
+  parameters:
+    step_size: 1000
+    gamma: 0.9
