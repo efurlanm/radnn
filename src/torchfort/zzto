@@ -1,2 +1,0 @@
-#!/bin/bash
-sudo mount --bind torchfort-repo /torchfort

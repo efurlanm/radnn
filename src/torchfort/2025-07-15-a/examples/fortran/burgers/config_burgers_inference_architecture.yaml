@@ -1,0 +1,7 @@
+model:
+  type: torchscript
+  parameters:
+    filename: "burgers_model.pt"
+
+loss:
+  type: MSE

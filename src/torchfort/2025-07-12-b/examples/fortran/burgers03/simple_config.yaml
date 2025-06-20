@@ -1,0 +1,9 @@
+model:
+  type: torchscript
+  parameters:
+    filename: "simple_model.pt"
+
+optimizer:
+  type: Adam
+  parameters:
+    learning_rate: 1.0e-3
