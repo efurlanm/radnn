@@ -1,0 +1,4 @@
+model:
+  name: simple_linear_model
+  architecture:
+    model_path: simple_linear_model.pt

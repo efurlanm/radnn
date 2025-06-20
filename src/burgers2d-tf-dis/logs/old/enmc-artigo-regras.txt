@@ -1,0 +1,224 @@
+XXVIII ENMC, XVI ECTM
+21 a 24 de outubro de 2025
+
+INSTRUCTIONS FOR PREPARATION AND SUBMISSION OF PAPERS FOR
+PUBLICATION IN THE PROCEEDINGS OF XXVIII ENMC / XVI ECTM
+First Author1 - e-mail
+Second Author2 - e-mail
+Third Author3 - e-mail
+1 Universidade Estadual de Montes Claros – Montes Claros – MG
+2 Instituto Federal do Norte de Minas Gerais – Montes Claros – MG
+3 Universidade Federal dos Vales do Jequititinhonha e Mucuri – Janaúba – MG
+
+Abstract. This document-template provides detailed instructions for preparing and submitting a
+paper to XXVIII ENMC – National Meeting on Computational Modeling / XVI ECTM – Meeting
+on Materials Science and Technology. Please follow these instructions: a) type the body of the
+paper in a single column; b) use 5 to 10 A4-size pages (21 cm × 29.7 cm), each formatted with
+2.5 cm margins on all sides except at the top of the page (do not print any border around the
+text and do not insert page numbers); c) use 12 pt Times New Roman throughout, except on
+affiliation identification; d) type up to 200 words in the abstract, in italics; e) always use singlespaced lines, justified alignment; f) cite references by name (year) and list in alphabetical order
+by author last name at the end; g) supply good quality figures/photographs being recommended
+a resolution of 300 dpi (color figures can be used); h) define all symbols as they appear in the
+text; i) use only SI units. The paper may be written in English, Portuguese or Spanish.
+Keywords: First keyword, Second keyword, Third keyword (up to 5 keywords)
+1.
+
+INTRODUCTION [Times New Roman 12pt, all capital letters, bold]
+
+The Proceedings of XXVIII ENMC / XVI ECTM, which include the full versions of all
+papers to be presented at the meeting, will be published in digital media. Therefore, it is
+extremely important that you prepare the PDF digital version of your contribution in accordance
+with the present instructions. The file size must be less than 4 MB.
+The Editorial Committee will evaluate all submitted papers.
+1.1 Alterations
+Hyperref package inclusion; Eq. (1) or Fig. 1
+Bibliography with apalike, through .bib file
+For references, use cite for external or direct citacion “In Del Vecchio (1992)...”, and citep
+for in parenthesis/indirect (Del Vecchio, 1992).
+
+XXVIII ENMC – Encontro Nacional de Modelagem Computacional
+XVI ECTM – Encontro de Ciência e Tecnologia de Materiais
+21 a 24 de outubro de 2025
+
+XXVIII ENMC, XVI ECTM
+21 a 24 de outubro de 2025
+
+Examples inside .bib for conference (Davies et al., 2008), for book (Horrocks and Anand,
+2016), for in-collection (Linganiso and Anandjiwala, 2016), for article (Abhari et al., 2017),
+for PhD thesis (Del Vecchio, 1992), and for manual/standard International Organization for
+Standardization (1994).
+2.
+
+TYPING INSTRUCTIONS
+
+The paper must be written in English, Portuguese or Spanish. If written in Portuguese or
+Spanish, a translation of title, abstract and keywords into English must be provided at the end
+of the paper (after the reference list).
+2.1 Paper length
+The full paper including figures and tables must have at least 5 pages, but is limited to 10
+A4-size pages (21 cm x 29.7 cm). Please limit your paper by writing concisely, rather than by
+reducing figures or tables to a size at which symbols/labels become difficult to read.
+2.2 Page format
+Each A4-size page should be formatted with 2.5 cm margins on all sides, except at the top.
+This defines the printable area. Inside this area, the text must be arranged in a single column.
+Please do not print any border around the text and do not insert page numbers.
+The final paper should look like this document.
+2.3 General text specifications
+The paper must be typed using 12 pt Times New Roman throughout the text, as in the present
+document. This includes title, headings, and figure and table captions.
+Paper title. The title should be in boldface type, all capital letters and centered on the page
+and must not exceed three lines. It should be single spaced if longer than one line. Skip one
+line (12 pt) between the title and the first author.
+Author(s) and affiliation. Type authors names in boldface type, flush left, one per line,
+including first name, middle and last name, followed by the e-mail address (not boldfaced).
+After the name put in superscript the number, related to the affiliation. The authors names
+should be followed by the corresponding affiliation, which should be in regular type (neither
+boldfaced nor italicized). After presenting affiliations should skip two lines (24 pt) between the
+last affiliation and the abstract.
+Abstract and keywords. Type the heading Abstract. in boldface italics, flush left, followed
+by a period. On the same line, type the abstract in italics, justified alignment. The abstract
+should be no longer than 200 words. Skip one line, then type the heading Keywords: (don’t
+forget the colon) in boldface italics, flush left and type 3 to 5 keywords, separated by commas,
+with only the first letter of each keyword capitalized. Skip two lines (24 pt) between the
+keywords and the body of text.
+
+XXVIII ENMC – Encontro Nacional de Modelagem Computacional
+XVI ECTM – Encontro de Ciência e Tecnologia de Materiais
+21 a 24 de outubro de 2025
+
+XXVIII ENMC, XVI ECTM
+21 a 24 de outubro de 2025
+
+Headings. Type a first-level head (section) in all capital letters, boldface type, flush left.
+Begin by typing the Arabic number followed by a period, then type the head title 0.75 cm (or 7
+blank spaces) from the left margin. Leave one blank line above and one below this head.
+For a second-level head (subsection), capitalize only the first letter, using boldface type,
+flush left. Begin by typing the double number, then type the sub-head title 0.75 cm from the left
+margin. Leave one blank line above and one below this head.
+Do not number third-level heads (sub-subsection). Use boldface italics, capitalizing only
+the first letter and indenting 0.75 cm from the left margin. Follow it by a period and start the
+text immediately. Leave one blank line above this head.
+Body of text. The text should be typed using single-spaced lines and justified alignment.
+Start each paragraph 0.75 cm from the left margin and allow no space between paragraphs.
+2.4 Equations, symbols and units
+Indent an equation 1 cm (or 10 spaces) from the left margin. Number it with an Arabic
+number enclosed in parentheses, placed flush right. Allow one blank line above and one below
+each equation. For example:
+⃗qr = −4πr2 k
+
+dT
+dr
+
+(1)
+
+When referring to an equation in the text write Eq. (1), except at the beginning of a sentence,
+where Equation (1) should be used.
+Symbols should be italicized throughout the text. Define all symbols as they appear in the
+text. A nomenclature section is not necessary.
+All data, including those shown in tables and figures, must be reported in SI units.
+2.5 Figures and tables
+Figures and tables should be inserted as close as possible to their mention in the text.
+Enclosed text and symbols must be clearly readable; avoid small symbols. Supply good quality
+pictures and illustrations.
+Figures and tables and their captions should be centered in the text. Place figure caption
+below the figure, leaving one blank line between them. Place table title above the table, also
+leaving one blank line between them. Leave one blank line between the table or figure and the
+adjacent text. Color figures can be used.
+Number figures and tables consecutively using Arabic numerals (e.g., Figure 1, Figure 2,
+Table 1, Table 2). Refer to them in the text as Table 1 and Fig. 1 (except at the beginning of a
+sentence, where Figure 1 should be used).
+Table 1: Input parameters
+
+Method LJ
+k1 (W/mK)
+k2 (W/mK)
+n
+
+Configuration
+[0, 0; 0, 1]
+[0, 0; 0, 1]
+1, 0
+
+Method R2W
+k1 (W/mK)
+k2 (W/mK)
+n
+
+XXVIII ENMC – Encontro Nacional de Modelagem Computacional
+XVI ECTM – Encontro de Ciência e Tecnologia de Materiais
+21 a 24 de outubro de 2025
+
+Configuration
+[0, 0; 0, 1]
+[0, 0; 0, 1]
+1, 0
+
+XXVIII ENMC, XVI ECTM
+21 a 24 de outubro de 2025
+
+Figure 1: Gibbs free energy variations: simulated results.
+
+Label coordinates in plots and add the corresponding units. Similarly, label columns/rows
+in tables and add the units.
+2.6 Permission
+You are responsible for making sure that you have the right to publish everything in your
+paper. If you use material from a copyrighted source, you may need to obtain permission from
+the copyright holder.
+3.
+
+CALL TO REFERENCES IN THE BODY OF TEXT
+
+References should be cited in the text by name last (year) or (last name, year). For example:
+“In a recent work, Jones et al. (2005) proposed ...,” or “In a recent work (Devlou & Zaparolli,
+2013), it is suggested ... .”
+References must be listed in alphabetical order at the end of the paper. Type the word
+REFERENCES in all capitals, boldface type from the left margin, skip one line and type
+the reference list. In each reference, indent all lines 0.75 cm except the first line, which
+starts directly at the left margin. Each reference must be cited in the text. In the section
+REFERENCES is presented an example of a reference list including a journal article, a report,
+an edited book, proceedings, a dissertation and a book.
+4.
+
+CONCLUSIONS
+
+This section should be included and need to show the main contributions of the paper in a
+briefly form.
+Acknowledgements
+This section should be positioned between the end of the text and the reference list. Type
+Acknowledgements in boldface italics, skip one line of space and type the text in regular type.
+XXVIII ENMC – Encontro Nacional de Modelagem Computacional
+XVI ECTM – Encontro de Ciência e Tecnologia de Materiais
+21 a 24 de outubro de 2025
+
+XXVIII ENMC, XVI ECTM
+21 a 24 de outubro de 2025
+
+REFERENCES
+Abhari, R. E., Martins, J. A., Morris, H. L., Mouthuy, P.-A., and Carr, A. (2017). Synthetic sutures:
+Clinical evaluation and future developments. Journal of Biomaterials Applications, 32(3):410–421.
+Davies, P., Baron, P., Salomon, K., Bideaud, C., Labbé, J.-P., Toumit, S., Francois, M., Grosjean,
+F., Bunsell, T., and Moysan, A.-G. (2008). Influence of fibre stiffness on deepwater mooring line
+response. In 27th International Conference on Offshore Mechanics and Arctic Engineering, pages
+179–187, Estoril, Portugal.
+Del Vecchio, C. J. M. (1992). Light weight materials for deep water moorings. PhD thesis, University
+of Reading, Reading, UK.
+Horrocks, A. R. and Anand, S. C., editors (2016). Handbook of Technical Textiles. Woodhead Publishing
+Series in Textiles. Woodhead Publishing, second edition edition.
+International Organization for Standardization (1994). Textiles — Yarn from packages — Determination
+of linear density (mass per unit length) by the skein method. International Organization for
+Standardization. ISO 2060:1994.
+Linganiso, L. Z. and Anandjiwala, R. D. (2016). 4 - fibre-reinforced laminates in aerospace engineering.
+In Rana, S. and Fangueiro, R., editors, Advanced Composite Materials for Aerospace Engineering,
+pages 101–127. Woodhead Publishing.
+
+APPENDIX A
+This section, if necessary, must be included here.
+For Papers written in Portuguese or Spanish a translation of title, abstract and keywords into English
+must be provided after the Appendix using the same format for title, abstract and keywords presented in
+the first page of the template.
+
+XXVIII ENMC – Encontro Nacional de Modelagem Computacional
+XVI ECTM – Encontro de Ciência e Tecnologia de Materiais
+21 a 24 de outubro de 2025
+
+

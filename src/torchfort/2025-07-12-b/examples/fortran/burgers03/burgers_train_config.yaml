@@ -1,0 +1,14 @@
+model:
+  type: torchscript
+  parameters:
+    filename: "burgers_model.pt"
+
+loss:
+  type: torchscript
+  parameters:
+    filename: "burgers_loss.pt"
+
+optimizer:
+  type: Adam
+  parameters:
+    learning_rate: 1.0e-3

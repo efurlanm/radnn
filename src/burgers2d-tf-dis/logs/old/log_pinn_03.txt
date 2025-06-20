@@ -1,0 +1,63 @@
+True nu: 0.05
+Initial nu_pinn guess: 0.060000
+Starting Adam training...
+Adam Epoch 0: Loss = 155.082611, Discovered nu = 0.059940
+Adam Epoch 100: Loss = 0.120165, Discovered nu = 0.059358
+Adam Epoch 200: Loss = 0.091654, Discovered nu = 0.059386
+Adam Epoch 300: Loss = 0.081893, Discovered nu = 0.059463
+Adam Epoch 400: Loss = 0.076343, Discovered nu = 0.059528
+Adam Epoch 500: Loss = 0.073111, Discovered nu = 0.059572
+Adam Epoch 600: Loss = 0.071226, Discovered nu = 0.059597
+Adam Epoch 700: Loss = 0.070122, Discovered nu = 0.059606
+Adam Epoch 800: Loss = 0.069453, Discovered nu = 0.059604
+Adam Epoch 900: Loss = 0.069009, Discovered nu = 0.059592
+Adam Epoch 1000: Loss = 0.068689, Discovered nu = 0.059573
+Adam Epoch 1100: Loss = 0.068429, Discovered nu = 0.059546
+Adam Epoch 1200: Loss = 0.068202, Discovered nu = 0.059512
+Adam Epoch 1300: Loss = 0.067987, Discovered nu = 0.059469
+Adam Epoch 1400: Loss = 0.067783, Discovered nu = 0.059412
+Adam Epoch 1500: Loss = 0.067562, Discovered nu = 0.059342
+Adam Epoch 1600: Loss = 0.067341, Discovered nu = 0.059254
+Adam Epoch 1700: Loss = 0.067105, Discovered nu = 0.059143
+Adam Epoch 1800: Loss = 0.066854, Discovered nu = 0.059006
+Adam Epoch 1900: Loss = 0.066576, Discovered nu = 0.058835
+Adam Epoch 2000: Loss = 0.066259, Discovered nu = 0.058624
+Adam Epoch 2100: Loss = 0.065902, Discovered nu = 0.058365
+Adam Epoch 2200: Loss = 0.065490, Discovered nu = 0.058046
+Adam Epoch 2300: Loss = 0.065036, Discovered nu = 0.057654
+Adam Epoch 2400: Loss = 0.064455, Discovered nu = 0.057177
+Adam Epoch 2500: Loss = 0.063737, Discovered nu = 0.056592
+Adam Epoch 2600: Loss = 0.062892, Discovered nu = 0.055873
+Adam Epoch 2700: Loss = 0.061973, Discovered nu = 0.055011
+Adam Epoch 2800: Loss = 0.060706, Discovered nu = 0.054149
+Adam Epoch 2900: Loss = 0.059345, Discovered nu = 0.053466
+Adam Epoch 3000: Loss = 0.057778, Discovered nu = 0.052856
+Adam Epoch 3100: Loss = 0.055267, Discovered nu = 0.052349
+Adam Epoch 3200: Loss = 0.057146, Discovered nu = 0.051931
+Adam Epoch 3300: Loss = 0.064840, Discovered nu = 0.051544
+Adam Epoch 3400: Loss = 0.048475, Discovered nu = 0.051265
+Adam Epoch 3500: Loss = 0.076820, Discovered nu = 0.050971
+Adam Epoch 3600: Loss = 0.046505, Discovered nu = 0.050651
+Adam Epoch 3700: Loss = 0.041473, Discovered nu = 0.050271
+Adam Epoch 3800: Loss = 0.039332, Discovered nu = 0.049910
+Adam Epoch 3900: Loss = 0.043333, Discovered nu = 0.049499
+Adam Epoch 4000: Loss = 0.035801, Discovered nu = 0.049180
+Adam Epoch 4100: Loss = 0.034204, Discovered nu = 0.048878
+Adam Epoch 4200: Loss = 0.033153, Discovered nu = 0.048517
+Adam Epoch 4300: Loss = 0.033027, Discovered nu = 0.048107
+Adam Epoch 4400: Loss = 0.033580, Discovered nu = 0.047667
+Adam Epoch 4500: Loss = 0.031012, Discovered nu = 0.047225
+Adam Epoch 4600: Loss = 0.029445, Discovered nu = 0.046794
+Adam Epoch 4700: Loss = 0.028565, Discovered nu = 0.046356
+Adam Epoch 4800: Loss = 0.028174, Discovered nu = 0.045933
+Adam Epoch 4900: Loss = 0.026564, Discovered nu = 0.045475
+Adam training finished.
+Starting L-BFGS-B training...
+L-BFGS-B training finished.
+L-BFGS-B converged: False
+L-BFGS-B number of iterations: 2
+L-BFGS-B function evaluations: 34
+--------------------------------------------------
+Final Discovered nu: 0.044986
+True nu: 0.05
+Resultados salvos em pinn_results_03.npz

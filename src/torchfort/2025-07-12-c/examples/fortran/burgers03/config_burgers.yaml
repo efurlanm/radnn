@@ -1,0 +1,14 @@
+model:
+  type: burgers
+  parameters:
+    layers: [2, 10, 10, 10, 10, 10, 10, 10, 10, 1]
+
+loss:
+  type: pinn
+  parameters:
+    nu: 0.00318309886
+
+optimizer:
+  type: adam
+  parameters:
+    learning_rate: 0.001

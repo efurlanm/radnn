@@ -1,0 +1,12 @@
+# TorchFort configuration for running the pre-trained Burgers' PINN model
+
+model:
+  # Specifies that we are loading a model from a TorchScript file
+  type: torchscript
+  
+  parameters:
+    # The path to the JIT-scripted inference network file
+    filename: "burgers_inference_trained.pt"
+
+# Note: We do not specify loss, optimizer, or lr_scheduler here
+# because this configuration is intended only for inference, not training.

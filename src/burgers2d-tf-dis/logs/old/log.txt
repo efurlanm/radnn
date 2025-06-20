@@ -1,0 +1,33 @@
+True nu: 0.05
+Initial nu_pinn guess: 0.100000
+Starting Adam training...
+Adam Epoch 0: Loss = 191.895615, Discovered nu = 0.099990
+Adam Epoch 100: Loss = 0.934458, Discovered nu = 0.099682
+Adam Epoch 200: Loss = 0.556505, Discovered nu = 0.099703
+Adam Epoch 300: Loss = 0.352829, Discovered nu = 0.099771
+Adam Epoch 400: Loss = 0.254104, Discovered nu = 0.099834
+Adam Epoch 500: Loss = 0.203648, Discovered nu = 0.099865
+Adam Epoch 600: Loss = 0.172457, Discovered nu = 0.099859
+Adam Epoch 700: Loss = 0.149761, Discovered nu = 0.099820
+Adam Epoch 800: Loss = 0.132447, Discovered nu = 0.099755
+Adam Epoch 900: Loss = 0.118734, Discovered nu = 0.099671
+Adam Epoch 1000: Loss = 0.108181, Discovered nu = 0.099580
+Adam Epoch 1100: Loss = 0.099950, Discovered nu = 0.099487
+Adam Epoch 1200: Loss = 0.093667, Discovered nu = 0.099400
+Adam Epoch 1300: Loss = 0.088783, Discovered nu = 0.099323
+Adam Epoch 1400: Loss = 0.085055, Discovered nu = 0.099258
+Adam Epoch 1500: Loss = 0.082207, Discovered nu = 0.099206
+Adam Epoch 1600: Loss = 0.079992, Discovered nu = 0.099167
+Adam Epoch 1700: Loss = 0.078296, Discovered nu = 0.099138
+Adam Epoch 1800: Loss = 0.076947, Discovered nu = 0.099119
+Adam Epoch 1900: Loss = 0.075864, Discovered nu = 0.099110
+Adam training finished.
+Starting L-BFGS-B training...
+L-BFGS-B training finished.
+L-BFGS-B converged: False
+L-BFGS-B number of iterations: 6
+L-BFGS-B function evaluations: 47
+--------------------------------------------------
+Final Discovered nu: 0.099107
+True nu: 0.05
+Resultados salvos em pinn_results_03.npz

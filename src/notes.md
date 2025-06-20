@@ -41,6 +41,8 @@ The documentation uses the [MkDocs](https://www.mkdocs.org/) static documentatio
 
 ## Conda & JupyterLab
 
+See also `env-tensorflow.md` .
+
 ### Install
 
 ```bash

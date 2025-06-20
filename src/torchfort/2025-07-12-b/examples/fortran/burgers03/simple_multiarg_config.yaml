@@ -1,0 +1,15 @@
+model:
+  name: mymodel
+  type: torchscript
+  parameters:
+    filename: simple_multiarg_model.pt
+
+optimizer:
+  name: Adam
+  learning_rate: 0.001
+
+loss:
+  name: myloss
+  type: torchscript
+  parameters:
+    filename: simple_multiarg_loss.pt

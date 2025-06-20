@@ -1,0 +1,15 @@
+# TorchFort configuration for training the Burgers' PINN model using TorchScript
+model:
+  type: torchscript
+  parameters:
+    filename: "burgers_model.pt"
+
+loss:
+  type: torchscript
+  parameters:
+    filename: "burgers_loss.pt"
+
+optimizer:
+  type: adam
+  parameters:
+    learning_rate: 0.001

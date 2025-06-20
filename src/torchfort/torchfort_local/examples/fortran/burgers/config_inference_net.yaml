@@ -1,0 +1,4 @@
+model:
+  type: torchscript
+  parameters:
+    filename: "../examples/fortran/burgers/burgers_trained_net.pt"
